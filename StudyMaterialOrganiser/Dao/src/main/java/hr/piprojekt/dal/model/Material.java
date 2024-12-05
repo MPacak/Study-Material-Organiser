@@ -27,13 +27,10 @@ public class Material {
         this.filetype = filetype;
     }
 
-    public Material(int id, String name, String description, String Link, String filepath, FileType filetype) {
+    public Material(int id, String name, String description, String Link, 
+            String filepath, FileType filetype) {
+        this(name, description,Link,filepath, filetype);
         this.id = id;
-        this.name = name;
-        this.description = description;
-        this.Link = Link;
-        this.filepath = filepath;
-        this.filetype = filetype;
     }
 
     public int getId() {

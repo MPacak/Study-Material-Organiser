@@ -27,7 +27,7 @@ public enum FileType {
                 return value;
             }
         }
-         throw new RuntimeException("no such category");
+         throw new RuntimeException("no such file type");
     }
     public static FileType getFileType(String data) {
     try {
