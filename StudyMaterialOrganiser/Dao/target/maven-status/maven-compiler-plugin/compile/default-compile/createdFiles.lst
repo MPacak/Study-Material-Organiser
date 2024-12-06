@@ -1,7 +1,11 @@
 hr\piprojekt\dal\sql\SqlRepository.class
+hr\piprojekt\dal\sql\MaterialSqlRepository.class
 hr\piprojekt\dal\Repository.class
+hr\piprojekt\dal\services\MaterialService.class
+hr\piprojekt\dal\MaterialRepository.class
 hr\piprojekt\dal\sql\DataSourceSingleton.class
 hr\piprojekt\dal\model\Material.class
 hr\piprojekt\dal\RepositoryFactory.class
 hr\piprojekt\dal\model\MaterialTag.class
+hr\piprojekt\dal\MaterialTagRepository.class
 hr\piprojekt\dal\model\FileType.class
