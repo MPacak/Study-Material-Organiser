@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="hr.piprojekt.studymaterialorganiser.MaterialController" spacing="20" alignment="CENTER">
+    <Label text="Materials Page" style="-fx-font-size: 24;" />
+    <TextField fx:id="materialInput" promptText="Enter material name" />
+    <Button text="Add Material" onAction="#handleAddMaterial" />
+    <ListView fx:id="materialsList" />
+    <Button text="Back to Home Page" onAction="#handleHomePage" />
+</VBox>

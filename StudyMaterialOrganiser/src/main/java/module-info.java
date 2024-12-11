@@ -10,4 +10,6 @@ module hr.piprojekt.studymaterialorganiser {
 
     opens hr.piprojekt.studymaterialorganiser to javafx.fxml;
     exports hr.piprojekt.studymaterialorganiser;
+    exports hr.piprojekt.studymaterialorganiser.controllers;
+    opens hr.piprojekt.studymaterialorganiser.controllers to javafx.fxml;
 }
