@@ -1,7 +1,14 @@
 package hr.piprojekt.dao.model;
 
 public enum FileType {
-    PDF(1), JPEG(2), UNKNOWN(3);
+    PDF(1),
+    JPEG(2),
+    TXT(3),
+    DOC(4),
+    DOCX(5),
+    PNG(6),
+    GIF(7),
+    UNKNOWN(8);
 
     private final int id;
 
@@ -9,18 +16,19 @@ public enum FileType {
         this.id = id;
     }
 
-
     public int getId() {
         return id;
     }
+
     public static FileType from(int id) {
-        for(FileType value : values()) {
-            if(value.id == id ) {
+        for (FileType value : values()) {
+            if (value.id == id) {
                 return value;
             }
         }
         throw new RuntimeException("no such file type");
     }
+
     public static FileType getFileType(String data) {
         try {
             return FileType.valueOf(data.toUpperCase());

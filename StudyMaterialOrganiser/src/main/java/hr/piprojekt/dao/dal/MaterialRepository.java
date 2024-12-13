@@ -14,5 +14,7 @@ public interface MaterialRepository extends Repository {
 
     Optional<Material> selectMaterial(int id) throws Exception;
 
+  //  Optional<Material> selectMaterialbyName(String name) throws Exception;
+
     List<Material> selectMaterials() throws Exception;
 }

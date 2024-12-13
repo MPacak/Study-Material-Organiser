@@ -17,8 +17,6 @@ public class StudyMaterialController {
             stage.setScene(scene);
             stage.setTitle("Materials Page");
 
-            System.out.println(getClass().getResource("/hr/piprojekt/studymaterialorganiser/MaterialsPage.fxml"));
-
         } catch (Exception e) {
             e.printStackTrace();
         }

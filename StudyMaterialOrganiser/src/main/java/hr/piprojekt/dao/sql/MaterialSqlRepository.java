@@ -5,10 +5,7 @@ import hr.piprojekt.dao.model.FileType;
 import hr.piprojekt.dao.model.Material;
 
 import javax.sql.DataSource;
-import java.sql.CallableStatement;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -17,9 +14,8 @@ public class MaterialSqlRepository implements MaterialRepository {
     private static final String ID_MATERIAL = "IDMaterial";
     private static final String NAME = "Name";
     private static final String LINK = "Link";
-    private static final String FILE_PATH = "IDMission";
+    private static final String FILE_PATH = "FilePath";
     private static final String DESCRIPTION = "Description";
-
     private static final String FOLDERTYPE = "FolderTypeID";
 
     private static final String ID_TAG = "IDTag";
@@ -27,25 +23,36 @@ public class MaterialSqlRepository implements MaterialRepository {
 
     private static final String ID_MATERIALTAG = "IDMaterialTag";
 
-    private static final String CREATE_MATERIAL = "{ CALL createMaterial (?,?,?,?,?,?,?,?,?,?,?) }";
-    private static final String UPDATE_MATERIAL = "{ CALL updateMaterial (?,?,?,?,?,?,?,?,?,?,?) }";
+    private static final String CREATE_MATERIAL = "{ CALL createMaterial (?,?,?,?,?,?) }";
+    private static final String UPDATE_MATERIAL = "{ CALL updateMaterial (?,?,?,?,?,?) }";
     private static final String DELETE_MATERIAL  = "{ CALL deleteMaterial (?) }";
     private static final String SELECT_MATERIAL  = "{ CALL selectMaterial (?) }";
     private static final String SELECT_MATERIALS = "{ CALL selectMaterials }";
+    public MaterialSqlRepository() {
+        // Constructor logic
+    }
     @Override
     public int createMaterial(Material material) throws Exception {
         DataSource dataSource = DataSourceSingleton.getInstance();
-        try (Connection con = dataSource.getConnection();
-             CallableStatement stmt = con.prepareCall(CREATE_MATERIAL)) {
+        try
+            (Connection con = dataSource.getConnection();
+            CallableStatement stmt = con.prepareCall(CREATE_MATERIAL)){
+            stmt.registerOutParameter(ID_MATERIAL, java.sql.Types.INTEGER);
+                stmt.setString(NAME, material.getName());
+                stmt.setString(DESCRIPTION, material.getDescription());
+                stmt.setString(LINK, material.getLink());
+                stmt.setString(FILE_PATH, material.getFilepath());
+                stmt.setInt(FOLDERTYPE, material.getFiletype().getId());
 
-            stmt.setString(NAME, material.getName());
-            stmt.setString(LINK, material.getLink());
-            stmt.setString(DESCRIPTION, material.getDescription());
-            stmt.setString(FILE_PATH, material.getFilepath());
-            stmt.setInt(FOLDERTYPE, material.getFiletype().getId());
+                stmt.executeUpdate();
+                return stmt.getInt(ID_MATERIAL);
+            }
+        catch (SQLException e) {
 
-            stmt.executeUpdate();
-            return stmt.getInt(ID_MATERIAL);
+            if (e.getSQLState().equals("23000")) {
+                throw new IllegalArgumentException("Material with the same name already exists.", e);
+            }
+            throw e;
         }
     }
 
