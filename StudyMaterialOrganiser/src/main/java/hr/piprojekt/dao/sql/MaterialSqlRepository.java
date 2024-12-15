@@ -49,7 +49,7 @@ public class MaterialSqlRepository implements MaterialRepository {
             }
         catch (SQLException e) {
 
-            if (e.getSQLState().equals("23000")) {
+            if (e.getErrorCode() == 51000) {
                 throw new IllegalArgumentException("Material with the same name already exists.", e);
             }
             throw e;

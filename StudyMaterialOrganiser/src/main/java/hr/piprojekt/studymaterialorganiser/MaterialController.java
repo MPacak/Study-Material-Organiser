@@ -65,7 +65,7 @@ public class MaterialController {
 
             materialService.createMaterial(material);
 
-            showAlert(Alert.AlertType.INFORMATION, "Success", "Material updated successfully!");
+            showAlert(Alert.AlertType.INFORMATION, "Success", "Material created successfully!");
             clearForm();
         } catch (IllegalArgumentException ex) {
             if (ex.getMessage().contains("already exists")) {
@@ -73,11 +73,11 @@ public class MaterialController {
                 nameField.requestFocus();
             } else {
                 Logger.getLogger(MaterialController.class.getName()).log(Level.SEVERE, null, ex);
-                showAlert(Alert.AlertType.ERROR, "Error", "Unable to update material.");
+                showAlert(Alert.AlertType.ERROR, "Error", "Unable to create material.");
             }
         } catch (Exception ex) {
             Logger.getLogger(MaterialController.class.getName()).log(Level.SEVERE, null, ex);
-            showAlert(Alert.AlertType.ERROR, "Error", "Unable to update material.");
+            showAlert(Alert.AlertType.ERROR, "Error", "Unable to create material.");
         }
     }
 

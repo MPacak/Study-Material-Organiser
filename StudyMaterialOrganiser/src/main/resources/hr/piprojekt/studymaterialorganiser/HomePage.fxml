@@ -3,7 +3,11 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="hr.piprojekt.studymaterialorganiser.controllers.StudyMaterialController" spacing="20" alignment="CENTER">
-    <Label text="Welcome to the Home Page" style="-fx-font-size: 24;" />
-    <Button text="Go to Materials Page" onAction="#handleMaterialsPage" />
-</VBox>
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="hr.piprojekt.studymaterialorganiser.controllers.StudyMaterialController">
+    <center>
+        <VBox spacing="20" alignment="CENTER" prefWidth="800" prefHeight="600">
+            <Label text="Welcome to Study material organiser" style="-fx-font-size: 24;" />
+            <Button text="Go to Materials Page" onAction="#handleMaterialsPage" />
+        </VBox>
+    </center>
+</BorderPane>
