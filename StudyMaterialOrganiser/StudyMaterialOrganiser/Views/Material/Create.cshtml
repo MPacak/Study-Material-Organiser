@@ -1,0 +1,44 @@
+﻿@model StudyMaterialOrganiser.ViewModels.MaterialVM
+@{
+    ViewData["Title"] = "Add Material";
+}
+
+<div class="container py-4">
+    <h1 class="display-6">Add Material</h1>
+    <form asp-action="Create" method="post">
+        <div class="mb-3">
+            <label for="Name" class="form-label">Material Name</label>
+            <input asp-for="Name" class="form-control" id="Name" required />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label for="Description" class="form-label">Description</label>
+            <textarea asp-for="Description" class="form-control" id="Description"></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label for="Link" class="form-label">Material Link</label>
+            <input asp-for="Link" class="form-control" id="Link" required />
+            <span asp-validation-for="Link" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label for="FilePath" class="form-label">File Path</label>
+            <input asp-for="FilePath" class="form-control" id="FilePath" required />
+            <span asp-validation-for="FilePath" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label for="FolderTypeId" class="form-label">Folder Type</label>
+            <input asp-for="FolderTypeId" class="form-control" id="FolderTypeId" required />
+            <span asp-validation-for="FolderTypeId" class="text-danger"></span>
+        </div>
+
+        <div class="text-end">
+            <button type="submit" class="btn btn-success">Save</button>
+            <a class="btn btn-secondary" asp-action="Index">Cancel</a>
+        </div>
+    </form>
+</div>
