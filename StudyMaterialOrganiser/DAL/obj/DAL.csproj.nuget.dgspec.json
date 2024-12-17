@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Faks\\3. godina\\PI\\C#\\StudyMaterialOrganiser\\DAL\\DAL.csproj": {}
+    "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\DAL.csproj": {}
   },
   "projects": {
-    "D:\\Faks\\3. godina\\PI\\C#\\StudyMaterialOrganiser\\DAL\\DAL.csproj": {
+    "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Faks\\3. godina\\PI\\C#\\StudyMaterialOrganiser\\DAL\\DAL.csproj",
+        "projectUniqueName": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "D:\\Faks\\3. godina\\PI\\C#\\StudyMaterialOrganiser\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\majap\\.nuget\\packages\\",
-        "outputPath": "D:\\Faks\\3. godina\\PI\\C#\\StudyMaterialOrganiser\\DAL\\obj\\",
+        "projectPath": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\Kuri\\.nuget\\packages\\",
+        "outputPath": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\majap\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Kuri\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,6 +38,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -80,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     }

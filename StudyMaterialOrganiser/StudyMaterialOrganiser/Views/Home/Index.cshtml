@@ -5,4 +5,7 @@
 <div class="container text-center py-5">
     <h1 class="display-4">Welcome to Study Material Organiser</h1>
     <button class="btn btn-primary mt-4" onclick="location.href='@Url.Action("MaterialsPage", "Home")'">Go to Materials Page</button>
+    <a class="btn btn-outline-secondary register-btn ms-2" asp-controller="User" asp-action="Registration">Register now!</a>
+    <p>Already have an account? </p>
+    <a class="btn btn-outline-secondary register-btn ms-2" asp-controller="User" asp-action="Login">Login</a>
 </div>

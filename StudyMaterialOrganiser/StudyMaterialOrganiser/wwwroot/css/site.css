@@ -1,18 +1,51 @@
-html {
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
 body {
-  margin-bottom: 60px;
+    background-image: url('~/images/default.jpg');
+    background-size: cover;
+    background-attachment: fixed;
 }
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    max-width: 1200px;
+}
+
+.image-placeholder img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.text-content {
+    max-width: 600px;
+    margin-left: 50px;
+}
+
+    .text-content h1 {
+        font-size: 3em;
+        color: #007bff;
+    }
+
+    .text-content p, .text-content ul {
+        font-size: 1.2em;
+        color: #343a40;
+    }
+
+    .text-content .btn-primary {
+        background-color: #007bff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1.2em;
+        transition: background-color 0.3s ease;
+    }
+
+        .text-content .btn-primary:hover {
+            background-color: #0056b3;
+        }
