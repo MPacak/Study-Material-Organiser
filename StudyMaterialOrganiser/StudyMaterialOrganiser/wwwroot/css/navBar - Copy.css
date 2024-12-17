@@ -1,0 +1,22 @@
+﻿.nav-btn, .profile-btn, .logout-btn, .login-btn, .register-btn {
+    margin: 5px;
+}
+
+.navbar {
+    width: 100%;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .container-fluid .d-flex {
+        display: flex;
+        align-items: center;
+    }
+
+.ms-auto {
+    margin-left: auto !important;
+}

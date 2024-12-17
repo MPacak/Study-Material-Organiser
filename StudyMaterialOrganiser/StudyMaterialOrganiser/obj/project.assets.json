@@ -62,8 +62,6 @@
           }
         }
       },
-<<<<<<< HEAD
-=======
       "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.0": {
         "type": "package",
         "dependencies": {
@@ -112,7 +110,6 @@
           }
         }
       },
->>>>>>> faf
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
         "type": "package",
         "compile": {
@@ -1114,8 +1111,6 @@
           }
         }
       },
-<<<<<<< HEAD
-=======
       "BL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -1130,7 +1125,6 @@
           "bin/placeholder/BL.dll": {}
         }
       },
->>>>>>> faf
       "DAL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -1202,8 +1196,6 @@
         "lib/netstandard2.0/Azure.Identity.xml"
       ]
     },
-<<<<<<< HEAD
-=======
     "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.0": {
       "sha512": "eIhpX25uUn33Ornnh718V2G/nESvk3TNX2FjTarv634GLfE50Fhz2geJ/QYpSmFaUIQ1hkZPfd9i0LcpZ9bfLQ==",
       "type": "package",
@@ -1257,7 +1249,6 @@
         "microsoft.aspnetcore.cryptography.keyderivation.nuspec"
       ]
     },
->>>>>>> faf
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
       "sha512": "yuvf07qFWFqtK3P/MRkEKLhn5r2UbSpVueRziSqj0yJQIKFwG1pq9mOayK3zE5qZCTs0CbrwL9M6R8VwqyGy2w==",
       "type": "package",
@@ -3386,14 +3377,11 @@
         "version.txt"
       ]
     },
-<<<<<<< HEAD
-=======
     "BL/1.0.0": {
       "type": "project",
       "path": "../BL/BL.csproj",
       "msbuildProject": "../BL/BL.csproj"
     },
->>>>>>> faf
     "DAL/1.0.0": {
       "type": "project",
       "path": "../DAL/DAL.csproj",
@@ -3402,50 +3390,30 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-<<<<<<< HEAD
-      "DAL >= 1.0.0",
-=======
       "BL >= 1.0.0",
       "DAL >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.0",
->>>>>>> faf
       "Microsoft.EntityFrameworkCore >= 7.0.0"
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
-    "C:\\Users\\majap\\.nuget\\packages\\": {},
-=======
     "C:\\Users\\Kuri\\.nuget\\packages\\": {},
->>>>>>> faf
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "D:\\Faks\\3. godina\\PI\\C#\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj",
-      "projectName": "StudyMaterialOrganiser",
-      "projectPath": "D:\\Faks\\3. godina\\PI\\C#\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj",
-      "packagesPath": "C:\\Users\\majap\\.nuget\\packages\\",
-      "outputPath": "D:\\Faks\\3. godina\\PI\\C#\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\obj\\",
-=======
       "projectUniqueName": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj",
       "projectName": "StudyMaterialOrganiser",
       "projectPath": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj",
       "packagesPath": "C:\\Users\\Kuri\\.nuget\\packages\\",
       "outputPath": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\obj\\",
->>>>>>> faf
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-<<<<<<< HEAD
-        "C:\\Users\\majap\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
         "C:\\Users\\Kuri\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> faf
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3454,26 +3422,17 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-<<<<<<< HEAD
-        "C:\\Program Files\\dotnet\\library-packs": {},
-=======
->>>>>>> faf
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-<<<<<<< HEAD
-            "D:\\Faks\\3. godina\\PI\\C#\\StudyMaterialOrganiser\\DAL\\DAL.csproj": {
-              "projectPath": "D:\\Faks\\3. godina\\PI\\C#\\StudyMaterialOrganiser\\DAL\\DAL.csproj"
-=======
             "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\BL.csproj": {
               "projectPath": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\BL.csproj"
             },
             "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\DAL.csproj": {
               "projectPath": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\DAL.csproj"
->>>>>>> faf
             }
           }
         }
@@ -3482,27 +3441,21 @@
         "warnAsError": [
           "NU1605"
         ]
-<<<<<<< HEAD
-=======
       },
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
->>>>>>> faf
       }
     },
     "frameworks": {
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
-<<<<<<< HEAD
-=======
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
             "version": "[6.0.0, )"
           },
->>>>>>> faf
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[7.0.0, )"
@@ -3527,11 +3480,7 @@
             "privateAssets": "all"
           }
         },
-<<<<<<< HEAD
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
-=======
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404\\RuntimeIdentifierGraph.json"
->>>>>>> faf
       }
     }
   }

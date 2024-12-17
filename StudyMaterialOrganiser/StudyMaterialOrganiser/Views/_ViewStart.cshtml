@@ -1,3 +1,18 @@
 ﻿@{
-    Layout = "_Layout";
+    Layout = "_EmptyLayout";
+
+    var user = ViewContext.HttpContext.User;
+
+    if (user.IsInRole("NonUser"))
+    {
+        Layout = "_LayoutNonUser";
+    }
+    if (user.IsInRole("Admin"))
+    {
+        Layout = "_LayoutAdmin";
+    }
+    if (user.IsInRole("User"))
+    {
+        Layout = "_LayoutUser";
+    }
 }
