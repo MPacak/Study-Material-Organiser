@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "D:\\Faks\\3. godina\\PI\\C#\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj": {}
   },
   "projects": {
@@ -12,12 +13,24 @@
         "projectPath": "D:\\Faks\\3. godina\\PI\\C#\\StudyMaterialOrganiser\\DAL\\DAL.csproj",
         "packagesPath": "C:\\Users\\majap\\.nuget\\packages\\",
         "outputPath": "D:\\Faks\\3. godina\\PI\\C#\\StudyMaterialOrganiser\\DAL\\obj\\",
+=======
+    "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj": {}
+  },
+  "projects": {
+    "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\BL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\BL.csproj",
+        "projectName": "BL",
+        "projectPath": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\BL.csproj",
+        "packagesPath": "C:\\Users\\Kuri\\.nuget\\packages\\",
+        "outputPath": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\majap\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Kuri\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +39,89 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\DAL.csproj": {
+                "projectPath": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\DAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Cryptography.KeyDerivation": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\DAL.csproj",
+        "projectName": "DAL",
+        "projectPath": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\Kuri\\.nuget\\packages\\",
+        "outputPath": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\obj\\",
+>>>>>>> faf
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+<<<<<<< HEAD
+          "C:\\Users\\majap\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\Kuri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> faf
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+<<<<<<< HEAD
           "C:\\Program Files\\dotnet\\library-packs": {},
+=======
+>>>>>>> faf
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,6 +134,14 @@
           "warnAsError": [
             "NU1605"
           ]
+<<<<<<< HEAD
+=======
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+>>>>>>> faf
         }
       },
       "frameworks": {
@@ -80,6 +183,7 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
@@ -92,12 +196,30 @@
         "projectPath": "D:\\Faks\\3. godina\\PI\\C#\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj",
         "packagesPath": "C:\\Users\\majap\\.nuget\\packages\\",
         "outputPath": "D:\\Faks\\3. godina\\PI\\C#\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\obj\\",
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj",
+        "projectName": "StudyMaterialOrganiser",
+        "projectPath": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj",
+        "packagesPath": "C:\\Users\\Kuri\\.nuget\\packages\\",
+        "outputPath": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\obj\\",
+>>>>>>> faf
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\majap\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\Kuri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> faf
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -106,15 +228,26 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+<<<<<<< HEAD
           "C:\\Program Files\\dotnet\\library-packs": {},
+=======
+>>>>>>> faf
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+<<<<<<< HEAD
               "D:\\Faks\\3. godina\\PI\\C#\\StudyMaterialOrganiser\\DAL\\DAL.csproj": {
                 "projectPath": "D:\\Faks\\3. godina\\PI\\C#\\StudyMaterialOrganiser\\DAL\\DAL.csproj"
+=======
+              "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\BL.csproj": {
+                "projectPath": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\BL.csproj"
+              },
+              "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\DAL.csproj": {
+                "projectPath": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\DAL.csproj"
+>>>>>>> faf
               }
             }
           }
@@ -123,12 +256,27 @@
           "warnAsError": [
             "NU1605"
           ]
+<<<<<<< HEAD
+=======
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+>>>>>>> faf
         }
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+<<<<<<< HEAD
+=======
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+>>>>>>> faf
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.0, )"
@@ -153,7 +301,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404\\RuntimeIdentifierGraph.json"
+>>>>>>> faf
         }
       }
     }
