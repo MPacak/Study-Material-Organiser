@@ -1,0 +1,47 @@
+﻿@model IEnumerable<BL.Models.LogDto>
+
+<div>
+	
+	<form method="get" asp-action="LogList" asp-controller="Log">
+		<button type="submit" name="pageSize" value="20" class="btn btn-primary">Show 20</button>
+		<button type="submit" name="pageSize" value="50" class="btn btn-primary">Show 50</button>
+		<button type="submit" name="pageSize" value="0" class="btn btn-primary">Show All</button>
+		<input type="hidden" name="page" value="1" />
+	</form>
+</div>
+
+<table id="tblLogs" class="table">
+	<thead>
+	<tr>
+		<th>@Html.DisplayNameFor(model => model.Id)</th>
+		<th>@Html.DisplayNameFor(model => model.Level)</th>
+		<th>@Html.DisplayNameFor(model => model.Message)</th>
+		<th>@Html.DisplayNameFor(model => model.Timestamp)</th>
+	</tr>
+	</thead>
+	<tbody>
+	@foreach (var log in Model)
+	{
+		<tr>
+			<td>@log.Id</td>
+			<td>@log.Level</td>
+			<td>@log.Message</td>
+			<td>@log.Timestamp</td>
+		</tr>
+	}
+	</tbody>
+</table>
+
+<div>
+	@if (ViewBag.TotalPages > 1) 
+	{
+		<ul class="pagination">
+			@for (int i = 1; i <= ViewBag.TotalPages; i++)
+			{
+				<li class="page-item @(i == ViewBag.CurrentPage ? "active" : "")">
+					<a class="page-link" href="@Url.Action("LogList", new { page = i, pageSize = ViewBag.PageSize })">@i</a>
+				</li>
+			}
+		</ul>
+	}
+</div>

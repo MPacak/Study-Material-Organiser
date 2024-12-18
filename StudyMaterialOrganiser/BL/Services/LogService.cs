@@ -38,7 +38,6 @@ public class LogService : ILogService
     public IEnumerable<Log> GetAll()
     {
 	    var logs =_unitOfWork.Log.GetAll();
-        _logMapper.Map<LogDto>(logs);
         return logs;
     }
 

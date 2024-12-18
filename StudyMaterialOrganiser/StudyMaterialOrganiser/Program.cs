@@ -28,7 +28,6 @@ builder.Services.AddSession(options =>
 });
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-builder.Services.AddAutoMapper(typeof(MappingProfile));
 
 
 builder.Services.AddScoped<IMaterialRepository, MaterialRepository>();

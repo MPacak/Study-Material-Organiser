@@ -13,17 +13,19 @@ namespace StudyMaterialOrganiser.Controllers
 {
     public class UserController : Controller
     {
+        private readonly ILogService _logService;
         private readonly IMapper _mapper;
         private readonly IUserService _userService;
         private readonly ILogger<UserController> _logger;
-        private readonly ILogService _logService;
+        
 
 
 
         public UserController(IUserService userService, IMapper mapper, ILogger<UserController> logger, ILogService logService)
         {
-	        _logService = logService;
+	       
             _userService = userService;
+            _logService = logService;
             _mapper = mapper;
             _logger = logger;
             

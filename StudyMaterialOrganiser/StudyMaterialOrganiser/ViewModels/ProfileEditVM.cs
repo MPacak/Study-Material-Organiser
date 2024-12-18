@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace MVC.Models;
+namespace ViewModels;
 
 public class ProfileEditVM
 {
