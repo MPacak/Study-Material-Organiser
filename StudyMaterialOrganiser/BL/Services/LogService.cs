@@ -35,6 +35,13 @@ public class LogService : ILogService
         return logs;
     }
 
+    public IEnumerable<Log> GetAll()
+    {
+	    var logs =_unitOfWork.Log.GetAll();
+        _logMapper.Map<LogDto>(logs);
+        return logs;
+    }
+
 
     public int GetCount() =>  _unitOfWork.Log.GetAll().Count();
 

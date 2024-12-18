@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
@@ -20,17 +21,20 @@ public class UserService : IUserService
     private readonly IUnitOfWork _unitOfWork;
     private readonly IConfiguration _configuration;
     private readonly IMapper _userMapper;
+    private readonly ILogService _logService;
 
-    public UserService(IUnitOfWork  unitOfWork, IConfiguration configuration, IMapper userMapper)
+	public UserService(IUnitOfWork  unitOfWork, IConfiguration configuration, IMapper userMapper, ILogService logService)
     {
-         _unitOfWork =  unitOfWork;
+	    
+		_unitOfWork =  unitOfWork;
         _configuration = configuration;
         _userMapper = userMapper;
-    }
+        _logService = logService;
+	}
 
     public ICollection<UserDto> GetAll()
     {
-        var allUsers =  _unitOfWork.User.GetAll(u => u.IsDeleted == false);
+		var allUsers =  _unitOfWork.User.GetAll(u => u.IsDeleted == false);
         return _userMapper.Map<ICollection<UserDto>>(allUsers).ToList();
 
 

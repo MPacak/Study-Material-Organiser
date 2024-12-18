@@ -16,20 +16,29 @@ namespace StudyMaterialOrganiser.Controllers
         private readonly IMapper _mapper;
         private readonly IUserService _userService;
         private readonly ILogger<UserController> _logger;
+        private readonly ILogService _logService;
 
-        public UserController(IUserService userService, IMapper mapper, ILogger<UserController> logger)
+
+
+        public UserController(IUserService userService, IMapper mapper, ILogger<UserController> logger, ILogService logService)
         {
+	        _logService = logService;
             _userService = userService;
             _mapper = mapper;
             _logger = logger;
-        }
-        [Authorize(Roles = "Admin")]
+            
+
+
+		}
+		[Authorize(Roles = "Admin")]
         public IActionResult List()
         {
             try
             {
-                var allUsers = _userService.GetAll();
+	            
+				var allUsers = _userService.GetAll();
                 var usersDtos = _mapper.Map<ICollection<UserDto>>(allUsers);
+                _logService.Log("Action", $"All users were fetched by {HttpContext?.User?.Identity?.Name}");
                 return View(usersDtos);
             }
             catch (Exception ex)
@@ -45,14 +54,17 @@ namespace StudyMaterialOrganiser.Controllers
         [HttpPost]
         public IActionResult Approve(int id)
         {
-            try
+	        var userName = HttpContext?.User?.Identity?.Name;
+
+			try
             {
                 var userToUpdate = _userService.GetById(id);
 
 
                 if (userToUpdate.Role == 2)
                 {
-                    return Json(new { success = false, message = "Admin Role cannot be changed", type = "error" });
+	               
+					return Json(new { success = false, message = "Admin Role cannot be changed", type = "error" });
                 }
                 if (userToUpdate.Role == 1)
                 {
@@ -60,7 +72,8 @@ namespace StudyMaterialOrganiser.Controllers
                 }
                 userToUpdate.Role = 1;
                 _userService.Update(id, userToUpdate);
-                return Json(new { success = true, message = $"{userToUpdate.Username} role updated successfully!", type = "success" });
+                _logService.Log("Action", $"User{userToUpdate.Username} approved by {HttpContext?.User?.Identity?.Name}");
+				return Json(new { success = true, message = $"{userToUpdate.Username} role updated successfully!", type = "success" });
             }
             catch (Exception ex)
             {
@@ -88,7 +101,8 @@ namespace StudyMaterialOrganiser.Controllers
                 }
                 userToUpdate.Role = 0;
                 _userService.Update(id, userToUpdate);
-                return Json(new { success = true, message = $"{userToUpdate.Username} role updated successfully!", type = "success" });
+                _logService.Log("Action", $"User{userToUpdate.Username} disapproved by {HttpContext?.User?.Identity?.Name}");
+				return Json(new { success = true, message = $"{userToUpdate.Username} role updated successfully!", type = "success" });
             }
             catch (Exception ex)
             {
@@ -135,9 +149,10 @@ namespace StudyMaterialOrganiser.Controllers
 
 
                 _userService.Create(model);
+                _logService.Log("Registration", $"User: {model.UserName} Created");
 
 
-                TempData["ToastMessage"] = $"User {model.UserName} created successfully!";
+				TempData["ToastMessage"] = $"User: {model.UserName} created successfully!";
                 TempData["ToastType"] = "success";
                 return RedirectToAction(nameof(List));
             }
@@ -206,7 +221,7 @@ namespace StudyMaterialOrganiser.Controllers
                 var toUpdate = _mapper.Map<UserDto>(model);
                 _userService.Update(model.Id, toUpdate);
 
-                TempData["ToastMessage"] = $"User {model.Username} updated successfully!";
+                TempData["ToastMessage"] = $"User: {model.Username} updated successfully!";
                 TempData["ToastType"] = "success";
                 return RedirectToAction(nameof(List));
             }
@@ -243,7 +258,8 @@ namespace StudyMaterialOrganiser.Controllers
             try
             {
                 _userService.Delete(user.Id);
-                return RedirectToAction(nameof(List));
+                _logService.Log("Action", $"User: {user.Username} deleted by {HttpContext?.User?.Identity?.Name}");
+				return RedirectToAction(nameof(List));
             }
             catch (Exception ex)
             {
@@ -272,8 +288,10 @@ namespace StudyMaterialOrganiser.Controllers
             {
                 user.Role = 0;
                 _userService.Create(user);
+                _logService.Log("Registration", $"User: {user.UserName} Created");
 
-                return View(user);
+
+				return View(user);
             }
             catch (Exception ex)
             {
@@ -351,8 +369,8 @@ namespace StudyMaterialOrganiser.Controllers
                         authProperties)
                 ).GetAwaiter().GetResult();
 
-
-                TempData["ToastMessage"] = "You have successfully logged in";
+                _logService.Log("LogIn", $"User: {request.Username} logged in");
+				TempData["ToastMessage"] = "You have successfully logged in";
                 TempData["ToastType"] = "success";
                 if (existingUser.Role.ToString() == "2")
                     return RedirectToAction("index", "Home");
@@ -374,12 +392,14 @@ namespace StudyMaterialOrganiser.Controllers
         [AllowAnonymous]
         public IActionResult Logout()
         {
+	        var userName = HttpContext.User.Identity.Name;
             Task.Run(async () =>
                 await HttpContext.SignOutAsync(
                     CookieAuthenticationDefaults.AuthenticationScheme)
             ).GetAwaiter().GetResult();
+            _logService.Log("LogOut", $"User: {userName} logged out");
 
-            return View();
+			return View();
         }
 
         [Authorize(Roles = "NonUser,User,Admin")]
