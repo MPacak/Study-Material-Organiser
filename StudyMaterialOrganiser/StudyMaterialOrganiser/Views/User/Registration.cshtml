@@ -1,0 +1,57 @@
+﻿@model BL.Models.UserRegistrationDto
+
+@{
+    ViewData["Title"] = "Registration";
+}
+
+<form method="post" asp-action="CreateUser" asp-controller="User">
+	<div class="border-2 mt-4">
+		<div class="row mb-2">
+			<h2 class="text-primary">Registration</h2>
+			<hr />
+		</div>
+		<div class="row">
+			<div class="mb-3 col-6">
+				<label asp-for="UserName">Username</label>
+				<input asp-for="UserName" class="form-control border border-1 border-dark" />
+				<span asp-validation-for="UserName" class="text-danger"></span>
+			</div>
+			<div class="mb-3 col-6">
+				<label asp-for="Password"></label>
+				<input type="password" asp-for="Password" class="form-control border border-1 border-dark" />
+				<span asp-validation-for="Password" class="text-danger"></span>
+			</div>
+			<div class="mb-3 col-6">
+				<label asp-for="FirstName">First Name</label>
+				<input asp-for="FirstName" class="form-control border border-1 border-dark" />
+				<span asp-validation-for="FirstName" class="text-danger"></span>
+			</div>
+			<div class="mb-3 col-6">
+				<label asp-for="LastName">Last Name</label>
+				<input asp-for="LastName" class="form-control border border-1 border-dark" />
+				<span asp-validation-for="LastName" class="text-danger"></span>
+			</div>
+			<div class="mb-3 col-6">
+				<label asp-for="Email"> E-Mail</label>
+				<input asp-for="Email" class="form-control border border-1 border-dark" />
+				<span asp-validation-for="Email" class="text-danger"></span>
+			</div>
+			<div class="mb-3 col-6">
+				<label asp-for="Phone"></label>
+				<input asp-for="Phone" class="form-control border border-1 border-dark" />
+				<span asp-validation-for="Phone" class="text-danger"></span>
+			</div>
+		</div>
+		<button type="submit" class="btn btn-dark btn-custom">Register</button>
+		<a asp-controller="Home" asp-action="Index" class="btn btn-light btn-custom">Back</a>
+	</div>
+</form>
+<div class="col-md-12 mb-3">
+	<p class="text-primary">
+		Already have an account? <a asp-controller="User" asp-action="LogIn" class="text-info">Log in!</a>
+	</p>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,48 @@
+﻿@model IEnumerable<BL.Models.UserDto>
+
+<table id="tblProjects" class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Id)</th>
+            <th>@Html.DisplayNameFor(model => model.FirstName)</th>
+            <th>@Html.DisplayNameFor(model => model.LastName)</th>
+            <th>@Html.DisplayNameFor(model => model.Username)</th>
+            <th>@Html.DisplayNameFor(model => model.CreatedAt)</th>
+            <th>@Html.DisplayNameFor(model => model.Email)</th>
+            <th>@Html.DisplayNameFor(model => model.Phone)</th>
+            <th>@Html.DisplayNameFor(model => model.Role)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr data-id="@user.Id">
+                <td>@Html.DisplayFor(model => user.Id)</td>
+                <td>@Html.DisplayFor(model => user.FirstName)</td>
+                <td>@Html.DisplayFor(model => user.LastName)</td>
+                <td>@Html.DisplayFor(model => user.Username)</td>
+                <td>@Html.DisplayFor(model => user.CreatedAt)</td>
+                <td>@Html.DisplayFor(model => user.Email)</td>
+                <td>@Html.DisplayFor(model => user.Phone)</td>
+                <td>@Html.DisplayFor(model => user.Role)</td>
+                <td>
+                    <div class="btn-group" role="group">
+                        <a href="javascript:void(0);" onclick="updateUserStatus('@Url.Action("Approve", "User", new { id = user.Id })');" class="btn btn-success" title="Approve">
+                            <i class="fas fa-thumbs-up"></i>
+                        </a>
+                        <a href="javascript:void(0);" onclick="updateUserStatus('@Url.Action("Disapprove", "User", new { id = user.Id })');" class="btn btn-danger" title="Disapprove">
+	                        <i class="fas fa-thumbs-down"></i>
+                        </a>
+                        <a asp-action="Edit" asp-controller="User" asp-route-id="@user.Id" class="btn btn-primary" title="Edit">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                        <a asp-action="Delete" asp-controller="User" asp-route-id="@user.Id" class="btn btn-danger" title="Delete">
+                            <i class="fas fa-trash-alt"></i>
+                        </a>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

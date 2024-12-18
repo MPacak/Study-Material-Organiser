@@ -11,21 +11,21 @@
 	<link rel="stylesheet" href="~/css/toast.css" asp-append-version="true" />
 </head>
 <body>
-	<input type="hidden" id="toast-message" value="@TempData["ToastMessage"]" />
-	<input type="hidden" id="toast-type" value="@TempData["ToastType"]" />
-	<div class="container">
-		<main role="main" class="pb-3">
-			@RenderBody()
-		</main>
-	</div>
+<input type="hidden" id="toast-message" value="@TempData["ToastMessage"]" />
+<input type="hidden" id="toast-type" value="@TempData["ToastType"]" />
+<div class="container">
+	<main role="main" class="pb-3">
+		@RenderBody()
+	</main>
+</div>
 
 
 
-	<script src="~/lib/jquery/dist/jquery.min.js"></script>
-	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-	<script src="~/js/site.js" asp-append-version="true"></script>
-	<script src="~/js/toast.js" asp-append-version="true"></script>
-	@await RenderSectionAsync("Scripts", required: false)
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+<script src="~/js/toast.js" asp-append-version="true"></script>
+@await RenderSectionAsync("Scripts", required: false)
 
 </body>
 </html>

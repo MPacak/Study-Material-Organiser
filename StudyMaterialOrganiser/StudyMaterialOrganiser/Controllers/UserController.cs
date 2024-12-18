@@ -355,11 +355,11 @@ namespace StudyMaterialOrganiser.Controllers
                 TempData["ToastMessage"] = "You have successfully logged in";
                 TempData["ToastType"] = "success";
                 if (existingUser.Role.ToString() == "2")
-                    return RedirectToAction("ListAdmin", "Project");
+                    return RedirectToAction("index", "Home");
                 if (existingUser.Role.ToString() == "1")
-                    return RedirectToAction("List", "Application");
+                    return RedirectToAction("index", "Home");
 
-                return RedirectToAction("List", "Project");
+                return RedirectToAction("index", "Home");
 
 
 

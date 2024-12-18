@@ -1,0 +1,42 @@
+﻿@model IEnumerable<BL.Models.UserDto>
+
+@{
+	ViewData["Title"] = "All Users";
+}
+
+
+<div class="container p-2">
+	<div class="row mt-3">
+		<h2>All Users</h2>
+	</div>
+
+	<div id="projectsListPlaceholder">
+		@await Html.PartialAsync("_UserList", Model)
+	</div>
+
+	<p>
+		<a asp-action="Create" class="btn btn-outline-primary">Create new User</a>
+	</p>
+</div>
+
+@section Scripts{
+	<partial name="_ValidationScriptsPartial"/>
+	<script>
+        function updateUserStatus(url) {
+            $.ajax({
+                url: url,
+                type: 'POST',
+                success: function (response) {
+                    showToast(response.message, response.type);
+                    if (response.success) {
+                        $("#projectsListPlaceholder").load('@Url.Action("LoadUserList", "User")');
+                    }
+                },
+                error: function (xhr) {
+                    showToast("An unexpected error occurred.", "error");
+                }
+            });
+        }
+    </script>
+
+}

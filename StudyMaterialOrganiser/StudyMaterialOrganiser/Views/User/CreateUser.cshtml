@@ -1,0 +1,63 @@
+﻿@model BL.Models.UserRegistrationDto
+
+@{
+    ViewData["Title"] = "Registration Successful";
+    Layout = null; 
+}
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+        .success-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f9fa;
+        }
+
+        .success-card {
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .success-icon {
+            font-size: 4rem;
+            color: #28a745;
+        }
+
+        .success-message {
+            margin-top: 1rem;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        .success-button {
+            margin-top: 2rem;
+        }
+    </style>
+<body>
+
+    <div class="success-container">
+        <div class="success-card">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="success-message">
+                Thank you for registering, @Model.Email!
+            </div>
+            <p>Your registration was successful.</p>
+            <div class="success-button">
+                <a asp-action="LogIn" asp-controller="User" class="btn btn-primary">Continue</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+

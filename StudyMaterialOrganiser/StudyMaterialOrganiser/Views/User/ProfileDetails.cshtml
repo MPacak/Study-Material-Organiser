@@ -1,0 +1,68 @@
+﻿@model BL.Models.UserDto
+
+@{
+    ViewData["Title"] = "Profile Details";
+}
+
+<h1>Profile Details</h1>
+<hr />
+<div id="profileDetailsPlaceholder">
+    @await Html.PartialAsync("_ProfileDetailsPartial", Model)
+</div>
+<div>
+    <button id="editProfileButton" class="btn btn-primary" data-id="@Model.Id">Edit Profile</button>
+    <a asp-action="Index" asp-controller="Home" class="btn btn-outline-primary">Home</a>
+</div>
+
+<div class="modal fade" id="editProfileModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div id="editProfileModalBody"></div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        $(document).ready(function () {
+            const editProfileModalEl = $('#editProfileModal');
+            const editProfileModalBody = $('#editProfileModalBody');
+            const editProfileModal = new bootstrap.Modal(editProfileModalEl[0]);
+
+            $('#editProfileButton').click(function () {
+                const userId = $(this).data('id');
+                $.ajax({
+                    url: `/User/ProfileEdit/${userId}`,
+                    method: 'GET',
+                    success: function (data) {
+                        editProfileModalBody.html(data);
+                        $.validator.unobtrusive.parse(editProfileModalBody);
+                        editProfileModal.show();
+                    },
+                    error: function () {
+                        alert('ERROR: Could not load profile edit form');
+                    }
+                });
+            });
+
+            $(document).on('click', '#saveProfileButton', function () {
+                const form = $('#profileEditForm');
+                if (form.valid()) {
+                    $.ajax({
+                        url: form.attr('action'),
+                        method: 'POST',
+                        data: form.serialize(),
+                        success: function (data) {
+                            editProfileModal.hide();
+                            $('#profileDetailsPlaceholder').html(data);
+                        },
+                        error: function () {
+                            alert('ERROR: Could not update profile');
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+}

@@ -4,29 +4,36 @@ using System.Diagnostics;
 
 namespace StudyMaterialOrganiser.Controllers
 {
-    public class HomeController : Controller
-    {
-        private readonly ILogger<HomeController> _logger;
+	public class HomeController : Controller
+	{
+		private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
+		public HomeController(ILogger<HomeController> logger)
+		{
+			_logger = logger;
+		}
 
-        public IActionResult Index()
-        {
-            return View();
-        }
+		public IActionResult Index()
+		{
+			if (User.IsInRole("Admin")) return RedirectToAction("List", "User");
+			if (User.IsInRole("User")) return View("Home", "Home");
+			if (User.IsInRole("NonUser")) return View("Home", "Home");
 
-        public IActionResult MaterialsPage()
-        {
-            return RedirectToAction("Index", "Material");
-        }
+			return View();
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
-    }
+
+
+		}
+
+		public IActionResult Privacy()
+		{
+			return View();
+		}
+
+		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+		public IActionResult Error()
+		{
+			return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+		}
+	}
 }

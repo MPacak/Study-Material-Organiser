@@ -1,0 +1,25 @@
+﻿@{
+	ViewData["Title"] = "Study material group!";
+}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="~/css/site.css" />
+
+<div class="content">
+	<div class="image-placeholder">
+		<img src="@Url.Content("~/images/default.jpeg")" alt="Volunteering Picture">
+	</div>
+	<div class="text-content">
+		<h1>Make a Difference Today!</h1>
+		<p>Are you ready to impact your community and change lives? Join our team of dedicated volunteers and be a part of something bigger. Whether you have a few hours or a few days, your time and talents can make a real difference.</p>
+		<ul>
+			<li><strong>Empower Others:</strong> Your efforts can empower individuals and communities, creating lasting change.</li>
+			<li><strong>Learn and Grow:</strong> Gain new skills, experience personal growth, and build meaningful connections.</li>
+			<li><strong>Be Part of a Community:</strong> Join a network of passionate volunteers and make lifelong friendships.</li>
+		</ul>
+		<p>Don't wait – take the first step towards a rewarding volunteer experience. Click the button below to join now!</p>
+		<a class="btn btn-outline-secondary register-btn ms-2" asp-controller="User" asp-action="Registration">Register now!</a>
+		<p>Already have an account? </p>
+		<a class="btn btn-outline-secondary register-btn ms-2" asp-controller="User" asp-action="Login">Login</a>
+	</div>
+</div>

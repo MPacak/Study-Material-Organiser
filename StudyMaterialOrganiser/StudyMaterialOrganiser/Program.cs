@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using System.Text;
+using BL.AutoMaperProfiles;
 using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,7 +16,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<StudymaterialorganiserContext>(options => {
-    options.UseSqlServer(builder.Configuration["ConnectionStrings:TripOrganiserConnStr"]);
+    options.UseSqlServer(builder.Configuration["ConnectionStrings:StudyOrganiserConnStr"]);
 });
 builder.Services.AddDistributedMemoryCache();
 
@@ -27,6 +28,8 @@ builder.Services.AddSession(options =>
 });
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddAutoMapper(typeof(MappingProfile));
+
 
 builder.Services.AddScoped<IMaterialRepository, MaterialRepository>();
 builder.Services.AddScoped<ITagRepository, TagRepository>();
@@ -75,7 +78,7 @@ if (!app.Environment.IsDevelopment())
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

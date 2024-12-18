@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
+using BL.Models;
 using DAL.Models;
+using MVC.Models;
 using StudyMaterialOrganiser.ViewModels;
 
 
@@ -36,6 +38,12 @@ namespace StudyMaterialOrganiser.Mappers
                 .ForMember(dest => dest.Link, opt => opt.MapFrom(src => src.Link))
                 .ForMember(dest => dest.FilePath, opt => opt.MapFrom(src => src.FilePath))
                 .ForMember(dest => dest.FolderTypeId, opt => opt.MapFrom(src => src.FolderTypeId));
-        }
+
+           
+            //  CreateMap<Project, ProjectListVM>();
+
+            CreateMap<UserDto, UserEditVM>().ReverseMap();
+            CreateMap<UserDto, ProfileEditVM>().ReverseMap();
+		}
     }
 }
