@@ -1,0 +1,15 @@
+D:\Faks\3. godina\Study-Material-Organiser\StudyMaterialOrganiser\BL\bin\Debug\net6.0\BL.deps.json
+D:\Faks\3. godina\Study-Material-Organiser\StudyMaterialOrganiser\BL\bin\Debug\net6.0\BL.dll
+D:\Faks\3. godina\Study-Material-Organiser\StudyMaterialOrganiser\BL\bin\Debug\net6.0\BL.pdb
+D:\Faks\3. godina\Study-Material-Organiser\StudyMaterialOrganiser\BL\bin\Debug\net6.0\DAL.dll
+D:\Faks\3. godina\Study-Material-Organiser\StudyMaterialOrganiser\BL\bin\Debug\net6.0\DAL.pdb
+D:\Faks\3. godina\Study-Material-Organiser\StudyMaterialOrganiser\BL\obj\Debug\net6.0\BL.csproj.AssemblyReference.cache
+D:\Faks\3. godina\Study-Material-Organiser\StudyMaterialOrganiser\BL\obj\Debug\net6.0\BL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Faks\3. godina\Study-Material-Organiser\StudyMaterialOrganiser\BL\obj\Debug\net6.0\BL.AssemblyInfoInputs.cache
+D:\Faks\3. godina\Study-Material-Organiser\StudyMaterialOrganiser\BL\obj\Debug\net6.0\BL.AssemblyInfo.cs
+D:\Faks\3. godina\Study-Material-Organiser\StudyMaterialOrganiser\BL\obj\Debug\net6.0\BL.csproj.CoreCompileInputs.cache
+D:\Faks\3. godina\Study-Material-Organiser\StudyMaterialOrganiser\BL\obj\Debug\net6.0\BL.csproj.CopyComplete
+D:\Faks\3. godina\Study-Material-Organiser\StudyMaterialOrganiser\BL\obj\Debug\net6.0\BL.dll
+D:\Faks\3. godina\Study-Material-Organiser\StudyMaterialOrganiser\BL\obj\Debug\net6.0\refint\BL.dll
+D:\Faks\3. godina\Study-Material-Organiser\StudyMaterialOrganiser\BL\obj\Debug\net6.0\BL.pdb
+D:\Faks\3. godina\Study-Material-Organiser\StudyMaterialOrganiser\BL\obj\Debug\net6.0\ref\BL.dll

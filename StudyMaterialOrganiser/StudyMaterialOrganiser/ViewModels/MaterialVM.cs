@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using BL.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace StudyMaterialOrganiser.ViewModels
 {
@@ -13,15 +14,17 @@ namespace StudyMaterialOrganiser.ViewModels
         public string? Description { get; set; }
 
         [Required]
-     
         public string Link { get; set; } = string.Empty;
-
         [Required]
         public string FilePath { get; set; } = string.Empty;
 
         [Required]
         public int FolderTypeId { get; set; }
 
-        public List<string> Tags { get; set; } = new List<string>();
+        [Required]
+        public IFormFile File { get; set; }
+        public List<int> SelectedTagIds { get; set; } = new List<int>();
+        public List<TagVM>? AvailableTags { get; set; } = new List<TagVM>();
+
     }
 }

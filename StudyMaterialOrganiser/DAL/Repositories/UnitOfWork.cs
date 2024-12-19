@@ -20,6 +20,9 @@ namespace DAL.Repositories
             Group = new GroupRepository(_context);
             User = new UserRepository(_context);
             Log = new LogRepository(_context);
+            Material = new MaterialRepository(_context);
+            Tag = new TagRepository(_context);
+            MaterialTag = new MaterialTagRepository(_context);
 
         }
 
@@ -29,6 +32,11 @@ namespace DAL.Repositories
         public IUserRepository User { get; private set; }
         public ILogRepository Log { get; private set; }
 
+        public IMaterialRepository Material { get; private set; }
+        public ITagRepository Tag { get; private set; }
+        public IMaterialTagRepository MaterialTag { get; private set; }
+
+       
 
         public void Save()
         {

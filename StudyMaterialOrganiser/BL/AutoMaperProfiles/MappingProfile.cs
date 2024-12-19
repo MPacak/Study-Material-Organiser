@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using BL.Models;
+using DAL.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +15,16 @@ namespace BL.AutoMaperProfiles
         {
             CreateMap<DAL.Models.User, Models.UserDto>().ReverseMap();
             CreateMap<DAL.Models.Log, Models.LogDto>().ReverseMap();
+            CreateMap<Material, MaterialDto>()
+               .ForMember(dest => dest.TagIds, opt => opt.MapFrom(src => src.MaterialTags.Select(mt => mt.Tag.Idtag)));
+            CreateMap<MaterialDto, Material>()
+                .ForMember(dest => dest.MaterialTags, opt => opt.Ignore());
+            CreateMap<Tag, TagDto>()
+           .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Idtag))
+           .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.TagName));
+            CreateMap<TagDto, Tag>()
+                .ForMember(dest => dest.Idtag, opt => opt.Ignore())
+                .ForMember(dest => dest.TagName, opt => opt.MapFrom(src => src.Name));
         }
     }
 }

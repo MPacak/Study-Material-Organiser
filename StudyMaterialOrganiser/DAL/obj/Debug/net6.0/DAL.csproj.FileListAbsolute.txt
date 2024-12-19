@@ -12,3 +12,17 @@ D:\Faks\3. godina\PI\C#\StudyMaterialOrganiser\DAL\obj\Debug\net6.0\refint\DAL.d
 D:\Faks\3. godina\PI\C#\StudyMaterialOrganiser\DAL\obj\Debug\net6.0\DAL.pdb
 D:\Faks\3. godina\PI\C#\StudyMaterialOrganiser\DAL\obj\Debug\net6.0\DAL.genruntimeconfig.cache
 D:\Faks\3. godina\PI\C#\StudyMaterialOrganiser\DAL\obj\Debug\net6.0\ref\DAL.dll
+D:\Faks\3. godina\Study-Material-Organiser\StudyMaterialOrganiser\DAL\bin\Debug\net6.0\DAL.deps.json
+D:\Faks\3. godina\Study-Material-Organiser\StudyMaterialOrganiser\DAL\bin\Debug\net6.0\DAL.runtimeconfig.json
+D:\Faks\3. godina\Study-Material-Organiser\StudyMaterialOrganiser\DAL\bin\Debug\net6.0\DAL.dll
+D:\Faks\3. godina\Study-Material-Organiser\StudyMaterialOrganiser\DAL\bin\Debug\net6.0\DAL.pdb
+D:\Faks\3. godina\Study-Material-Organiser\StudyMaterialOrganiser\DAL\obj\Debug\net6.0\DAL.csproj.AssemblyReference.cache
+D:\Faks\3. godina\Study-Material-Organiser\StudyMaterialOrganiser\DAL\obj\Debug\net6.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Faks\3. godina\Study-Material-Organiser\StudyMaterialOrganiser\DAL\obj\Debug\net6.0\DAL.AssemblyInfoInputs.cache
+D:\Faks\3. godina\Study-Material-Organiser\StudyMaterialOrganiser\DAL\obj\Debug\net6.0\DAL.AssemblyInfo.cs
+D:\Faks\3. godina\Study-Material-Organiser\StudyMaterialOrganiser\DAL\obj\Debug\net6.0\DAL.csproj.CoreCompileInputs.cache
+D:\Faks\3. godina\Study-Material-Organiser\StudyMaterialOrganiser\DAL\obj\Debug\net6.0\DAL.dll
+D:\Faks\3. godina\Study-Material-Organiser\StudyMaterialOrganiser\DAL\obj\Debug\net6.0\refint\DAL.dll
+D:\Faks\3. godina\Study-Material-Organiser\StudyMaterialOrganiser\DAL\obj\Debug\net6.0\DAL.pdb
+D:\Faks\3. godina\Study-Material-Organiser\StudyMaterialOrganiser\DAL\obj\Debug\net6.0\DAL.genruntimeconfig.cache
+D:\Faks\3. godina\Study-Material-Organiser\StudyMaterialOrganiser\DAL\obj\Debug\net6.0\ref\DAL.dll

@@ -7,14 +7,8 @@ using System.Threading.Tasks;
 
 namespace DAL.IRepositories
 {
-    public interface IMaterialRepository
+    public interface IMaterialRepository : IRepository<Material>
     {
-        Material? GetMaterialById(int materialId);
-        Material? GetMaterialByName(string materialName);
-        void Add(Material material);
-        void Update(int id, Material data);
-        void Delete(Material material);
-        IEnumerable<Material> GetAll();
-        bool MaterialNameExists(string name);
+       
     }
 }

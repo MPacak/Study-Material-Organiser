@@ -5,35 +5,40 @@
 
 <div class="container py-4">
     <h1 class="display-6">Add Material</h1>
-    <form asp-action="Create" method="post">
+    <form asp-action="Create" method="post" enctype="multipart/form-data">
         <div class="mb-3">
             <label for="Name" class="form-label">Material Name</label>
             <input asp-for="Name" class="form-control" id="Name" required />
             <span asp-validation-for="Name" class="text-danger"></span>
         </div>
-
         <div class="mb-3">
             <label for="Description" class="form-label">Description</label>
             <textarea asp-for="Description" class="form-control" id="Description"></textarea>
             <span asp-validation-for="Description" class="text-danger"></span>
         </div>
-
         <div class="mb-3">
             <label for="Link" class="form-label">Material Link</label>
             <input asp-for="Link" class="form-control" id="Link" required />
             <span asp-validation-for="Link" class="text-danger"></span>
         </div>
-
         <div class="mb-3">
-            <label for="FilePath" class="form-label">File Path</label>
-            <input asp-for="FilePath" class="form-control" id="FilePath" required />
-            <span asp-validation-for="FilePath" class="text-danger"></span>
+            <label for="File" class="form-label">Upload File</label>
+            <input type="file" asp-for="File" class="form-control" id="File" required
+                   accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.jpg,.jpeg,.png" />
+            <span asp-validation-for="File" class="text-danger"></span>
+            <small class="form-text text-muted">Supported file types: PDF, Word, Excel, PowerPoint, JPEG, PNG</small>
         </div>
-
+       
         <div class="mb-3">
-            <label for="FolderTypeId" class="form-label">Folder Type</label>
-            <input asp-for="FolderTypeId" class="form-control" id="FolderTypeId" required />
-            <span asp-validation-for="FolderTypeId" class="text-danger"></span>
+            <label class="form-label">Tags</label>
+            <select asp-for="SelectedTagIds" class="form-select" multiple>
+                @foreach (var tag in Model.AvailableTags)
+                {
+                    <option value="@tag.Id">@tag.Name</option>
+                }
+            </select>
+            <span asp-validation-for="SelectedTagIds" class="text-danger"></span>
+            <small class="form-text text-muted">Hold Ctrl/Cmd to select multiple tags</small>
         </div>
 
         <div class="text-end">
@@ -42,3 +47,5 @@
         </div>
     </form>
 </div>
+
+

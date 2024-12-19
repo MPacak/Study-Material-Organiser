@@ -12,6 +12,9 @@ namespace DAL.IRepositories
 		IUserGroupRepository UserGroup { get; }
 		ILogRepository Log { get; }
         IUserRepository User { get; }
+        ITagRepository Tag { get; }
+        IMaterialRepository Material { get; }
+        IMaterialTagRepository MaterialTag { get; }
         void Save();
     }
 }
