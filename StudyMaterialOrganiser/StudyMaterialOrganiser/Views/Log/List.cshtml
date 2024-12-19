@@ -2,7 +2,7 @@
 
 <div>
 	
-	<form method="get" asp-action="LogList" asp-controller="Log">
+	<form method="get" asp-action="List" asp-controller="Log">
 		<button type="submit" name="pageSize" value="20" class="btn btn-primary">Show 20</button>
 		<button type="submit" name="pageSize" value="50" class="btn btn-primary">Show 50</button>
 		<button type="submit" name="pageSize" value="0" class="btn btn-primary">Show All</button>
@@ -39,7 +39,7 @@
 			@for (int i = 1; i <= ViewBag.TotalPages; i++)
 			{
 				<li class="page-item @(i == ViewBag.CurrentPage ? "active" : "")">
-					<a class="page-link" href="@Url.Action("LogList", new { page = i, pageSize = ViewBag.PageSize })">@i</a>
+					<a class="page-link" href="@Url.Action("List", new { page = i, pageSize = ViewBag.PageSize })">@i</a>
 				</li>
 			}
 		</ul>

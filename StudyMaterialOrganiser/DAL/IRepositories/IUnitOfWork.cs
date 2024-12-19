@@ -8,7 +8,9 @@ namespace DAL.IRepositories
 {
     public interface IUnitOfWork
     {
-        ILogRepository Log { get; }
+        IGroupRepository Group{ get; }
+		IUserGroupRepository UserGroup { get; }
+		ILogRepository Log { get; }
         IUserRepository User { get; }
         void Save();
     }

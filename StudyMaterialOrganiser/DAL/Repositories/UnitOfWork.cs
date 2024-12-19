@@ -16,11 +16,16 @@ namespace DAL.Repositories
         {
             _context = context;
 
-          
+            UserGroup = new UserGroupRepository(_context);
+            Group = new GroupRepository(_context);
             User = new UserRepository(_context);
             Log = new LogRepository(_context);
 
-        }   
+        }
+
+
+        public IUserGroupRepository UserGroup { get; private set; }
+		public IGroupRepository Group { get; private set; }
         public IUserRepository User { get; private set; }
         public ILogRepository Log { get; private set; }
 
