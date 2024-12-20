@@ -11,7 +11,7 @@ public partial class MaterialTag
 
     public int? MaterialId { get; set; }
 
-    public int? TagId { get; set; }
+    public int TagId { get; set; }
 
     public virtual Material Material { get; set; }
 

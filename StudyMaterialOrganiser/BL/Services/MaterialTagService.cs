@@ -53,5 +53,36 @@ namespace BL.Services
 
             return _mapper.Map<IEnumerable<MaterialTagDto>>(materialTags);
         }
+
+        public void Update(int materialId, List<int> TagIds)
+        {
+            var existingMaterial = _unitOfWork.Material
+        .GetAll(
+            filter: m => m.Idmaterial == materialId,
+            includeProperties: "MaterialTags")
+        .FirstOrDefault();
+
+            if (existingMaterial == null)
+                throw new InvalidOperationException($"Material with ID {materialId} not found");
+
+            
+            foreach (var materialTag in existingMaterial.MaterialTags.ToList())
+            {
+                _unitOfWork.MaterialTag.Delete(materialTag);
+            }
+
+            
+            foreach (var tagId in TagIds)
+            {
+                var newMaterialTag = new MaterialTag
+                {
+                    MaterialId = materialId,
+                    TagId = tagId
+                };
+                _unitOfWork.MaterialTag.Add(newMaterialTag);
+            }
+
+            _unitOfWork.Save();
+        }
     }
 }

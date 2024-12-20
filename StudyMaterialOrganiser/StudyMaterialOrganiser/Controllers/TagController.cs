@@ -21,7 +21,7 @@ namespace StudyMaterialOrganiser.Controllers
         public IActionResult Index()
         {
             var tags = _tagService.GetAll();
-            var tagVm = _mapper.Map<TagVM>(tags);
+            var tagVm = tags.Select(x => _mapper.Map<TagVM>(x));
             return View(tagVm);
         }
 

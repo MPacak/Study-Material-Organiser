@@ -2017,8 +2017,16 @@
       "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\vader\\theme.min.css"
     },
     {
+      "Id": "D:\\Faks\\3. godina\\Study-Material-Organiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\wwwroot\\uploads\\1miw15n5.1jo.docx",
+      "PackagePath": "staticwebassets\\uploads\\1miw15n5.1jo.docx"
+    },
+    {
       "Id": "D:\\Faks\\3. godina\\Study-Material-Organiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\wwwroot\\uploads\\xmdqokkp.ecl.pdf",
       "PackagePath": "staticwebassets\\uploads\\xmdqokkp.ecl.pdf"
+    },
+    {
+      "Id": "D:\\Faks\\3. godina\\Study-Material-Organiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\wwwroot\\uploads\\y1aqx1e3.fse.pdf",
+      "PackagePath": "staticwebassets\\uploads\\y1aqx1e3.fse.pdf"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.StudyMaterialOrganiser.Microsoft.AspNetCore.StaticWebAssets.props",

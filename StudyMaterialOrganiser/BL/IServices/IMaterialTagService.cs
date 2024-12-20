@@ -12,5 +12,6 @@ namespace BL.IServices
         void Create(MaterialTagDto materialTagDto);
         void DeleteByMaterialId(int materialId);
         IEnumerable<MaterialTagDto> GetByMaterialId(int materialId);
+        void Update(int materialId, List<int> TagIds);
     }
 }

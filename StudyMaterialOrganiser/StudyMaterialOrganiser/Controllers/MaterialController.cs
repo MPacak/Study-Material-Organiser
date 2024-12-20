@@ -148,21 +148,24 @@ namespace StudyMaterialOrganiser.Controllers
         // GET: MaterialController/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            var materialVm = _mapper.Map<MaterialVM>(_materialService.GetMaterialById(id));
+            return View(materialVm);
         }
 
         // POST: MaterialController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public ActionResult Delete(int id, MaterialVM materialVM)
         {
             try
             {
+                var material = _mapper.Map<MaterialDto>(materialVM);
+                _materialService.Delete(material);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(materialVM);
             }
         }
         public ActionResult Access(int id)

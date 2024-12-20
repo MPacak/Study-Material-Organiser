@@ -52,11 +52,25 @@ namespace BL.Services
             }
         }
 
-        public void Delete(MaterialDto materialdto)
+        public void Delete(MaterialDto materialDto)
         {
-            var material = _mapper.Map<Material>(materialdto);
-            _unitOfWork.Material.Delete(material);
-            _unitOfWork.Save();
+            var material = _unitOfWork.Material
+      .GetAll(
+          filter: m => m.Idmaterial == materialDto.Id,
+          includeProperties: "MaterialTags")
+      .FirstOrDefault();
+
+            if (material != null)
+            {
+                foreach (var materialTag in material.MaterialTags.ToList())
+                {
+                    _unitOfWork.MaterialTag.Delete(materialTag);
+                }
+
+                _unitOfWork.Material.Delete(material);
+
+                _unitOfWork.Save();
+            }
         }
 
         public IEnumerable<MaterialDto> GetAll()
@@ -69,10 +83,47 @@ namespace BL.Services
 
         public void Update(int id, MaterialDto data)
         {
-            
+            var existingMaterial = _unitOfWork.Material
+      .GetAll(
+          filter: m => m.Idmaterial == data.Id,
+          includeProperties: "MaterialTags")
+      .FirstOrDefault();
+
+            if (existingMaterial == null)
+                throw new InvalidOperationException($"Material with ID {data.Id} not found");
+
+
+            _mapper.Map(data, existingMaterial);
+
+
+            if (data.TagIds != null)
+            {
+                var tagsToRemove = existingMaterial.MaterialTags
+                    .Where(mt => !data.TagIds.Contains(mt.TagId))
+                    .ToList();
+
+                foreach (var tagToRemove in tagsToRemove)
+                {
+                    _unitOfWork.MaterialTag.Delete(tagToRemove);
+                }
+
+
+                var existingTagIds = existingMaterial.MaterialTags.Select(mt => mt.TagId);
+                var newTagIds = data.TagIds.Except(existingTagIds);
+
+                foreach (var tagId in newTagIds)
+                {
+                    var newMaterialTag = new MaterialTag
+                    {
+                        MaterialId = existingMaterial.Idmaterial,
+                        TagId = tagId
+                    };
+                    _unitOfWork.MaterialTag.Add(newMaterialTag);
+                }
+            }
         }
 
-        MaterialDto? IMaterialService.GetMaterialById(int materialId)
+       public MaterialDto? GetMaterialById(int materialId)
         {
             var material = _unitOfWork.Material
        .GetAll(
@@ -82,7 +133,7 @@ namespace BL.Services
             return material != null ? _mapper.Map<MaterialDto>(material) : null;
         }
 
-        MaterialDto? IMaterialService.GetMaterialByName(string materialName)
+        public MaterialDto? GetMaterialByName(string materialName)
         {
             var material = _unitOfWork.Material
                 .GetAll(

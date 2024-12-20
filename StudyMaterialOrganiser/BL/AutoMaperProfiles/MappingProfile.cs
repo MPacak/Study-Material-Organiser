@@ -21,10 +21,13 @@ namespace BL.AutoMaperProfiles
                 .ForMember(dest => dest.MaterialTags, opt => opt.Ignore());
             CreateMap<Tag, TagDto>()
            .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Idtag))
-           .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.TagName));
+           .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.TagName))
+           .ForMember(dest => dest.Groups, opt => opt.Ignore());
             CreateMap<TagDto, Tag>()
                 .ForMember(dest => dest.Idtag, opt => opt.Ignore())
-                .ForMember(dest => dest.TagName, opt => opt.MapFrom(src => src.Name));
+                .ForMember(dest => dest.TagName, opt => opt.MapFrom(src => src.Name))
+                .ForMember(dest => dest.Groups, opt => opt.Ignore())
+                .ForMember(dest => dest.MaterialTags, opt => opt.Ignore());
         }
     }
 }

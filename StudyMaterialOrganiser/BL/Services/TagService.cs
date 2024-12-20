@@ -53,13 +53,11 @@ namespace BL.Services
 
         public void Create(TagDto tagDto)
         {
-            // Validate name is not empty
             if (string.IsNullOrWhiteSpace(tagDto.Name))
             {
                 throw new ArgumentException("Tag name cannot be empty.");
             }
 
-            // Check if tag with same name already exists
             var existingTag = _unitOfWork.Tag.GetFirstOrDefault(t => t.TagName == tagDto.Name);
             if (existingTag != null)
             {
