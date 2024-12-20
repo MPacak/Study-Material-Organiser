@@ -98,6 +98,7 @@ namespace BL.Services
 
             if (data.TagIds != null)
             {
+                //ovdje bi trebalo samo pozvati update na material tag i ubaciti tagsid jer imamo ovu istu formulu tamo
                 var tagsToRemove = existingMaterial.MaterialTags
                     .Where(mt => !data.TagIds.Contains(mt.TagId))
                     .ToList();

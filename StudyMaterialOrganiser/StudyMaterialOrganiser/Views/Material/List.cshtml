@@ -1,0 +1,29 @@
+﻿@model IEnumerable<StudyMaterialOrganiser.ViewModels.MaterialVM>
+@{
+    ViewData["Title"] = "List Material";
+}
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var material in Model)
+        {
+            <tr>
+                <td>@material.Name</td>
+               
+                <td>
+                  
+                    <a asp-action="Edit" asp-route-id="@material.Id">Edit</a> |
+                    <form asp-action="Delete" asp-route-id="@material.Id" method="post" style="display:inline;">
+                        <button type="submit" class="btn btn-link">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

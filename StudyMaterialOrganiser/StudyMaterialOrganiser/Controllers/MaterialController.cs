@@ -29,10 +29,13 @@ namespace StudyMaterialOrganiser.Controllers
         // GET: MaterialController
         public ActionResult Index()
         {
+
+            return View();
+        }
+        public ActionResult List()
+        {
             var materials = _materialService.GetAll();
             var viewModels = _mapper.Map<List<MaterialVM>>(materials);
-
-           
 
             return View(viewModels);
         }
