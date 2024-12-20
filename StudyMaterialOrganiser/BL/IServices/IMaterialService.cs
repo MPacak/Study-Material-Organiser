@@ -12,7 +12,7 @@ namespace BL.IServices
         MaterialDto? GetMaterialById(int materialId);
         MaterialDto? GetMaterialByName(string materialName);
         void Create(MaterialDto material);
-        void Update(int id, MaterialDto data);
+        void Update(MaterialDto data);
         void Delete(MaterialDto material);
         IEnumerable<MaterialDto> GetAll();
        

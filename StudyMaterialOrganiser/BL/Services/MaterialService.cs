@@ -81,7 +81,7 @@ namespace BL.Services
         }
 
 
-        public void Update(int id, MaterialDto data)
+        public void Update(MaterialDto data)
         {
             var existingMaterial = _unitOfWork.Material
       .GetAll(
@@ -94,7 +94,7 @@ namespace BL.Services
 
 
             _mapper.Map(data, existingMaterial);
-
+            _unitOfWork.Save();
 
             if (data.TagIds != null)
             {
@@ -120,6 +120,7 @@ namespace BL.Services
                     };
                     _unitOfWork.MaterialTag.Add(newMaterialTag);
                 }
+                _unitOfWork.Save();
             }
         }
 

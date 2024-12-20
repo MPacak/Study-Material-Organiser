@@ -29,7 +29,7 @@ namespace BL.Services
         {
             var materialTag = _mapper.Map<MaterialTag>(materialTagDto);
             _unitOfWork.MaterialTag.Add(materialTag);
-            _unitOfWork.Save();
+          //  _unitOfWork.Save();
         }
         public void DeleteByMaterialId(int materialId)
         {
@@ -41,7 +41,7 @@ namespace BL.Services
             {
                 _unitOfWork.MaterialTag.Delete(tag);
             }
-            _unitOfWork.Save();
+          //  _unitOfWork.Save();
         }
 
         public IEnumerable<MaterialTagDto> GetByMaterialId(int materialId)
@@ -82,7 +82,7 @@ namespace BL.Services
                 _unitOfWork.MaterialTag.Add(newMaterialTag);
             }
 
-            _unitOfWork.Save();
+           // _unitOfWork.Save();
         }
     }
 }

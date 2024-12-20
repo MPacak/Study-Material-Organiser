@@ -125,23 +125,98 @@ namespace StudyMaterialOrganiser.Controllers
         }
 
         // GET: MaterialController/Edit/5
+        // GET: MaterialController/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var material = _materialService.GetMaterialById(id);
+            if (material == null)
+            {
+                return NotFound();
+            }
+
+            var materialVM = _mapper.Map<MaterialVM>(material);
+
+            materialVM.AvailableTags = AssignTags();
+
+            materialVM.SelectedTagIds = material.TagIds;
+
+            return View(materialVM);
         }
 
         // POST: MaterialController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public async Task<ActionResult> Edit(int id, MaterialVM materialVM)
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                if (id != materialVM.Id)
+                {
+                    return NotFound();
+                }
+
+                if (ModelState.IsValid)
+                {
+                    var existingMaterial = _materialService.GetMaterialById(id);
+                    if (existingMaterial == null)
+                    {
+                        return NotFound();
+                    }
+
+                    if (materialVM.File != null)
+                    {
+                        var fileType = FileTypeExtensions.GetFileTypeFromExtension(materialVM.File.FileName);
+                        if (!fileType.HasValue)
+                        {
+                            ModelState.AddModelError("File", "Invalid file type");
+                            materialVM.AvailableTags = _mapper.Map<List<TagVM>>(_tagService.GetAll().ToList());
+                            return View(materialVM);
+                        }
+
+                        var fileName = Path.GetRandomFileName() + Path.GetExtension(materialVM.File.FileName);
+                        var uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "uploads");
+                        var filePath = Path.Combine(uploadsFolder, fileName);
+
+                        using (var stream = new FileStream(filePath, FileMode.Create))
+                        {
+                            await materialVM.File.CopyToAsync(stream);
+                        }
+
+                        if (!string.IsNullOrEmpty(existingMaterial.FilePath))
+                        {
+                            var oldFilePath = Path.Combine(uploadsFolder, existingMaterial.FilePath);
+                            if (System.IO.File.Exists(oldFilePath))
+                            {
+                                System.IO.File.Delete(oldFilePath);
+                            }
+                        }
+
+                        materialVM.FilePath = fileName;
+                        materialVM.FolderTypeId = (int)fileType.Value;
+                    }
+                    else
+                    {
+
+                        materialVM.FilePath = existingMaterial.FilePath;
+                        materialVM.FolderTypeId = existingMaterial.FolderTypeId;
+                    }
+
+                    materialVM.Link = existingMaterial.Link;
+
+                    var materialDto = _mapper.Map<MaterialDto>(materialVM);
+                    _materialService.Update(materialDto);
+
+                    return RedirectToAction(nameof(Index));
+                }
+
+                materialVM.AvailableTags = AssignTags();
+                return View(materialVM);
             }
-            catch
+            catch (Exception ex)
             {
-                return View();
+                ModelState.AddModelError("", $"Error: {ex.Message}");
+                materialVM.AvailableTags = AssignTags();
+                return View(materialVM);
             }
         }
 
