@@ -23,6 +23,7 @@ namespace DAL.Repositories
             Material = new MaterialRepository(_context);
             Tag = new TagRepository(_context);
             MaterialTag = new MaterialTagRepository(_context);
+			StudyGroup = new GroupRepository(_context);
 
         }
 
@@ -35,10 +36,12 @@ namespace DAL.Repositories
         public IMaterialRepository Material { get; private set; }
         public ITagRepository Tag { get; private set; }
         public IMaterialTagRepository MaterialTag { get; private set; }
+        public IGroupRepository StudyGroup { get; private set; }
 
-       
 
-        public void Save()
+
+
+		public void Save()
         {
             _context.SaveChanges();
         }
