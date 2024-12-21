@@ -15,10 +15,7 @@ namespace BL.IServices;
         UserDto Create(UserRegistrationDto user);
         UserDto Update(int id, UserDto user);
         UserDto Delete(int id);
-        string GenerateToken(UserLoginDto request);
-
         void ChangePassword(UserPasswordChangeDto request);
-        User Authenticate(string username, string password);
         UserDto GetByName(string name);
         UserDto GetByUserName(string username);
         UserDto GetByEmail(string email);

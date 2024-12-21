@@ -26,6 +26,7 @@ builder.Services.AddSession(options =>
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
 });
+builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
@@ -45,6 +46,9 @@ builder.Services.AddScoped<ITagRepository, TagRepository>();
 builder.Services.AddScoped<IMaterialService, MaterialService>();
 builder.Services.AddScoped<IMaterialTagService, MaterialTagService>();
 builder.Services.AddScoped<ITagService, TagService>();
+builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IRoleService, RoleService>();
+builder.Services.AddScoped<IPasswordService, PasswordService>();
 
 builder.Services
     .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
