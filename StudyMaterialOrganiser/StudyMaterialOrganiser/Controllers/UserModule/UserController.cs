@@ -308,15 +308,13 @@ namespace StudyMaterialOrganiser.Controllers.UserModule
         {
 	        try
 	        {
-		        var isAuthenticated = _authService.Authenticate(request.Username, request.Password);
-		        if (isAuthenticated.Username != request.Username)
-			        throw new InvalidOperationException("Invalid credentials");
-
-		        var user = _userService.GetByName(request.Username);
+		        var user = _authService.Authenticate(request.Username, request.Password);
 		        _authService.SignIn(user.Username, user.Role, user.Id);
 
 		        _logService.Log("LogIn", $"User {request.Username} logged in");
-		        return RedirectToAction("Index", "Home");
+		        TempData["ToastMessage"] = "Successfully logged in!";
+		        TempData["ToastType"] = "success";
+				return RedirectToAction("Index", "Home");
 	        }
 	        catch (Exception ex)
 	        {
@@ -404,40 +402,13 @@ namespace StudyMaterialOrganiser.Controllers.UserModule
             try
             {
                 _userService.Update(id, user);
+                _authService.SignOut();
+          
 
-                Task.Run(async () =>
-                    await HttpContext.SignOutAsync(
-                        CookieAuthenticationDefaults.AuthenticationScheme)
-                ).GetAwaiter().GetResult();
+               var updatedUserName = _userService.GetById(id);
+            
 
-                var updatedUserName = _userService.GetById(id);
-                var claims = new List<Claim>
-            {
-                new Claim(ClaimTypes.Name, updatedUserName.Username),
-                new Claim(ClaimTypes.Role, updatedUserName.Role switch
-                {
-                    2 => "Admin",
-                    1 => "User",
-                    0 => "NonUser",
-                    _ => throw new ArgumentOutOfRangeException()
-                }), new Claim(ClaimTypes.NameIdentifier, updatedUserName.Id.ToString())
-            };
-                var claimsIdentity = new ClaimsIdentity(
-                    claims, CookieAuthenticationDefaults.AuthenticationScheme);
-
-
-                var authProperties = new AuthenticationProperties
-                {
-
-                };
-
-
-                Task.Run(async () =>
-                    await HttpContext.SignInAsync(
-                        CookieAuthenticationDefaults.AuthenticationScheme,
-                        new ClaimsPrincipal(claimsIdentity),
-                        authProperties)
-                ).GetAwaiter().GetResult();
+                _authService.SignIn(updatedUserName.Username, updatedUserName.Role, updatedUserName.Id);
 
 
                 return PartialView("_ProfileDetailsPartial", updatedUserName);

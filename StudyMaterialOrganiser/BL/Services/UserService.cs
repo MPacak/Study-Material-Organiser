@@ -40,8 +40,7 @@ public class UserService : IUserService
 
     public UserDto GetById(int id)
     {
-        var user =  _unitOfWork.User.GetFirstOrDefault(u => u.Id == id && u.IsDeleted == false);
-        if (user == null) return null;
+        var user = _unitOfWork.User.GetFirstOrDefault(u => u.Id == id && !u.IsDeleted);
         return user == null ? null : _userMapper.Map<UserDto>(user);
     }
 

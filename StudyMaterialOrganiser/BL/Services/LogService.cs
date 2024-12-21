@@ -58,7 +58,28 @@ public class LogService : ILogService
          _unitOfWork.Save();
 
     }
+    public PaginatedResultDto<LogDto> GetPaginatedLogs(int page, int pageSize)
+    {
+	    var query = _unitOfWork.Log.GetAll().OrderBy(log => log.Timestamp);
 
+	    var totalLogs = query.Count();
+	    var logsToDisplay = pageSize == 0
+		    ? query.ToList()
+		    : query.Skip((page - 1) * pageSize).Take(pageSize).ToList();
 
+	    var logDtos = _logMapper.Map<List<LogDto>>(logsToDisplay);
+
+	    return new PaginatedResultDto<LogDto>()
+	    {
+		    Items = logDtos,
+		    CurrentPage = page,
+		    PageSize = pageSize,
+		    TotalPages = pageSize == 0 ? 1 : (int)Math.Ceiling(totalLogs / (double)pageSize),
+		    TotalCount = totalLogs
+	    };
+    }
 }
+
+
+
 
