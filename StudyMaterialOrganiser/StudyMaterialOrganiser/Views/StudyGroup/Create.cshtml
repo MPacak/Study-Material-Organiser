@@ -1,0 +1,31 @@
+﻿@model DAL.Models.Group
+
+@{
+    ViewData["Title"] = "Create Study Group";
+    var tags = ViewData["Tags"] as List<SelectListItem>;
+}
+
+<h2>Create Study Group</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Name" class="form-label">Study Group Name</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="TagId" class="form-label">Tag</label>
+        <select asp-for="TagId" class="form-control">
+            <option value="">-- Select a Tag --</option>
+            @foreach (var tag in ViewData["Tags"] as List<SelectListItem>)
+            {
+                <option value="@tag.Value">@tag.Text</option>
+            }
+        </select>
+        <span asp-validation-for="TagId" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success">Create</button>
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</form>

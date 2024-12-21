@@ -1,0 +1,34 @@
+﻿@model IEnumerable<DAL.Models.Group>
+
+@{
+    ViewData["Title"] = "Study Groups";
+}
+
+<h2>Study Groups</h2>
+
+<h2>Study Groups</h2>
+
+<a asp-action="Create" class="btn btn-primary">+ Create Study Group</a>
+
+<table class="table table-striped mt-4">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Tag</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var group in Model)
+        {
+            <tr>
+                <td>@group.Name</td>
+                <td>@group.Tag?.TagName</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@group.Id" class="btn btn-secondary">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@group.Id" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

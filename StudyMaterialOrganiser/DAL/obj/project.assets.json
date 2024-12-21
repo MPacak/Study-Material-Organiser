@@ -2076,23 +2076,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\majap\\.nuget\\packages\\": {},
+    "C:\\Users\\Tegula1\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Faks\\3. godina\\Study-Material-Organiser\\StudyMaterialOrganiser\\DAL\\DAL.csproj",
+      "projectUniqueName": "C:\\Users\\Tegula1\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\DAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "D:\\Faks\\3. godina\\Study-Material-Organiser\\StudyMaterialOrganiser\\DAL\\DAL.csproj",
-      "packagesPath": "C:\\Users\\majap\\.nuget\\packages\\",
-      "outputPath": "D:\\Faks\\3. godina\\Study-Material-Organiser\\StudyMaterialOrganiser\\DAL\\obj\\",
+      "projectPath": "C:\\Users\\Tegula1\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\DAL\\DAL.csproj",
+      "packagesPath": "C:\\Users\\Tegula1\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Tegula1\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\majap\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Tegula1\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2101,7 +2101,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -2159,7 +2158,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
