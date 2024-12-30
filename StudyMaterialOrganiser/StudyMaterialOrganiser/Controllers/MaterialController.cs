@@ -94,7 +94,7 @@ namespace StudyMaterialOrganiser.Controllers
                         await materialVM.File.CopyToAsync(stream);
                     }
 
-                    materialVM.Link = GenerateShareableLink(materialVM.Id);
+                    materialVM.Link = GenerateShareableLink(materialVM.Idmaterial);
                     materialVM.FilePath = fileName;
                     materialVM.FolderTypeId = (int)fileType.Value;
                     var materialDto = _mapper.Map<MaterialDto>(materialVM);
@@ -153,7 +153,7 @@ namespace StudyMaterialOrganiser.Controllers
         {
             try
             {
-                if (id != materialVM.Id)
+                if (id != materialVM.Idmaterial)
                 {
                     return NotFound();
                 }

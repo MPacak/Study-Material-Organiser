@@ -56,7 +56,7 @@ namespace BL.Services
         {
             var material = _unitOfWork.Material
       .GetAll(
-          filter: m => m.Idmaterial == materialDto.Id,
+          filter: m => m.Idmaterial == materialDto.Idmaterial,
           includeProperties: "MaterialTags")
       .FirstOrDefault();
 
@@ -85,12 +85,12 @@ namespace BL.Services
         {
             var existingMaterial = _unitOfWork.Material
       .GetAll(
-          filter: m => m.Idmaterial == data.Id,
+          filter: m => m.Idmaterial == data.Idmaterial,
           includeProperties: "MaterialTags")
       .FirstOrDefault();
 
             if (existingMaterial == null)
-                throw new InvalidOperationException($"Material with ID {data.Id} not found");
+                throw new InvalidOperationException($"Material with ID {data.Idmaterial} not found");
 
 
             _mapper.Map(data, existingMaterial);

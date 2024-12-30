@@ -10,7 +10,7 @@ namespace BL.Models
 {
    public class MaterialDto
     {
-        public int Id { get; set; }
+        public int Idmaterial { get; set; }
         [Required]
         [StringLength(100)]
         public string Name { get; set; } = string.Empty;
