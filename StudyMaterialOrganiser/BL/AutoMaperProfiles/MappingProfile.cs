@@ -16,7 +16,8 @@ namespace BL.AutoMaperProfiles
             CreateMap<DAL.Models.User, Models.UserDto>().ReverseMap();
             CreateMap<DAL.Models.Log, Models.LogDto>().ReverseMap();
             CreateMap<Material, MaterialDto>()
-               .ForMember(dest => dest.TagIds, opt => opt.MapFrom(src => src.MaterialTags.Select(mt => mt.Tag.Idtag)));
+               .ForMember(dest => dest.TagIds, opt => opt.MapFrom(src => src.MaterialTags.Select(mt => mt.Tag.Idtag)))
+               .ForMember(dest => dest.TagNames, opt => opt.MapFrom(src => src.MaterialTags.Select(mt => mt.Tag.TagName)));
             CreateMap<MaterialDto, Material>()
                 .ForMember(dest => dest.MaterialTags, opt => opt.Ignore());
             CreateMap<Tag, TagDto>()

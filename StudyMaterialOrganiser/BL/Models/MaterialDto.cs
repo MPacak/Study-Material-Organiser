@@ -28,7 +28,7 @@ namespace BL.Models
         public int FolderTypeId { get; set; }
 
         public List<int> TagIds { get; set; } = new List<int>();
-
+        public List<string> TagNames { get; set; }  
 
     }
 }

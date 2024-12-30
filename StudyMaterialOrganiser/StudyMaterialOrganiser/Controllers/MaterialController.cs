@@ -43,7 +43,16 @@ namespace StudyMaterialOrganiser.Controllers
         // GET: MaterialController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var material = _materialService.GetMaterialById(id);
+
+            if (material == null)
+            {
+                return NotFound(); 
+            }
+            var materialVM = _mapper.Map<MaterialVM>(material);
+          
+
+            return View(materialVM);
         }
 
         // GET: MaterialController/Create
@@ -239,7 +248,7 @@ namespace StudyMaterialOrganiser.Controllers
             {
                 var material = _mapper.Map<MaterialDto>(materialVM);
                 _materialService.Delete(material);
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(List));
             }
             catch
             {
