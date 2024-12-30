@@ -32,12 +32,63 @@ namespace StudyMaterialOrganiser.Controllers
 
             return View();
         }
-        public ActionResult List()
+       /* public ActionResult List()
         {
             var materials = _materialService.GetAll();
             var viewModels = _mapper.Map<List<MaterialVM>>(materials);
 
             return View(viewModels);
+        }*/
+        public ActionResult List(string? query, int? fileType, List<int>? tagIds, int page = 1, int pageSize = 10)
+        {
+            var materialsDto = _materialService.GetAll();
+
+            var materials = materialsDto.Select(x => _mapper.Map<MaterialVM>(x));
+
+            if (!string.IsNullOrEmpty(query))
+            {
+                materials = materials.Where(m =>
+                    m.Name.Contains(query, StringComparison.OrdinalIgnoreCase) ||
+                    (m.Description != null && m.Description.Contains(query, StringComparison.OrdinalIgnoreCase)));
+            }
+
+            if (fileType.HasValue)
+            {
+                materials = materials.Where(m => m.FolderTypeId == fileType.Value);
+            }
+
+            if (tagIds != null && tagIds.Any())
+            {
+                materials = materials.Where(m =>
+                    m.SelectedTagIds.Any(tagId => tagIds.Contains(tagId)));
+            }
+
+            var totalItems = materials.Count();
+            var totalPages = (int)Math.Ceiling(totalItems / (double)pageSize);
+
+            var paginatedMaterials = materials
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToList();
+
+         /*   var materialVMs = paginatedMaterials
+                .Select(x => _mapper.Map<MaterialVM>(x))
+                .ToList();*/
+
+            var searchVM = new MaterialSearchVM
+            {
+                Materials = paginatedMaterials,
+                CurrentPage = page,
+                TotalPages = totalPages,
+                PageSize = pageSize,
+                TotalItems = totalItems,
+                Query = query,
+                FileType = fileType,
+                TagIds = tagIds,
+                AvailableTags = AssignTags()
+            };
+
+            return View(searchVM);
         }
 
         // GET: MaterialController/Details/5
@@ -250,8 +301,14 @@ namespace StudyMaterialOrganiser.Controllers
                 _materialService.Delete(material);
                 return RedirectToAction(nameof(List));
             }
-            catch
+            catch (InvalidOperationException ex)
             {
+                TempData["ErrorMessage"] = "Deletion was unsuccessful. Please try again.";
+                return View(materialVM);
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", $"Error: {ex.Message}");
                 return View(materialVM);
             }
         }

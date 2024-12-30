@@ -70,6 +70,9 @@ namespace BL.Services
                 _unitOfWork.Material.Delete(material);
 
                 _unitOfWork.Save();
+            } else
+            {
+                throw new InvalidOperationException("The material was not found");
             }
         }
 
