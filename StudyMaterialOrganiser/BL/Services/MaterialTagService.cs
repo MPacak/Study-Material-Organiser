@@ -25,10 +25,18 @@ namespace BL.Services
             _mapper = mapper;
         }
 
-        public void Create(MaterialTagDto materialTagDto)
+        public void Create(int id, List<int> tagIds)
         {
-            var materialTag = _mapper.Map<MaterialTag>(materialTagDto);
-            _unitOfWork.MaterialTag.Add(materialTag);
+            foreach (var tagId in tagIds)
+            {
+                var materialTag = new MaterialTag
+                {
+                    MaterialId = id,
+                    TagId = tagId
+                };
+                _unitOfWork.MaterialTag.Add(materialTag);
+            }
+           
           //  _unitOfWork.Save();
         }
         public void DeleteByMaterialId(int materialId)

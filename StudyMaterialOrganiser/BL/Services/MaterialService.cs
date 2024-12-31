@@ -18,15 +18,17 @@ namespace BL.Services
         private readonly IUnitOfWork _unitOfWork;
         private readonly IConfiguration _configuration;
         private readonly IMapper _mapper;
+        private readonly IMaterialTagService _materialTagService;
 
-        public MaterialService(IUnitOfWork unitOfWork, IConfiguration configuration, IMapper mapper)
+        public MaterialService(IUnitOfWork unitOfWork, IConfiguration configuration, IMapper mapper, IMaterialTagService materialTagService)
         {
             _unitOfWork = unitOfWork;
             _configuration = configuration;
             _mapper = mapper;
+            _materialTagService = materialTagService;
         }
 
-        public void Create(MaterialDto materialDto)
+        public MaterialDto Create(MaterialDto materialDto)
         {
             var material = _mapper.Map<Material>(materialDto);
             var checkMaterial= _unitOfWork.Material.GetFirstOrDefault(u => u.Name == material.Name);
@@ -36,20 +38,14 @@ namespace BL.Services
             }
 
             _unitOfWork.Material.Add(material);
+            materialDto.Idmaterial = material.Idmaterial;
             _unitOfWork.Save();
             if (materialDto.TagIds != null && materialDto.TagIds.Any())
             {
-                foreach (var tagId in materialDto.TagIds)
-                {
-                    var materialTag = new MaterialTag
-                    {
-                        MaterialId = material.Idmaterial,
-                        TagId = tagId
-                    };
-                    _unitOfWork.MaterialTag.Add(materialTag);
-                }
+                _materialTagService.Create(material.Idmaterial, materialDto.TagIds);
                 _unitOfWork.Save();
             }
+            return materialDto;
         }
 
         public void Delete(MaterialDto materialDto)
@@ -101,29 +97,7 @@ namespace BL.Services
 
             if (data.TagIds != null)
             {
-                //ovdje bi trebalo samo pozvati update na material tag i ubaciti tagsid jer imamo ovu istu formulu tamo
-                var tagsToRemove = existingMaterial.MaterialTags
-                    .Where(mt => !data.TagIds.Contains(mt.TagId))
-                    .ToList();
-
-                foreach (var tagToRemove in tagsToRemove)
-                {
-                    _unitOfWork.MaterialTag.Delete(tagToRemove);
-                }
-
-
-                var existingTagIds = existingMaterial.MaterialTags.Select(mt => mt.TagId);
-                var newTagIds = data.TagIds.Except(existingTagIds);
-
-                foreach (var tagId in newTagIds)
-                {
-                    var newMaterialTag = new MaterialTag
-                    {
-                        MaterialId = existingMaterial.Idmaterial,
-                        TagId = tagId
-                    };
-                    _unitOfWork.MaterialTag.Add(newMaterialTag);
-                }
+                _materialTagService.Update(data.Idmaterial, data.TagIds);
                 _unitOfWork.Save();
             }
         }

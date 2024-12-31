@@ -60,7 +60,8 @@ namespace StudyMaterialOrganiser.Controllers
             if (tagIds != null && tagIds.Any())
             {
                 materials = materials.Where(m =>
-                    m.SelectedTagIds.Any(tagId => tagIds.Contains(tagId)));
+                   //  m.SelectedTagIds.Any(tagId => tagIds.Contains(tagId)));
+                   m.TagIds.Any(tagId => tagIds.Contains(tagId)));
             }
 
             var totalItems = materials.Count();
@@ -71,9 +72,7 @@ namespace StudyMaterialOrganiser.Controllers
                 .Take(pageSize)
                 .ToList();
 
-         /*   var materialVMs = paginatedMaterials
-                .Select(x => _mapper.Map<MaterialVM>(x))
-                .ToList();*/
+         
 
             var searchVM = new MaterialSearchVM
             {
@@ -130,6 +129,7 @@ namespace StudyMaterialOrganiser.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Create(MaterialVM materialVM)
         {
+            //S
             materialVM.AvailableTags = AssignTags();
             try
             {
@@ -158,10 +158,16 @@ namespace StudyMaterialOrganiser.Controllers
                     materialVM.FilePath = fileName;
                     materialVM.FolderTypeId = (int)fileType.Value;
                     var materialDto = _mapper.Map<MaterialDto>(materialVM);
-                    
 
-                    _materialService.Create(materialDto);
-                    return RedirectToAction(nameof(Index));
+                    _materialService.Create(materialVM);
+                    //_materialService.Create(materialDto);
+                    return View("Confirmation", new ConfirmationVM
+                    {
+                        Message = "Material was successfully created.",
+                        ActionName = nameof(List),
+                        ControllerName = "Material",
+                        RedirectSeconds = 3
+                    });
                 }
 
                 ModelState.AddModelError("File", "No file was uploaded");
@@ -201,7 +207,7 @@ namespace StudyMaterialOrganiser.Controllers
 
             materialVM.AvailableTags = AssignTags();
 
-            materialVM.SelectedTagIds = material.TagIds;
+           // materialVM.SelectedTagIds = material.TagIds;
 
             return View(materialVM);
         }
@@ -269,10 +275,21 @@ namespace StudyMaterialOrganiser.Controllers
                     var materialDto = _mapper.Map<MaterialDto>(materialVM);
                     _materialService.Update(materialDto);
 
-                    return RedirectToAction(nameof(Index));
+                    return View("Confirmation", new ConfirmationVM
+                    {
+                        Message = "Material was successfully updated.",
+                        ActionName = nameof(List),
+                        ControllerName = "Material",
+                        RedirectSeconds = 3
+                    });
                 }
 
                 materialVM.AvailableTags = AssignTags();
+                return View(materialVM);
+            }
+            catch (InvalidOperationException ex)
+            {
+                ModelState.AddModelError("Name", "A material with this name already exists.");
                 return View(materialVM);
             }
             catch (Exception ex)
@@ -299,8 +316,15 @@ namespace StudyMaterialOrganiser.Controllers
             {
                 var material = _mapper.Map<MaterialDto>(materialVM);
                 _materialService.Delete(material);
-                return RedirectToAction(nameof(List));
+                return View("Confirmation", new ConfirmationVM
+                {
+                    Message = "Material was successfully deleted.",
+                    ActionName = nameof(List),
+                    ControllerName = "Material",
+                    RedirectSeconds = 3
+                });
             }
+              
             catch (InvalidOperationException ex)
             {
                 TempData["ErrorMessage"] = "Deletion was unsuccessful. Please try again.";
