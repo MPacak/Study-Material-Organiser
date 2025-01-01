@@ -9,6 +9,9 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using System.Text;
 using BL.AutoMaperProfiles;
 using Microsoft.IdentityModel.Tokens;
+using BL.Utilities;
+using Microsoft.AspNetCore.Razor.TagHelpers;
+using StudyMaterialOrganiser.Utilities;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -49,6 +52,10 @@ builder.Services.AddScoped<ITagService, TagService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IRoleService, RoleService>();
 builder.Services.AddScoped<IPasswordService, PasswordService>();
+
+builder.Services.AddTransient<IFileHandler, FileHandler>();
+builder.Services.AddTransient<IFileValidator, FileHandler>();
+builder.Services.AddTransient<AssignTags>();
 
 builder.Services
     .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
