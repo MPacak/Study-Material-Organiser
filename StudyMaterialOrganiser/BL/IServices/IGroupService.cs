@@ -17,7 +17,7 @@ public interface IGroupService
 	GroupDto? Update(int id, GroupDto project);
 	GroupDto? Delete(int id);
 	int GetCount();
-	IEnumerable<GroupDto> GetFiltered(IEnumerable<GroupDto> projects, string? filterBy, string? filter);
+
 	
 
 
