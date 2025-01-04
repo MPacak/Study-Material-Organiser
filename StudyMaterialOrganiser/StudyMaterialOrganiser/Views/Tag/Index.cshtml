@@ -1,6 +1,7 @@
 ﻿@model IEnumerable<StudyMaterialOrganiser.ViewModels.TagVM>
 
 <h1>Tags</h1>
+<a asp-action="Create" class="mt-1 btn btn-primary">+Create New Tag</a>
 <table class="table">
     <thead>
         <tr>
@@ -13,16 +14,14 @@
         @foreach (var tag in Model)
         {
             <tr>
-                
                 <td>@tag.Name</td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@tag.Id">Edit</a> |
+                    <a asp-action="Edit" asp-route-id="@tag.Id" class="btn btn-secondary">Edit</a>
                     <form asp-action="Delete" asp-route-id="@tag.Id" method="post" style="display:inline;">
-                        <button type="submit" class="btn btn-link">Delete</button>
+                        <button type="submit" class="btn btn-danger">Delete</button>
                     </form>
                 </td>
             </tr>
         }
     </tbody>
 </table>
-<a asp-action="Create" class="btn btn-primary">Create New Tag</a>
