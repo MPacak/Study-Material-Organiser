@@ -28,7 +28,9 @@
         <div class="text-end mt-4">
             <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model.Idmaterial" class="btn btn-primary">
                 <i class="bi bi-pencil"></i> Edit
-               
+                <a asp-action="ShareWithUsers" asp-controller="Material" asp-route-id="@Model.Idmaterial" class="btn btn-secondary">
+                    <i class="bi bi-share"></i> Share
+                </a>
                    
             </a>
             <a class="btn btn-primary" asp-action="List" class="btn btn-outline-primary">Back to the list</a>

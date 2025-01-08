@@ -13,6 +13,9 @@ using System.Threading.Tasks;
 using BL.Models;
 using DAL.Models;
 using StudyMaterialOrganiser.Utilities;
+using Microsoft.VisualBasic.FileIO;
+using BL.Services;
+using System.Xml.Linq;
 
 namespace StudyMaterialOrganiser.Controllers
 {
@@ -24,22 +27,22 @@ namespace StudyMaterialOrganiser.Controllers
         private readonly AssignTags _assignTags;
         private readonly IFileHandler _fileHandler;
         private readonly IFileValidator _fileValidator;
+        private readonly BaseFileHandler _binaryFileHandler;
+        private readonly IUserService _userService;
 
-        public MaterialController(
-            IMaterialService materialService,
-            IMapper mapper,
-            IWebHostEnvironment webHostEnvironment,
-            AssignTags assignTags,
-            IFileHandler fileHandler,
-            IFileValidator fileValidator)
+        public MaterialController(IMaterialService materialService, IMapper mapper, IWebHostEnvironment webHostEnvironment, AssignTags assignTags, IFileHandler fileHandler, IFileValidator fileValidator, BaseFileHandler basefileHandler, IUserService userService)
         {
             _materialService = materialService;
             _mapper = mapper;
             _webHostEnvironment = webHostEnvironment;
             _assignTags = assignTags;
-            _fileHandler = fileHandler;
+            this._fileHandler = fileHandler;
             _fileValidator = fileValidator;
+            this._binaryFileHandler = basefileHandler;
+            _userService = userService;
         }
+
+
 
         // GET: MaterialController
         public ActionResult Index()
@@ -69,6 +72,8 @@ namespace StudyMaterialOrganiser.Controllers
                 materials = materials.Where(m =>
                     m.TagIds.Any(tagId => tagIds.Contains(tagId)));
             }
+            
+
 
             var totalItems = materials.Count();
             var totalPages = (int)Math.Ceiling(totalItems / (double)pageSize);
@@ -77,6 +82,8 @@ namespace StudyMaterialOrganiser.Controllers
                 .Skip((page - 1) * pageSize)
                 .Take(pageSize)
                 .ToList();
+
+            var message = totalItems == 0 ? "No materials found matching the provided filters." : null;
 
             var searchVM = new MaterialSearchVM
             {
@@ -88,7 +95,8 @@ namespace StudyMaterialOrganiser.Controllers
                 Query = query,
                 FileType = fileType,
                 TagIds = tagIds,
-                AvailableTags = _assignTags.AssignTag()
+                AvailableTags = _assignTags.AssignTag(),
+                NotificationMessage = message
             };
 
             return View(searchVM);
@@ -111,6 +119,7 @@ namespace StudyMaterialOrganiser.Controllers
         // GET: MaterialController/Create
         public ActionResult Create()
         {
+
             var viewModel = new MaterialVM
             {
                 AvailableTags = _assignTags.AssignTag()
@@ -134,10 +143,14 @@ namespace StudyMaterialOrganiser.Controllers
                         return View(materialVM);
                     }
 
-                    var uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "uploads");
-                    Directory.CreateDirectory(uploadsFolder);
+                   // var uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "uploads");
+                  // Directory.CreateDirectory(uploadsFolder);
+                    var binaryStoragePath = Path.Combine(_webHostEnvironment.WebRootPath, "binary_storage");
+                    Directory.CreateDirectory(binaryStoragePath);
 
-                    materialVM.FilePath = _fileHandler.SaveFile(materialVM.File, uploadsFolder);
+                   // materialVM.FilePath = _fileHandler.SaveFile(materialVM.File, uploadsFolder);
+                    materialVM.FilePath = _binaryFileHandler.SaveFile(materialVM.File, binaryStoragePath);
+                    materialVM.FolderTypeId = _binaryFileHandler.GetFileTypeId(materialVM.File);
                     materialVM.Link = GenerateShareableLink(materialVM.Idmaterial);
 
                     _materialService.Create(materialVM);
@@ -297,7 +310,59 @@ namespace StudyMaterialOrganiser.Controllers
                 return View(materialVM);
             }
         }
+        public IActionResult ShareWithUsers(int id, string searchTerm = "")
+        {
+            var material = _materialService.GetMaterialById(id);
+            if (material == null)
+            {
+                return NotFound();
+            }
 
+            var users = string.IsNullOrEmpty(searchTerm)
+                ? _userService.GetAll()
+                : _userService.SearchUsers(builder =>
+            builder.FilterByName(searchTerm));
+
+            var viewModel = new ShareWithUsersViewModel
+            {
+                MaterialId = material.Idmaterial,
+                MaterialLink = material.Link, 
+                SearchTerm = searchTerm,
+                Users = users.Select(u => new UserShareViewModel
+                {
+                    Id = u.Id,
+                    FirstName = u.FirstName,
+                    LastName = u.LastName,
+                    Email = u.Email
+                }).ToList()
+            };
+
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        public IActionResult SendShareEmail(int materialId, int userId)
+        {
+            try
+            {
+                var material = _materialService.GetMaterialById(materialId);
+                var user = _userService.GetById(userId);
+
+                if (material == null || user == null)
+                {
+                    return Json(new { success = false, message = "Material or user not found." });
+                }
+
+                // Mock email sending - in production, implement actual email service
+                // _emailService.SendMaterialLink(user.Email, material.Link);
+
+                return Json(new { success = true, message = "Link shared successfully!" });
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = "Failed to share link." });
+            }
+        }
         public ActionResult Access(int id)
         {
             try
@@ -318,9 +383,8 @@ namespace StudyMaterialOrganiser.Controllers
 
 
         }
-
-
-    } } 
+    }
+} 
 
 /*namespace StudyMaterialOrganiser.Controllers
 {

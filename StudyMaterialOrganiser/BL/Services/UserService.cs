@@ -1,9 +1,11 @@
 ﻿using AutoMapper;
+using BL.Builder;
 using BL.IServices;
 using BL.Models;
 using BL.Security;
 using DAL.IRepositories;
 using DAL.Models;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
@@ -29,7 +31,12 @@ public class UserService : IUserService
         _userMapper = userMapper;
         _authService = authService;
     }
-
+    public IEnumerable<UserDto> SearchUsers(Func<UserSearchQueryBuilder, UserSearchQueryBuilder> buildQuery)
+    {
+        var builder = new UserSearchQueryBuilder(_unitOfWork, _userMapper);
+        var query = buildQuery(builder);
+        return query.BuildDto();
+    }
     public ICollection<UserDto> GetAll()
     {
 		var allUsers =  _unitOfWork.User.GetAll(u => u.IsDeleted == false);

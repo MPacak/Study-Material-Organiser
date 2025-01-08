@@ -6,7 +6,7 @@ namespace StudyMaterialOrganiser.ViewModels
 {
     public class MaterialVM : MaterialDto
     {
-       
+
         public string FolderTypeName => Enum.GetName(typeof(FileType), FolderTypeId) ?? "Unknown";
         [Required]
         public IFormFile File { get; set; }

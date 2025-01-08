@@ -56,6 +56,8 @@ builder.Services.AddScoped<IPasswordService, PasswordService>();
 builder.Services.AddTransient<IFileHandler, FileHandler>();
 builder.Services.AddTransient<IFileValidator, FileHandler>();
 builder.Services.AddTransient<AssignTags>();
+builder.Services.AddScoped<BaseFileHandler, BinaryFileHandler>();
+builder.Services.AddScoped<IMaterialFactory, MaterialFactory>();
 
 builder.Services
     .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

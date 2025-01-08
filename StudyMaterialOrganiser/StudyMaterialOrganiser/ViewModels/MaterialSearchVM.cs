@@ -14,6 +14,7 @@ namespace StudyMaterialOrganiser.ViewModels
         public List<int>? TagIds { get; set; }
 
         public List<TagVM>? AvailableTags { get; set; }
+        public string? NotificationMessage { get; set; }
         public Dictionary<int, string> AvailableFileTypes =>
             Enum.GetValues(typeof(FileType))
                 .Cast<FileType>()

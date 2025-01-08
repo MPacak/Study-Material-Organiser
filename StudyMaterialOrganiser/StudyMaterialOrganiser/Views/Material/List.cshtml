@@ -28,7 +28,12 @@
             </div>
         </div>
     </form>
-
+    @if (!string.IsNullOrEmpty(Model.NotificationMessage))
+    {
+        <div class="alert alert-warning">
+            @Model.NotificationMessage
+        </div>
+    }
     <div class="table-responsive">
         <table class="table">
             <thead>
