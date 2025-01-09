@@ -155,13 +155,13 @@ namespace StudyMaterialOrganiser.Controllers
 
                     _materialService.Create(materialVM);
 
-                    return View("Confirmation", new ConfirmationVM
-                    {
-                        Message = "Material was successfully created.",
-                        ActionName = nameof(List),
-                        ControllerName = "Material",
-                        RedirectSeconds = 3
-                    });
+                    var confirmation = ConfirmationManager.GetInstance().CreateConfirmation(
+        "Material was successfully created.",
+        nameof(List),
+        "Material",
+        3
+    );
+                    return View("Confirmation", confirmation);
                 }
 
                 ModelState.AddModelError("File", "No file was uploaded");
@@ -353,7 +353,7 @@ namespace StudyMaterialOrganiser.Controllers
                     return Json(new { success = false, message = "Material or user not found." });
                 }
 
-                // Mock email sending - in production, implement actual email service
+                
                 // _emailService.SendMaterialLink(user.Email, material.Link);
 
                 return Json(new { success = true, message = "Link shared successfully!" });
