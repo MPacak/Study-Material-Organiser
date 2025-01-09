@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using BL.IServices;
 using BL.Models;
+using BL.Utilities;
 using DAL.IRepositories;
 using DAL.Models;
 using Microsoft.Extensions.Configuration;
@@ -25,17 +26,17 @@ public class LogService : ILogService
         _configuration = configuration;
     }
 
-    public ICollection<LogDto> GetLastN(int n)
-    {
-        var logs =  _unitOfWork.Log.GetAll()
-            .OrderByDescending(log => log.Timestamp)
-            .Take(n)
-            .Select(log => _logMapper.Map<LogDto>(log))
-            .ToList();
-        return logs;
-    }
+	public ICollection<LogDto> GetLastN(int n)
+	{
+		var logs = _unitOfWork.Log.GetAll()
+			.OrderByDescending(log => log.Timestamp)
+			.Take(n)
+			.ToList();
 
-    public IEnumerable<Log> GetAll()
+		return LogAdapter.ToLogDtoList(logs).ToList();
+	}
+
+	public IEnumerable<Log> GetAll()
     {
 	    var logs =_unitOfWork.Log.GetAll();
         return logs;
@@ -58,26 +59,26 @@ public class LogService : ILogService
          _unitOfWork.Save();
 
     }
-    public PaginatedResultDto<LogDto> GetPaginatedLogs(int page, int pageSize)
-    {
-	    var query = _unitOfWork.Log.GetAll().OrderBy(log => log.Timestamp);
+	public PaginatedResultDto<LogDto> GetPaginatedLogs(int page, int pageSize)
+	{
+		var query = _unitOfWork.Log.GetAll().OrderBy(log => log.Timestamp);
 
-	    var totalLogs = query.Count();
-	    var logsToDisplay = pageSize == 0
-		    ? query.ToList()
-		    : query.Skip((page - 1) * pageSize).Take(pageSize).ToList();
+		var totalLogs = query.Count();
+		var logsToDisplay = pageSize == 0
+			? query.ToList()
+			: query.Skip((page - 1) * pageSize).Take(pageSize).ToList();
 
-	    var logDtos = _logMapper.Map<List<LogDto>>(logsToDisplay);
+		var logDtos = LogAdapter.ToLogDtoList(logsToDisplay).ToList();
 
-	    return new PaginatedResultDto<LogDto>()
-	    {
-		    Items = logDtos,
-		    CurrentPage = page,
-		    PageSize = pageSize,
-		    TotalPages = pageSize == 0 ? 1 : (int)Math.Ceiling(totalLogs / (double)pageSize),
-		    TotalCount = totalLogs
-	    };
-    }
+		return new PaginatedResultDto<LogDto>
+		{
+			Items = logDtos,
+			CurrentPage = page,
+			PageSize = pageSize,
+			TotalPages = pageSize == 0 ? 1 : (int)Math.Ceiling(totalLogs / (double)pageSize),
+			TotalCount = totalLogs
+		};
+	}
 }
 
 

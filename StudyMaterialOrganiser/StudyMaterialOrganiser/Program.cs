@@ -43,7 +43,8 @@ builder.Services.AddScoped<ILogService, LogService>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<ILogRepository, LogRepository>();
-
+builder.Services.AddScoped<IRoleApprovalStrategy, DefaultRoleApprovalStrategy>();
+builder.Services.AddScoped<IRoleApprovalStrategy, AdminRoleApprovalStrategy>();
 builder.Services.AddScoped<IMaterialRepository, MaterialRepository>();
 builder.Services.AddScoped<IMaterialTagRepository, MaterialTagRepository>();
 builder.Services.AddScoped<ITagRepository, TagRepository>();

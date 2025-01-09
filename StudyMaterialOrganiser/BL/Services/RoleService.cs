@@ -1,4 +1,5 @@
 ﻿using BL.IServices;
+using BL.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,27 +8,28 @@ using System.Threading.Tasks;
 
 namespace BL.Services
 {
-	public class RoleService : IRoleService
+    public class RoleService : IRoleService
 	{
+		private readonly IRoleApprovalStrategy _roleApprovalStrategy;
+
+		public RoleService(IRoleApprovalStrategy roleApprovalStrategy)
+		{
+			_roleApprovalStrategy = roleApprovalStrategy;
+		}
+
 		public bool CanApproveRole(int? currentRole)
 		{
-			return currentRole < 1;
+			return _roleApprovalStrategy.CanApprove(currentRole);
 		}
 
 		public bool CanDisapproveRole(int? currentRole)
 		{
-			return currentRole > 0;
+			return _roleApprovalStrategy.CanDisapprove(currentRole);
 		}
 
-		public int GetApprovedRole(int? currentRole)
-		{
-			return 1;
-		}
+		public int GetApprovedRole(int? currentRole) => 1;
 
-		public int GetDisapprovedRole(int? currentRole)
-		{
-			return 0;
-		}
+		public int GetDisapprovedRole(int? currentRole) => 0;
 	}
 
 }
