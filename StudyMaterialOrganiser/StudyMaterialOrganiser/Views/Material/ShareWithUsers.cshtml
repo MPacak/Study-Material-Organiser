@@ -111,17 +111,17 @@
                 .then(data => {
                     if (!data.success) {
                         alert('Failed to set permission: ' + data.message);
-                        // Reset to previous value
+                  
                         const select = document.querySelector(`select[data-user-id="${userId}"]`);
                         select.value = select.dataset.currentPermission;
                     } else {
                         const select = document.querySelector(`select[data-user-id="${userId}"]`);
-                        select.dataset.currentPermission = permission; // Update current permission
+                        select.dataset.currentPermission = permission; 
                     }
                 })
                 .catch(error => {
                     alert('Error setting permission');
-                    // Reset to previous value
+                 
                     const select = document.querySelector(`select[data-user-id="${userId}"]`);
                     select.value = select.dataset.currentPermission;
                 });
@@ -132,7 +132,7 @@
             const permission = permissionSelect.value;
 
             if (confirm(`Send material link to ${userName} with ${permission} permission?`)) {
-                // First set the permission
+            
                 fetch('/Material/SetPermission', {
                     method: 'POST',
                     headers: {
@@ -144,7 +144,7 @@
                 .then(response => response.json())
                 .then(data => {
                     if (data.success) {
-                        // After setting permission, send the share email
+                     
                         return fetch('/Material/SendShareEmail', {
                             method: 'POST',
                             headers: {

@@ -23,18 +23,17 @@ namespace BL.Utilities
 
         public bool CanAccessMaterial(int materialId, int userId, string permissionType)
         {
-            // Check in-memory permissions first
+            
             if (_permissions.TryGetValue(materialId, out var userPermissions) &&
                 userPermissions.TryGetValue(userId, out var permission))
             {
-                // If user has edit permission, they can also view
+            
                 if (permission == "edit" && permissionType == "view")
                     return true;
 
                 return permission == permissionType;
             }
 
-            // If no in-memory permission found, return false
             return false;
         }
 
@@ -67,19 +66,18 @@ namespace BL.Utilities
 
         public void AssignPermission(int materialId, int userId, string permissionType)
         {
-            // Validate permission type
+       
             if (permissionType != "view" && permissionType != "edit")
             {
                 throw new ArgumentException("Invalid permission type. Must be 'view' or 'edit'.");
             }
 
-            // Ensure the material dictionary exists
             if (!_permissions.ContainsKey(materialId))
             {
                 _permissions[materialId] = new Dictionary<int, string>();
             }
 
-            // Set or update the permission
+
             _permissions[materialId][userId] = permissionType;
         }
 
