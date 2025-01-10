@@ -60,6 +60,8 @@ builder.Services.AddTransient<IFileValidator, FileHandler>();
 builder.Services.AddTransient<AssignTags>();
 builder.Services.AddScoped<BaseFileHandler, BinaryFileHandler>();
 builder.Services.AddScoped<IMaterialFactory, MaterialFactory>();
+builder.Services.AddScoped<IMaterialAccessService, MaterialAccessService>();
+
 
 builder.Services
     .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

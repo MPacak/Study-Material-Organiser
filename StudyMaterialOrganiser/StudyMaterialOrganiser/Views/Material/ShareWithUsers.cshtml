@@ -37,6 +37,7 @@
                             <th>First Name</th>
                             <th>Last Name</th>
                             <th>Email</th>
+                            <th>Permission</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -48,7 +49,28 @@
                                 <td>@user.LastName</td>
                                 <td>@user.Email</td>
                                 <td>
-                                    <button class="btn btn-primary btn-sm"
+                                    <select class="form-select form-select-sm permission-select"
+                                            data-user-id="@user.Id"
+                                            data-current-permission="@user.Permission">
+                                        @if (user.Permission == "view")
+                                        {
+                                            <option value="view" selected>View</option>
+                                            <option value="edit">Edit</option>
+                                        }
+                                        else if (user.Permission == "edit")
+                                        {
+                                            <option value="view">View</option>
+                                            <option value="edit" selected>Edit</option>
+                                        }
+                                        else
+                                        {
+                                            <option value="view">View</option>
+                                            <option value="edit">Edit</option>
+                                        }
+                                    </select>
+                                </td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm share-btn"
                                             onclick="shareWithUser(@Model.MaterialId, @user.Id, '@user.FirstName')">
                                         <i class="bi bi-envelope"></i> Share
                                     </button>
@@ -75,27 +97,77 @@
             setTimeout(() => button.innerHTML = originalText, 2000);
         }
 
+
+        function setPermission(materialId, userId, permission) {
+            fetch('/Material/SetPermission', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]').value
+                },
+                body: JSON.stringify({ materialId, userId, permission })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (!data.success) {
+                        alert('Failed to set permission: ' + data.message);
+                        // Reset to previous value
+                        const select = document.querySelector(`select[data-user-id="${userId}"]`);
+                        select.value = select.dataset.currentPermission;
+                    } else {
+                        const select = document.querySelector(`select[data-user-id="${userId}"]`);
+                        select.dataset.currentPermission = permission; // Update current permission
+                    }
+                })
+                .catch(error => {
+                    alert('Error setting permission');
+                    // Reset to previous value
+                    const select = document.querySelector(`select[data-user-id="${userId}"]`);
+                    select.value = select.dataset.currentPermission;
+                });
+        }
+
         function shareWithUser(materialId, userId, userName) {
-            if (confirm(`Send material link to ${userName}?`)) {
-                fetch('/Material/SendShareEmail', {
+            const permissionSelect = document.querySelector(`select[data-user-id="${userId}"]`);
+            const permission = permissionSelect.value;
+
+            if (confirm(`Send material link to ${userName} with ${permission} permission?`)) {
+                // First set the permission
+                fetch('/Material/SetPermission', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                         'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]').value
                     },
-                    body: JSON.stringify({ materialId, userId })
+                    body: JSON.stringify({ materialId, userId, permission })
                 })
-                    .then(response => response.json())
-                    .then(data => {
-                        if (data.success) {
-                            alert('Link shared successfully!');
-                        } else {
-                            alert('Failed to share link: ' + data.message);
-                        }
-                    })
-                    .catch(error => {
-                        alert('Error sharing link');
-                    });
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        // After setting permission, send the share email
+                        return fetch('/Material/SendShareEmail', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]').value
+                            },
+                            body: JSON.stringify({ materialId, userId })
+                        });
+                    } else {
+                        throw new Error('Failed to set permission');
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert('Link shared successfully!');
+                    } else {
+                        alert('Failed to share link: ' + data.message);
+                    }
+                })
+                .catch(error => {
+                    alert('Error sharing link');
+                });
             }
         }
     </script>

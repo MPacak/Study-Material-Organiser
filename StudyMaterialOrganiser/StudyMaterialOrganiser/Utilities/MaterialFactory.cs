@@ -11,10 +11,14 @@ namespace StudyMaterialOrganiser.Utilities
 
         public int GetFolderTypeId(string folderTypeName)
         {
-            if (Enum.TryParse<FileType>(folderTypeName, out var folderType))
+
+            var fileType = FileTypeExtensions.GetFileTypeFromExtension(folderTypeName);
+
+            if (fileType.HasValue)
             {
-                return (int)folderType;
+                return (int)fileType.Value; 
             }
+
             throw new ArgumentException($"Invalid FolderTypeName: {folderTypeName}");
         }
     }
