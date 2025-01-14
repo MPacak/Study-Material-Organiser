@@ -15,7 +15,6 @@ namespace DAL.IRepositories
         ITagRepository Tag { get; }
         IMaterialRepository Material { get; }
         IMaterialTagRepository MaterialTag { get; }
-        IMaterialUserRepository MaterialUser { get; }
         void Save();
     }
 }

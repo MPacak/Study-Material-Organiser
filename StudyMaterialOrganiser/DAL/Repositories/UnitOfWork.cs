@@ -24,7 +24,7 @@ namespace DAL.Repositories
             Tag = new TagRepository(_context);
             MaterialTag = new MaterialTagRepository(_context);
 			StudyGroup = new GroupRepository(_context);
-            MaterialUser = new MaterialUserRepository(_context);
+          
         }
 
 
@@ -38,7 +38,7 @@ namespace DAL.Repositories
         public IMaterialTagRepository MaterialTag { get; private set; }
         public IGroupRepository StudyGroup { get; private set; }
 
-        public IMaterialUserRepository MaterialUser { get; private set; }
+
 
 
 		public void Save()
