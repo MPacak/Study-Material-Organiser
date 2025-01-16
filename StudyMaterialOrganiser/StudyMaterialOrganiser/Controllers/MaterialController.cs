@@ -45,11 +45,6 @@ namespace StudyMaterialOrganiser.Controllers
 
 
 
-        // GET: MaterialController
-        public ActionResult Index()
-        {
-            return View();
-        }
 
         public ActionResult List(string? query, int? fileType, List<int>? tagIds, int page = 1, int pageSize = 10)
         {
@@ -125,6 +120,7 @@ namespace StudyMaterialOrganiser.Controllers
             {
                 AvailableTags = _assignTags.AssignTag()
             };
+           
             return View(viewModel);
         }
 

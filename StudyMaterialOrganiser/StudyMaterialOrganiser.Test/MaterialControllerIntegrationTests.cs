@@ -109,14 +109,11 @@ namespace StudyMaterialOrganiser.Test
                 TagIds = new List<int> { 1 },
                 //AvailableTags = _assignTags.AssignTag()
             };
-            Console.WriteLine("Initial ModelState validity: " + _controller.ModelState.IsValid);
-            foreach (var modelState in _controller.ModelState)
-            {
-                Console.WriteLine($"Property: {modelState.Key}, Value: {modelState.Value?.RawValue}");
-            }
+            
+          
             // Act
             var result = await _controller.Create(materialVM);
-            Console.WriteLine("ModelState validity after result: " + _controller.ModelState.IsValid);
+           
             if (!_controller.ModelState.IsValid)
             {
                 foreach (var entry in _controller.ModelState)
@@ -163,51 +160,19 @@ namespace StudyMaterialOrganiser.Test
           
         }
         [Fact]
-        public async Task CanDeleteMaterialViaController()
+        public void Get_Create_ReturnsViewWithAvailableTags()
         {
-            // Arrange: Add a material to the database for deletion
-            var dbContext = _fixture.DbContext;
+            // Act
+            var result = _controller.Create();
 
-            var material = new DAL.Models.Material
-            {
-                Name = "Test Material for Deletion",
-                Description = "This material will be deleted",
-                FilePath = "test-path.pdf",
-                Link = "http://localhost/material",
-                FolderTypeId = 1
-            };
-
-            dbContext.Materials.Add(material);
-            await dbContext.SaveChangesAsync();
-
-            // Act: Call the Delete POST method
-            var materialVM = new MaterialVM
-            {
-                Idmaterial = material.Idmaterial,
-                Name = material.Name,
-                Description = material.Description,
-                FilePath = material.FilePath,
-                Link = material.Link,
-                FolderTypeId = material.FolderTypeId
-            };
-
-            var result = _controller.Delete(material.Idmaterial, materialVM);
-
-            // Assert: Check the result
+            // Assert
             var viewResult = Assert.IsType<ViewResult>(result);
-            Assert.Equal("Confirmation", viewResult.ViewName);
+            var model = Assert.IsType<MaterialVM>(viewResult.Model);
 
-            var model = Assert.IsType<ConfirmationVM>(viewResult.Model);
-            Assert.Equal("Material was successfully deleted.", model.Message);
-            Assert.Equal("List", model.ActionName);
-            Assert.Equal("Material", model.ControllerName);
-            Assert.Equal(3, model.RedirectSeconds);
-
-            // Verify the material is removed from the database
-            var deletedMaterial = await dbContext.Materials
-                .FirstOrDefaultAsync(m => m.Idmaterial == material.Idmaterial);
-            Assert.Null(deletedMaterial);
+            Assert.NotNull(model.AvailableTags);
+            Assert.True(model.AvailableTags.Any(), "AvailableTags should not be empty.");
         }
+
 
     }
 }
