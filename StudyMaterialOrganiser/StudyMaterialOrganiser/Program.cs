@@ -58,6 +58,7 @@ builder.Services.AddScoped<IPasswordService, PasswordService>();
 
 builder.Services.AddTransient<AssignTags>();
 builder.Services.AddScoped<BaseFileHandler, BinaryFileHandler>();
+builder.Services.AddScoped<IBinaryFileHandler, BinaryFileHandler>();
 builder.Services.AddScoped<IMaterialFactory, MaterialFactory>();
 builder.Services.AddScoped<IMaterialAccessService, MaterialAccessService>();
 
