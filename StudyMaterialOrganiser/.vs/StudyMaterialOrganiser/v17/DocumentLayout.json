@@ -1,298 +1,42 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\",
+  "WorkspaceRootPath": "C:\\Users\\mario\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\studymaterialorganiser\\controllers\\usermodule\\groupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\controllers\\usermodule\\groupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\studymaterialorganiser\\controllers\\usermodule\\logcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\controllers\\usermodule\\logcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\studymaterialorganiser\\controllers\\usermodule\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\controllers\\usermodule\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\studymaterialorganiser\\controllers\\materialcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\controllers\\materialcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\studymaterialorganiser\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\studymaterialorganiser\\controllers\\usermodule\\usergroupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\controllers\\usermodule\\usergroupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E9FB447-E793-4CD9-BBBB-7BF470900C54}|BL\\BL.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\bl\\services\\groupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E9FB447-E793-4CD9-BBBB-7BF470900C54}|BL\\BL.csproj|solutionrelative:bl\\services\\groupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E9FB447-E793-4CD9-BBBB-7BF470900C54}|BL\\BL.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\bl\\iservices\\igroupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E9FB447-E793-4CD9-BBBB-7BF470900C54}|BL\\BL.csproj|solutionrelative:bl\\iservices\\igroupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E9FB447-E793-4CD9-BBBB-7BF470900C54}|BL\\BL.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\bl\\services\\usergroupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E9FB447-E793-4CD9-BBBB-7BF470900C54}|BL\\BL.csproj|solutionrelative:bl\\services\\usergroupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E9FB447-E793-4CD9-BBBB-7BF470900C54}|BL\\BL.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\bl\\iservices\\ilogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E9FB447-E793-4CD9-BBBB-7BF470900C54}|BL\\BL.csproj|solutionrelative:bl\\iservices\\ilogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E9FB447-E793-4CD9-BBBB-7BF470900C54}|BL\\BL.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\bl\\iservices\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E9FB447-E793-4CD9-BBBB-7BF470900C54}|BL\\BL.csproj|solutionrelative:bl\\iservices\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E9FB447-E793-4CD9-BBBB-7BF470900C54}|BL\\BL.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\bl\\iservices\\iusergroupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E9FB447-E793-4CD9-BBBB-7BF470900C54}|BL\\BL.csproj|solutionrelative:bl\\iservices\\iusergroupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E9FB447-E793-4CD9-BBBB-7BF470900C54}|BL\\BL.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\bl\\models\\usergroupdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E9FB447-E793-4CD9-BBBB-7BF470900C54}|BL\\BL.csproj|solutionrelative:bl\\models\\usergroupdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E9FB447-E793-4CD9-BBBB-7BF470900C54}|BL\\BL.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\bl\\models\\groupdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E9FB447-E793-4CD9-BBBB-7BF470900C54}|BL\\BL.csproj|solutionrelative:bl\\models\\groupdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E9FB447-E793-4CD9-BBBB-7BF470900C54}|BL\\BL.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\bl\\models\\logdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E9FB447-E793-4CD9-BBBB-7BF470900C54}|BL\\BL.csproj|solutionrelative:bl\\models\\logdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\studymaterialorganiser\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\dal\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|solutionrelative:dal\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\dal\\irepositories\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|solutionrelative:dal\\irepositories\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\dal\\irepositories\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|solutionrelative:dal\\irepositories\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\dal\\repositories\\usergrouprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|solutionrelative:dal\\repositories\\usergrouprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\dal\\irepositories\\igrouprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|solutionrelative:dal\\irepositories\\igrouprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\dal\\irepositories\\ilogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|solutionrelative:dal\\irepositories\\ilogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\dal\\irepositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|solutionrelative:dal\\irepositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\dal\\irepositories\\iusergrouprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|solutionrelative:dal\\irepositories\\iusergrouprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\dal\\irepositories\\itagrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|solutionrelative:dal\\irepositories\\itagrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\dal\\irepositories\\imaterialrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|solutionrelative:dal\\irepositories\\imaterialrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\dal\\repositories\\grouprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|solutionrelative:dal\\repositories\\grouprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\dal\\repositories\\logrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|solutionrelative:dal\\repositories\\logrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\dal\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|solutionrelative:dal\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\dal\\models\\group.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|solutionrelative:dal\\models\\group.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\dal\\models\\log.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|solutionrelative:dal\\models\\log.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\studymaterialorganiser\\views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\studymaterialorganiser\\views\\shared\\_layoutuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\views\\shared\\_layoutuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\studymaterialorganiser\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\studymaterialorganiser\\views\\log\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\views\\log\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E9FB447-E793-4CD9-BBBB-7BF470900C54}|BL\\BL.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\bl\\services\\logservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E9FB447-E793-4CD9-BBBB-7BF470900C54}|BL\\BL.csproj|solutionrelative:bl\\services\\logservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\studymaterialorganiser\\views\\user\\_userlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\views\\user\\_userlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\studymaterialorganiser\\automapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\automapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E9FB447-E793-4CD9-BBBB-7BF470900C54}|BL\\BL.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\bl\\automaperprofiles\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0E9FB447-E793-4CD9-BBBB-7BF470900C54}|BL\\BL.csproj|c:\\users\\mario\\documents\\github\\study-material-organiser\\studymaterialorganiser\\bl\\automaperprofiles\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0E9FB447-E793-4CD9-BBBB-7BF470900C54}|BL\\BL.csproj|solutionrelative:bl\\automaperprofiles\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\studymaterialorganiser\\viewmodels\\materialvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\viewmodels\\materialvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|c:\\users\\mario\\documents\\github\\study-material-organiser\\studymaterialorganiser\\studymaterialorganiser\\views\\studygroup\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\views\\studygroup\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\studymaterialorganiser\\viewmodels\\profileeditvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\viewmodels\\profileeditvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|c:\\users\\mario\\documents\\github\\study-material-organiser\\studymaterialorganiser\\studymaterialorganiser\\views\\studygroup\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\views\\studygroup\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\studymaterialorganiser\\viewmodels\\usereditvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\viewmodels\\usereditvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|c:\\users\\mario\\documents\\github\\study-material-organiser\\studymaterialorganiser\\studymaterialorganiser\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\studymaterialorganiser\\views\\user\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\views\\user\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|c:\\users\\mario\\documents\\github\\study-material-organiser\\studymaterialorganiser\\studymaterialorganiser\\controllers\\materialcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\controllers\\materialcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\studymaterialorganiser\\views\\user\\_editmodalpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\views\\user\\_editmodalpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|c:\\users\\mario\\documents\\github\\study-material-organiser\\studymaterialorganiser\\dal\\repositories\\grouprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|solutionrelative:dal\\repositories\\grouprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0E9FB447-E793-4CD9-BBBB-7BF470900C54}|BL\\BL.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\bl\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E9FB447-E793-4CD9-BBBB-7BF470900C54}|BL\\BL.csproj|solutionrelative:bl\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|c:\\users\\mario\\documents\\github\\study-material-organiser\\studymaterialorganiser\\dal\\models\\tag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|solutionrelative:dal\\models\\tag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\studymaterialorganiser\\views\\home\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\views\\home\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|c:\\users\\mario\\documents\\github\\study-material-organiser\\studymaterialorganiser\\dal\\models\\studymaterialorganisercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|solutionrelative:dal\\models\\studymaterialorganisercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\studymaterialorganiser\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\studymaterialorganiser\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\studymaterialorganiser\\views\\shared\\_layoutnonuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\views\\shared\\_layoutnonuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\studymaterialorganiser\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\studymaterialorganiser\\views\\user\\_profiledetailspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\views\\user\\_profiledetailspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\studymaterialorganiser\\views\\user\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\views\\user\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\studymaterialorganiser\\views\\user\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\views\\user\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\studymaterialorganiser\\views\\user\\profiledetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\views\\user\\profiledetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\studymaterialorganiser\\views\\user\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\views\\user\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\studymaterialorganiser\\views\\shared\\_emptylayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\views\\shared\\_emptylayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\studymaterialorganiser\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\dal\\dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|solutionrelative:dal\\dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\studymaterialorganiser\\studymaterialorganiser.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\studymaterialorganiser.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E9FB447-E793-4CD9-BBBB-7BF470900C54}|BL\\BL.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\bl\\bl.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{0E9FB447-E793-4CD9-BBBB-7BF470900C54}|BL\\BL.csproj|solutionrelative:bl\\bl.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\studymaterialorganiser\\views\\user\\registration.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\views\\user\\registration.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\studymaterialorganiser\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\studymaterialorganiser\\viewmodels\\tagvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\viewmodels\\tagvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\studymaterialorganiser\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\studymaterialorganiser\\wwwroot\\css\\navbar - copy.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\wwwroot\\css\\navbar - copy.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\studymaterialorganiser\\wwwroot\\css\\details.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\wwwroot\\css\\details.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\studymaterialorganiser\\wwwroot\\css\\cards.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\wwwroot\\css\\cards.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\studymaterialorganiser\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E9FB447-E793-4CD9-BBBB-7BF470900C54}|BL\\BL.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\bl\\security\\passwordhashprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E9FB447-E793-4CD9-BBBB-7BF470900C54}|BL\\BL.csproj|solutionrelative:bl\\security\\passwordhashprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E9FB447-E793-4CD9-BBBB-7BF470900C54}|BL\\BL.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\bl\\security\\jwtokenprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E9FB447-E793-4CD9-BBBB-7BF470900C54}|BL\\BL.csproj|solutionrelative:bl\\security\\jwtokenprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E9FB447-E793-4CD9-BBBB-7BF470900C54}|BL\\BL.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\bl\\models\\userregistrationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E9FB447-E793-4CD9-BBBB-7BF470900C54}|BL\\BL.csproj|solutionrelative:bl\\models\\userregistrationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E9FB447-E793-4CD9-BBBB-7BF470900C54}|BL\\BL.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\bl\\models\\userpasswordchangedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E9FB447-E793-4CD9-BBBB-7BF470900C54}|BL\\BL.csproj|solutionrelative:bl\\models\\userpasswordchangedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E9FB447-E793-4CD9-BBBB-7BF470900C54}|BL\\BL.csproj|d:\\users\\kuri\\desktop\\study-material-organizer\\studymaterialorganiser\\bl\\models\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E9FB447-E793-4CD9-BBBB-7BF470900C54}|BL\\BL.csproj|solutionrelative:bl\\models\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|c:\\users\\mario\\documents\\github\\study-material-organiser\\studymaterialorganiser\\dal\\models\\studygroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|solutionrelative:dal\\models\\studygroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -302,923 +46,120 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UserGroupController.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Controllers\\UserModule\\UserGroupController.cs",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\Controllers\\UserModule\\UserGroupController.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Controllers\\UserModule\\UserGroupController.cs",
-              "RelativeToolTip": "StudyMaterialOrganiser\\Controllers\\UserModule\\UserGroupController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T20:39:39.719Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GroupController.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Controllers\\UserModule\\GroupController.cs",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\Controllers\\UserModule\\GroupController.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Controllers\\UserModule\\GroupController.cs",
-              "RelativeToolTip": "StudyMaterialOrganiser\\Controllers\\UserModule\\GroupController.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAgwCYAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T20:39:21.771Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UserGroupService.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\Services\\UserGroupService.cs",
-              "RelativeDocumentMoniker": "BL\\Services\\UserGroupService.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\Services\\UserGroupService.cs",
-              "RelativeToolTip": "BL\\Services\\UserGroupService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T20:38:02.2Z",
-              "EditorCaption": ""
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "GroupService.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\Services\\GroupService.cs",
-              "RelativeDocumentMoniker": "BL\\Services\\GroupService.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\Services\\GroupService.cs",
-              "RelativeToolTip": "BL\\Services\\GroupService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAnAAAAAAAAAA==",
+              "Title": "Tag.cs",
+              "DocumentMoniker": "C:\\Users\\mario\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\DAL\\Models\\Tag.cs",
+              "RelativeDocumentMoniker": "DAL\\Models\\Tag.cs",
+              "ToolTip": "C:\\Users\\mario\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\DAL\\Models\\Tag.cs",
+              "RelativeToolTip": "DAL\\Models\\Tag.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T20:37:54.599Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IGroupService.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\IServices\\IGroupService.cs",
-              "RelativeDocumentMoniker": "BL\\IServices\\IGroupService.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\IServices\\IGroupService.cs",
-              "RelativeToolTip": "BL\\IServices\\IGroupService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T20:36:00.839Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "IUserGroupService.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\IServices\\IUserGroupService.cs",
-              "RelativeDocumentMoniker": "BL\\IServices\\IUserGroupService.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\IServices\\IUserGroupService.cs",
-              "RelativeToolTip": "BL\\IServices\\IUserGroupService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T20:33:16.197Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "UserGroupDto.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\Models\\UserGroupDto.cs",
-              "RelativeDocumentMoniker": "BL\\Models\\UserGroupDto.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\Models\\UserGroupDto.cs",
-              "RelativeToolTip": "BL\\Models\\UserGroupDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T20:30:30.326Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "GroupDto.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\Models\\GroupDto.cs",
-              "RelativeDocumentMoniker": "BL\\Models\\GroupDto.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\Models\\GroupDto.cs",
-              "RelativeToolTip": "BL\\Models\\GroupDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T20:23:22.258Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "UnitOfWork.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\Repositories\\UnitOfWork.cs",
-              "RelativeDocumentMoniker": "DAL\\Repositories\\UnitOfWork.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\Repositories\\UnitOfWork.cs",
-              "RelativeToolTip": "DAL\\Repositories\\UnitOfWork.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T20:10:05.397Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-16T17:54:38.504Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\Controllers\\HomeController.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "StudyMaterialOrganiser\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAsAAAAAAAAAA==",
+              "Title": "MaterialController.cs",
+              "DocumentMoniker": "C:\\Users\\mario\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Controllers\\MaterialController.cs",
+              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\Controllers\\MaterialController.cs",
+              "ToolTip": "C:\\Users\\mario\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Controllers\\MaterialController.cs",
+              "RelativeToolTip": "StudyMaterialOrganiser\\Controllers\\MaterialController.cs",
+              "ViewState": "AQIAALwAAAAAAAAAAAAcwM4AAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T21:29:53.813Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-16T17:53:43.038Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "MaterialController.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Controllers\\MaterialController.cs",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\Controllers\\MaterialController.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Controllers\\MaterialController.cs",
-              "RelativeToolTip": "StudyMaterialOrganiser\\Controllers\\MaterialController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAJAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\mario\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Program.cs",
+              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\Program.cs",
+              "ToolTip": "C:\\Users\\mario\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Program.cs",
+              "RelativeToolTip": "StudyMaterialOrganiser\\Program.cs",
+              "ViewState": "AQIAADIAAAAAAAAAAAAcwEQAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T21:29:53.235Z",
+              "WhenOpened": "2025-01-16T17:53:38.53Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\mario\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\BL\\AutoMaperProfiles\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "BL\\AutoMaperProfiles\\MappingProfile.cs",
+              "ToolTip": "C:\\Users\\mario\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\BL\\AutoMaperProfiles\\MappingProfile.cs",
+              "RelativeToolTip": "BL\\AutoMaperProfiles\\MappingProfile.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAACkAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-16T17:52:01.979Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GroupRepository.cs",
+              "DocumentMoniker": "C:\\Users\\mario\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\DAL\\Repositories\\GroupRepository.cs",
+              "RelativeDocumentMoniker": "DAL\\Repositories\\GroupRepository.cs",
+              "ToolTip": "C:\\Users\\mario\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\DAL\\Repositories\\GroupRepository.cs",
+              "RelativeToolTip": "DAL\\Repositories\\GroupRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-16T17:54:50.057Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Controllers\\UserModule\\UserController.cs",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\Controllers\\UserModule\\UserController.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Controllers\\UserModule\\UserController.cs",
-              "RelativeToolTip": "StudyMaterialOrganiser\\Controllers\\UserModule\\UserController.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAQwCEAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T17:45:04.033Z",
-              "EditorCaption": ""
+              "Title": "index.cshtml",
+              "DocumentMoniker": "C:\\Users\\mario\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\StudyGroup\\index.cshtml",
+              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\Views\\StudyGroup\\index.cshtml",
+              "ToolTip": "C:\\Users\\mario\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\StudyGroup\\index.cshtml",
+              "RelativeToolTip": "StudyMaterialOrganiser\\Views\\StudyGroup\\index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-16T17:57:23.1Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "LogController.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Controllers\\UserModule\\LogController.cs",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\Controllers\\UserModule\\LogController.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Controllers\\UserModule\\LogController.cs",
-              "RelativeToolTip": "StudyMaterialOrganiser\\Controllers\\UserModule\\LogController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T18:47:42.185Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "IUnitOfWork.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\IRepositories\\IUnitOfWork.cs",
-              "RelativeDocumentMoniker": "DAL\\IRepositories\\IUnitOfWork.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\IRepositories\\IUnitOfWork.cs",
-              "RelativeToolTip": "DAL\\IRepositories\\IUnitOfWork.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T20:17:36.225Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "UserGroupRepository.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\Repositories\\UserGroupRepository.cs",
-              "RelativeDocumentMoniker": "DAL\\Repositories\\UserGroupRepository.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\Repositories\\UserGroupRepository.cs",
-              "RelativeToolTip": "DAL\\Repositories\\UserGroupRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T20:16:48.535Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "IGroupRepository.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\IRepositories\\IGroupRepository.cs",
-              "RelativeDocumentMoniker": "DAL\\IRepositories\\IGroupRepository.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\IRepositories\\IGroupRepository.cs",
-              "RelativeToolTip": "DAL\\IRepositories\\IGroupRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T20:05:21.353Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\IRepositories\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "DAL\\IRepositories\\IUserRepository.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\IRepositories\\IUserRepository.cs",
-              "RelativeToolTip": "DAL\\IRepositories\\IUserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T20:19:24.927Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "ILogRepository.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\IRepositories\\ILogRepository.cs",
-              "RelativeDocumentMoniker": "DAL\\IRepositories\\ILogRepository.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\IRepositories\\ILogRepository.cs",
-              "RelativeToolTip": "DAL\\IRepositories\\ILogRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T20:05:41.392Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "IRepository.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\IRepositories\\IRepository.cs",
-              "RelativeDocumentMoniker": "DAL\\IRepositories\\IRepository.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\IRepositories\\IRepository.cs",
-              "RelativeToolTip": "DAL\\IRepositories\\IRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T19:57:14.596Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ILogService.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\IServices\\ILogService.cs",
-              "RelativeDocumentMoniker": "BL\\IServices\\ILogService.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\IServices\\ILogService.cs",
-              "RelativeToolTip": "BL\\IServices\\ILogService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T22:55:45.719Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\IServices\\IUserService.cs",
-              "RelativeDocumentMoniker": "BL\\IServices\\IUserService.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\IServices\\IUserService.cs",
-              "RelativeToolTip": "BL\\IServices\\IUserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T22:55:54.928Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "IUserGroupRepository.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\IRepositories\\IUserGroupRepository.cs",
-              "RelativeDocumentMoniker": "DAL\\IRepositories\\IUserGroupRepository.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\IRepositories\\IUserGroupRepository.cs",
-              "RelativeToolTip": "DAL\\IRepositories\\IUserGroupRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T20:15:58.177Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "ITagRepository.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\IRepositories\\ITagRepository.cs",
-              "RelativeDocumentMoniker": "DAL\\IRepositories\\ITagRepository.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\IRepositories\\ITagRepository.cs",
-              "RelativeToolTip": "DAL\\IRepositories\\ITagRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T20:19:16.002Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "IMaterialRepository.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\IRepositories\\IMaterialRepository.cs",
-              "RelativeDocumentMoniker": "DAL\\IRepositories\\IMaterialRepository.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\IRepositories\\IMaterialRepository.cs",
-              "RelativeToolTip": "DAL\\IRepositories\\IMaterialRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T20:19:08.589Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "GroupRepository.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\Repositories\\GroupRepository.cs",
-              "RelativeDocumentMoniker": "DAL\\Repositories\\GroupRepository.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\Repositories\\GroupRepository.cs",
-              "RelativeToolTip": "DAL\\Repositories\\GroupRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T20:06:14.947Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Program.cs",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\Program.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Program.cs",
-              "RelativeToolTip": "StudyMaterialOrganiser\\Program.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACEAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T17:26:34.108Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "LogDto.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\Models\\LogDto.cs",
-              "RelativeDocumentMoniker": "BL\\Models\\LogDto.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\Models\\LogDto.cs",
-              "RelativeToolTip": "BL\\Models\\LogDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T19:51:37.591Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "LogRepository.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\Repositories\\LogRepository.cs",
-              "RelativeDocumentMoniker": "DAL\\Repositories\\LogRepository.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\Repositories\\LogRepository.cs",
-              "RelativeToolTip": "DAL\\Repositories\\LogRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T20:06:59.171Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "Repository.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\Repositories\\Repository.cs",
-              "RelativeDocumentMoniker": "DAL\\Repositories\\Repository.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\Repositories\\Repository.cs",
-              "RelativeToolTip": "DAL\\Repositories\\Repository.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAA3wEkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T20:09:48.82Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "Group.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\Models\\Group.cs",
-              "RelativeDocumentMoniker": "DAL\\Models\\Group.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\Models\\Group.cs",
-              "RelativeToolTip": "DAL\\Models\\Group.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T20:05:04.577Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "LogIn.cshtml",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\User\\LogIn.cshtml",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\Views\\User\\LogIn.cshtml",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\User\\LogIn.cshtml",
-              "RelativeToolTip": "StudyMaterialOrganiser\\Views\\User\\LogIn.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA8AAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-19T15:14:55.734Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "List.cshtml",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\Log\\List.cshtml",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\Views\\Log\\List.cshtml",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\Log\\List.cshtml",
-              "RelativeToolTip": "StudyMaterialOrganiser\\Views\\Log\\List.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-18T19:35:15.078Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "ProfileDetails.cshtml",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\User\\ProfileDetails.cshtml",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\Views\\User\\ProfileDetails.cshtml",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\User\\ProfileDetails.cshtml",
-              "RelativeToolTip": "StudyMaterialOrganiser\\Views\\User\\ProfileDetails.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-18T17:44:52.944Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "Logout.cshtml",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\User\\Logout.cshtml",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\Views\\User\\Logout.cshtml",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\User\\Logout.cshtml",
-              "RelativeToolTip": "StudyMaterialOrganiser\\Views\\User\\Logout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-18T17:44:51.468Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "Privacy.cshtml",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\Home\\Privacy.cshtml",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\Views\\Home\\Privacy.cshtml",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\Home\\Privacy.cshtml",
-              "RelativeToolTip": "StudyMaterialOrganiser\\Views\\Home\\Privacy.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-18T17:42:53.758Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "_LayoutAdmin.cshtml",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "RelativeToolTip": "StudyMaterialOrganiser\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-18T17:41:31.018Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "Log.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\Models\\Log.cs",
-              "RelativeDocumentMoniker": "DAL\\Models\\Log.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\Models\\Log.cs",
-              "RelativeToolTip": "DAL\\Models\\Log.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T19:51:33.359Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "_UserList.cshtml",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\User\\_UserList.cshtml",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\Views\\User\\_UserList.cshtml",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\User\\_UserList.cshtml",
-              "RelativeToolTip": "StudyMaterialOrganiser\\Views\\User\\_UserList.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAmwDAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-18T18:02:20.256Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "UserEditVM.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\ViewModels\\UserEditVM.cs",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\ViewModels\\UserEditVM.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\ViewModels\\UserEditVM.cs",
-              "RelativeToolTip": "StudyMaterialOrganiser\\ViewModels\\UserEditVM.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T19:45:52.054Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "LogService.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\Services\\LogService.cs",
-              "RelativeDocumentMoniker": "BL\\Services\\LogService.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\Services\\LogService.cs",
-              "RelativeToolTip": "BL\\Services\\LogService.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAswEAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T18:54:35.79Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "_LayoutUser.cshtml",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\Shared\\_LayoutUser.cshtml",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\Views\\Shared\\_LayoutUser.cshtml",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\Shared\\_LayoutUser.cshtml",
-              "RelativeToolTip": "StudyMaterialOrganiser\\Views\\Shared\\_LayoutUser.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAQwBEAAABhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-18T17:11:52.579Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "MappingProfile.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\AutoMaperProfiles\\MappingProfile.cs",
-              "RelativeDocumentMoniker": "BL\\AutoMaperProfiles\\MappingProfile.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\AutoMaperProfiles\\MappingProfile.cs",
-              "RelativeToolTip": "BL\\AutoMaperProfiles\\MappingProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T19:44:33.241Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "MappingProfile.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\AutoMapping\\MappingProfile.cs",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\AutoMapping\\MappingProfile.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\AutoMapping\\MappingProfile.cs",
-              "RelativeToolTip": "StudyMaterialOrganiser\\AutoMapping\\MappingProfile.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAgwC0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T17:46:36.247Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "ProfileEditVM.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\ViewModels\\ProfileEditVM.cs",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\ViewModels\\ProfileEditVM.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\ViewModels\\ProfileEditVM.cs",
-              "RelativeToolTip": "StudyMaterialOrganiser\\ViewModels\\ProfileEditVM.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAgwAUAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T19:45:57.996Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "MaterialVM.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\ViewModels\\MaterialVM.cs",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\ViewModels\\MaterialVM.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\ViewModels\\MaterialVM.cs",
-              "RelativeToolTip": "StudyMaterialOrganiser\\ViewModels\\MaterialVM.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T19:46:49.995Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "_LayoutNonUser.cshtml",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\Shared\\_LayoutNonUser.cshtml",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\Views\\Shared\\_LayoutNonUser.cshtml",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\Shared\\_LayoutNonUser.cshtml",
-              "RelativeToolTip": "StudyMaterialOrganiser\\Views\\Shared\\_LayoutNonUser.cshtml",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAQwB0AAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-18T17:11:20.814Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "Home.cshtml",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\Home\\Home.cshtml",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\Views\\Home\\Home.cshtml",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\Home\\Home.cshtml",
-              "RelativeToolTip": "StudyMaterialOrganiser\\Views\\Home\\Home.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-18T18:02:46.723Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "_EditModalPartial.cshtml",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\User\\_EditModalPartial.cshtml",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\Views\\User\\_EditModalPartial.cshtml",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\User\\_EditModalPartial.cshtml",
-              "RelativeToolTip": "StudyMaterialOrganiser\\Views\\User\\_EditModalPartial.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-18T17:44:55.654Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "List.cshtml",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\User\\List.cshtml",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\Views\\User\\List.cshtml",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\User\\List.cshtml",
-              "RelativeToolTip": "StudyMaterialOrganiser\\Views\\User\\List.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-18T17:40:13.654Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "BL\\Services\\UserService.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\Services\\UserService.cs",
-              "RelativeToolTip": "BL\\Services\\UserService.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAxwCUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T18:55:02.813Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\User\\Edit.cshtml",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\Views\\User\\Edit.cshtml",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\User\\Edit.cshtml",
-              "RelativeToolTip": "StudyMaterialOrganiser\\Views\\User\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-18T17:49:38.223Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\Views\\Home\\Index.cshtml",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "StudyMaterialOrganiser\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-17T22:57:58.78Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "_ProfileDetailsPartial.cshtml",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\User\\_ProfileDetailsPartial.cshtml",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\Views\\User\\_ProfileDetailsPartial.cshtml",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\User\\_ProfileDetailsPartial.cshtml",
-              "RelativeToolTip": "StudyMaterialOrganiser\\Views\\User\\_ProfileDetailsPartial.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-18T18:02:34.724Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "StudyMaterialOrganiser\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-18T17:11:01.411Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 51,
               "Title": "Create.cshtml",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\User\\Create.cshtml",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\Views\\User\\Create.cshtml",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\User\\Create.cshtml",
-              "RelativeToolTip": "StudyMaterialOrganiser\\Views\\User\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\mario\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\StudyGroup\\Create.cshtml",
+              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\Views\\StudyGroup\\Create.cshtml",
+              "ToolTip": "C:\\Users\\mario\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\StudyGroup\\Create.cshtml",
+              "RelativeToolTip": "StudyMaterialOrganiser\\Views\\StudyGroup\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-18T18:02:36.622Z"
+              "WhenOpened": "2025-01-16T17:57:57.235Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
-              "Title": "Registration.cshtml",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\User\\Registration.cshtml",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\Views\\User\\Registration.cshtml",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\User\\Registration.cshtml",
-              "RelativeToolTip": "StudyMaterialOrganiser\\Views\\User\\Registration.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-18T17:16:05.667Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 56,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\appsettings.json",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\appsettings.json",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\appsettings.json",
-              "RelativeToolTip": "StudyMaterialOrganiser\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-18T17:26:37.346Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 59,
-              "Title": "BL.csproj",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\BL.csproj",
-              "RelativeDocumentMoniker": "BL\\BL.csproj",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\BL.csproj",
-              "RelativeToolTip": "BL\\BL.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-12-18T17:26:46.92Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 57,
-              "Title": "DAL.csproj",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\DAL.csproj",
-              "RelativeDocumentMoniker": "DAL\\DAL.csproj",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\DAL\\DAL.csproj",
-              "RelativeToolTip": "DAL\\DAL.csproj",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAABUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-12-18T17:26:55.02Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 61,
-              "Title": "_ValidationScriptsPartial.cshtml",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeToolTip": "StudyMaterialOrganiser\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAABYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-18T17:11:58.563Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 55,
-              "Title": "_EmptyLayout.cshtml",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\Shared\\_EmptyLayout.cshtml",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\Views\\Shared\\_EmptyLayout.cshtml",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\Shared\\_EmptyLayout.cshtml",
-              "RelativeToolTip": "StudyMaterialOrganiser\\Views\\Shared\\_EmptyLayout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-18T17:11:13.532Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 58,
-              "Title": "StudyMaterialOrganiser.csproj",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj",
-              "RelativeToolTip": "StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABRAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-12-18T17:07:11.15Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 62,
-              "Title": "TagVM.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\ViewModels\\TagVM.cs",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\ViewModels\\TagVM.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\ViewModels\\TagVM.cs",
-              "RelativeToolTip": "StudyMaterialOrganiser\\ViewModels\\TagVM.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "StudyGroup.cs",
+              "DocumentMoniker": "C:\\Users\\mario\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\DAL\\Models\\StudyGroup.cs",
+              "RelativeDocumentMoniker": "DAL\\Models\\StudyGroup.cs",
+              "ToolTip": "C:\\Users\\mario\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\DAL\\Models\\StudyGroup.cs",
+              "RelativeToolTip": "DAL\\Models\\StudyGroup.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T23:00:43.288Z"
+              "WhenOpened": "2025-01-16T17:42:00.011Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
-              "Title": "site.css",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\wwwroot\\css\\site.css",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "StudyMaterialOrganiser\\wwwroot\\css\\site.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-17T22:58:29.885Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 64,
-              "Title": "navBar - Copy.css",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\wwwroot\\css\\navBar - Copy.css",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\wwwroot\\css\\navBar - Copy.css",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\wwwroot\\css\\navBar - Copy.css",
-              "RelativeToolTip": "StudyMaterialOrganiser\\wwwroot\\css\\navBar - Copy.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-17T22:58:27.43Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 65,
-              "Title": "details.css",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\wwwroot\\css\\details.css",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\wwwroot\\css\\details.css",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\wwwroot\\css\\details.css",
-              "RelativeToolTip": "StudyMaterialOrganiser\\wwwroot\\css\\details.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-17T22:58:25.004Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 66,
-              "Title": "Cards.css",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\wwwroot\\css\\Cards.css",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\wwwroot\\css\\Cards.css",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\wwwroot\\css\\Cards.css",
-              "RelativeToolTip": "StudyMaterialOrganiser\\wwwroot\\css\\Cards.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-17T22:58:22.851Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 67,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\Properties\\launchSettings.json",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Properties\\launchSettings.json",
-              "RelativeToolTip": "StudyMaterialOrganiser\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-17T22:58:07.637Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 68,
-              "Title": "PasswordHashProvider.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\Security\\PasswordHashProvider.cs",
-              "RelativeDocumentMoniker": "BL\\Security\\PasswordHashProvider.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\Security\\PasswordHashProvider.cs",
-              "RelativeToolTip": "BL\\Security\\PasswordHashProvider.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "StudymaterialorganiserContext.cs",
+              "DocumentMoniker": "C:\\Users\\mario\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\DAL\\Models\\StudymaterialorganiserContext.cs",
+              "RelativeDocumentMoniker": "DAL\\Models\\StudymaterialorganiserContext.cs",
+              "ToolTip": "C:\\Users\\mario\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\DAL\\Models\\StudymaterialorganiserContext.cs",
+              "RelativeToolTip": "DAL\\Models\\StudymaterialorganiserContext.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACcAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T22:57:03.204Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 69,
-              "Title": "JwTokenProvider.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\Security\\JwTokenProvider.cs",
-              "RelativeDocumentMoniker": "BL\\Security\\JwTokenProvider.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\Security\\JwTokenProvider.cs",
-              "RelativeToolTip": "BL\\Security\\JwTokenProvider.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T22:56:54.783Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 70,
-              "Title": "UserRegistrationDto.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\Models\\UserRegistrationDto.cs",
-              "RelativeDocumentMoniker": "BL\\Models\\UserRegistrationDto.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\Models\\UserRegistrationDto.cs",
-              "RelativeToolTip": "BL\\Models\\UserRegistrationDto.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T22:56:21.687Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 71,
-              "Title": "UserPasswordChangeDto.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\Models\\UserPasswordChangeDto.cs",
-              "RelativeDocumentMoniker": "BL\\Models\\UserPasswordChangeDto.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\Models\\UserPasswordChangeDto.cs",
-              "RelativeToolTip": "BL\\Models\\UserPasswordChangeDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T22:56:20.745Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 72,
-              "Title": "UserLoginDto.cs",
-              "DocumentMoniker": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\Models\\UserLoginDto.cs",
-              "RelativeDocumentMoniker": "BL\\Models\\UserLoginDto.cs",
-              "ToolTip": "D:\\Users\\Kuri\\Desktop\\Study-material-organizer\\StudyMaterialOrganiser\\BL\\Models\\UserLoginDto.cs",
-              "RelativeToolTip": "BL\\Models\\UserLoginDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T22:56:19.932Z"
+              "WhenOpened": "2025-01-16T17:44:28.8Z"
             }
           ]
         }

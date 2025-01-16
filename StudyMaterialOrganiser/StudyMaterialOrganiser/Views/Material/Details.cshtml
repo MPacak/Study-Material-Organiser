@@ -1,0 +1,39 @@
+﻿@model StudyMaterialOrganiser.ViewModels.MaterialVM
+
+<div class="container py-5">
+    <div class="card shadow-lg p-4" style="max-width: 800px; margin: auto;">
+        <h2 class="text-center mb-4">Material Details</h2>
+        <dl class="row">
+            <dt class="col-sm-4">Name</dt>
+            <dd class="col-sm-8">@Model.Name</dd>
+
+            <dt class="col-sm-4">Folder Type</dt>
+            <dd class="col-sm-8">@Model.FolderTypeName</dd>
+
+            <dt class="col-sm-4">Description</dt>
+            <dd class="col-sm-8">@Model.Description</dd>
+
+            <dt class="col-sm-4">Tags</dt>
+            <dd class="col-sm-8">
+                @if (Model.TagNames != null && Model.TagNames.Any())
+                {
+                    @string.Join(", ", Model.TagNames)
+                }
+                else
+                {
+                    <span>No tags available</span>
+                }
+            </dd>
+        </dl>
+        <div class="text-end mt-4">
+            <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model.Idmaterial" class="btn btn-primary">
+                <i class="bi bi-pencil"></i> Edit
+                <a asp-action="ShareWithUsers" asp-controller="Material" asp-route-id="@Model.Idmaterial" class="btn btn-secondary">
+                    <i class="bi bi-share"></i> Share
+                </a>
+                   
+            </a>
+            <a class="btn btn-primary" asp-action="List" class="btn btn-outline-primary">Back to the list</a>
+        </div>
+    </div>
+</div>

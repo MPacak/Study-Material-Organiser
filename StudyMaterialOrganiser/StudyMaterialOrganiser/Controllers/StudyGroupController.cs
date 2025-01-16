@@ -1,4 +1,6 @@
-﻿using DAL.IRepositories;
+﻿using BL.IServices;
+using BL.Models;
+using DAL.IRepositories;
 using DAL.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -8,30 +10,38 @@ namespace StudyMaterialOrganiser.Controllers
     public class StudyGroupController : Controller
     {
 
-        private readonly IGroupRepository _studyGroupRepository;
-        private readonly ITagRepository _tagRepository;
+        private readonly IStudyGroupService _studyGroupService;
+        private readonly ITagService _tagService;
 
-        public StudyGroupController(IGroupRepository studyGroupRepository, ITagRepository tagRepository)
+        public StudyGroupController(IStudyGroupService studyGroupService, ITagService tagService)
         {
-            _studyGroupRepository = studyGroupRepository;
-            _tagRepository = tagRepository;
+            _studyGroupService = studyGroupService;
+            _tagService = tagService;
         }
 
         // GET: /StudyGroup/Index
         public IActionResult Index()
         {
-            var studyGroups = _studyGroupRepository.GetAll();
+            var studyGroupDtos = _studyGroupService.GetAll();
+            var studyGroups = studyGroupDtos.Select(dto => new StudyGroup
+            {
+                Id = dto.Id,
+                Name = dto.Name,
+                TagId = dto.TagId,
+                Tag = new Tag { TagName = dto.TagName }
+            }).ToList();
+
             return View(studyGroups);
         }
 
         // GET: /StudyGroup/Create
         public IActionResult Create()
         {
-            var tags = _tagRepository.GetAll()
+            var tags = _tagService.GetAll()
                 .Select(tag => new SelectListItem
                 {
-                    Value = tag.Idtag.ToString(),
-                    Text = tag.TagName
+                    Value = tag.Id.ToString(),
+                    Text = tag.Name
                 }).ToList();
 
             ViewData["Tags"] = tags;
@@ -41,20 +51,20 @@ namespace StudyMaterialOrganiser.Controllers
         // POST: /StudyGroup/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(Group group)
+        public IActionResult Create(StudyGroupDto group)
         {
             if (ModelState.IsValid)
             {
                 group.Id = 0; 
-                _studyGroupRepository.Add(group); 
+                _studyGroupService.Add(group); 
                 return RedirectToAction(nameof(Index));
             }
 
-            var tags = _tagRepository.GetAll()
+            var tags = _tagService.GetAll()
                         .Select(tag => new SelectListItem
                         {
-                            Value = tag.Idtag.ToString(),
-                            Text = tag.TagName
+                            Value = tag.Id.ToString(),
+                            Text = tag.Name
                         }).ToList();
             ViewData["Tags"] = tags;
 

@@ -1,49 +1,120 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using DAL.IRepositories;
-using AutoMapper;
 using StudyMaterialOrganiser.ViewModels;
-using DAL.Models;
-using BL.Models;
 using BL.IServices;
+using BL.Utilities;
+using AutoMapper;
 using Microsoft.AspNetCore.Hosting;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
+using BL.Models;
+using DAL.Models;
+using StudyMaterialOrganiser.Utilities;
+using Microsoft.VisualBasic.FileIO;
+using BL.Services;
+using System.Xml.Linq;
 
 namespace StudyMaterialOrganiser.Controllers
 {
     public class MaterialController : Controller
     {
- 
         private readonly IMaterialService _materialService;
-        private readonly ITagService _tagService;
         private readonly IMapper _mapper;
         private readonly IWebHostEnvironment _webHostEnvironment;
+        private readonly AssignTags _assignTags;
+ 
+        private readonly BaseFileHandler _binaryFileHandler;
+        private readonly IUserService _userService;
+        private readonly IMaterialAccessService _materialAccessService;
+        private readonly IMaterialFactory _materialFactory;
 
-        public MaterialController(IMaterialService materialService, ITagService tagService, IMapper mapper, IWebHostEnvironment webHostEnvironment)
+        public MaterialController(IMaterialService materialService, IMapper mapper, IWebHostEnvironment webHostEnvironment, AssignTags assignTags, BaseFileHandler basefileHandler, IUserService userService, IMaterialAccessService materialAccessService, IMaterialFactory materialFactory)
         {
             _materialService = materialService;
-            _tagService = tagService;
             _mapper = mapper;
             _webHostEnvironment = webHostEnvironment;
+            _assignTags = assignTags;
+            this._binaryFileHandler = basefileHandler;
+            _userService = userService;
+            _materialAccessService = materialAccessService;
+            _materialFactory = materialFactory;
         }
+
+
 
         // GET: MaterialController
         public ActionResult Index()
         {
-
             return View();
         }
-        public ActionResult List()
-        {
-            var materials = _materialService.GetAll();
-            var viewModels = _mapper.Map<List<MaterialVM>>(materials);
 
-            return View(viewModels);
+        public ActionResult List(string? query, int? fileType, List<int>? tagIds, int page = 1, int pageSize = 10)
+        {
+            var materialsDto = _materialService.GetAll();
+            var materials = materialsDto.Select(x => _mapper.Map<MaterialVM>(x));
+
+            if (!string.IsNullOrEmpty(query))
+            {
+                materials = materials.Where(m =>
+                    m.Name.Contains(query, StringComparison.OrdinalIgnoreCase) ||
+                    (m.Description != null && m.Description.Contains(query, StringComparison.OrdinalIgnoreCase)));
+            }
+
+            if (fileType.HasValue)
+            {
+                materials = materials.Where(m => m.FolderTypeId == fileType.Value);
+            }
+
+            if (tagIds != null && tagIds.Any())
+            {
+                materials = materials.Where(m =>
+                    m.TagIds.Any(tagId => tagIds.Contains(tagId)));
+            }
+            
+
+
+            var totalItems = materials.Count();
+            var totalPages = (int)Math.Ceiling(totalItems / (double)pageSize);
+
+            var paginatedMaterials = materials
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToList();
+
+            var message = totalItems == 0 ? "No materials found matching the provided filters." : null;
+
+            var searchVM = new MaterialSearchVM
+            {
+                Materials = paginatedMaterials,
+                CurrentPage = page,
+                TotalPages = totalPages,
+                PageSize = pageSize,
+                TotalItems = totalItems,
+                Query = query,
+                FileType = fileType,
+                TagIds = tagIds,
+                AvailableTags = _assignTags.AssignTag(),
+                NotificationMessage = message
+            };
+
+            return View(searchVM);
         }
 
         // GET: MaterialController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var material = _materialService.GetMaterialById(id);
+
+            if (material == null)
+            {
+                return NotFound();
+            }
+
+            var materialVM = _mapper.Map<MaterialVM>(material);
+            return View(materialVM);
         }
 
         // GET: MaterialController/Create
@@ -52,17 +123,9 @@ namespace StudyMaterialOrganiser.Controllers
 
             var viewModel = new MaterialVM
             {
-                AvailableTags = AssignTags()
+                AvailableTags = _assignTags.AssignTag()
             };
             return View(viewModel);
-        }
-
-        private List<TagVM> AssignTags()
-        {
-            var tags = _tagService.GetAll().ToList();
-            var tagsVM = _mapper.Map<List<TagVM>>(tags);
-            
-            return tagsVM;
         }
 
         // POST: MaterialController/Create
@@ -70,44 +133,42 @@ namespace StudyMaterialOrganiser.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Create(MaterialVM materialVM)
         {
-            materialVM.AvailableTags = AssignTags();
+            materialVM.AvailableTags = _assignTags.AssignTag();
             try
             {
                 if (materialVM.File != null)
                 {
-                    
-                    var fileType = FileTypeExtensions.GetFileTypeFromExtension(materialVM.File.FileName);
-                    if (!fileType.HasValue)
+                    if (!_binaryFileHandler.IsValidFile(materialVM.File.FileName))
                     {
                         ModelState.AddModelError("File", "Invalid file type");
                         return View(materialVM);
                     }
 
-                
-                    var fileName = Path.GetRandomFileName() + Path.GetExtension(materialVM.File.FileName);
-                    var uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "uploads");
-                    Directory.CreateDirectory(uploadsFolder);
-                    var filePath = Path.Combine(uploadsFolder, fileName);
+                   // var uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "uploads");
+                  // Directory.CreateDirectory(uploadsFolder);
+                    var binaryStoragePath = Path.Combine(_webHostEnvironment.WebRootPath, "binary_storage");
+                    Directory.CreateDirectory(binaryStoragePath);
 
-                    using (var stream = new FileStream(filePath, FileMode.Create))
-                    {
-                        await materialVM.File.CopyToAsync(stream);
-                    }
+                   // materialVM.FilePath = _fileHandler.SaveFile(materialVM.File, uploadsFolder);
+                    materialVM.FilePath = _binaryFileHandler.SaveFile(materialVM.File, binaryStoragePath);
+                    materialVM.FolderTypeId = _binaryFileHandler.GetFileTypeId(materialVM.File);
+                    materialVM.Link = GenerateShareableLink(materialVM.Idmaterial);
 
-                    materialVM.Link = GenerateShareableLink(materialVM.Id);
-                    materialVM.FilePath = fileName;
-                    materialVM.FolderTypeId = (int)fileType.Value;
-                    var materialDto = _mapper.Map<MaterialDto>(materialVM);
-                    
+                    _materialService.Create(materialVM);
 
-                    _materialService.Create(materialDto);
-                    return RedirectToAction(nameof(Index));
+                    var confirmation = ConfirmationManager.GetInstance().CreateConfirmation(
+                    "Material was successfully created.",
+                    nameof(List),
+                    "Material",
+                    3
+                    );
+                    return View("Confirmation", confirmation);
                 }
 
                 ModelState.AddModelError("File", "No file was uploaded");
                 return View(materialVM);
             }
-            catch (InvalidOperationException ex)
+            catch (InvalidOperationException)
             {
                 ModelState.AddModelError("Name", "A material with this name already exists.");
                 return View(materialVM);
@@ -123,11 +184,9 @@ namespace StudyMaterialOrganiser.Controllers
         {
             var request = HttpContext.Request;
             var baseUrl = $"{request.Scheme}://{request.Host}";
-            
             return $"{baseUrl}/Material/Access/{materialId}";
         }
 
-        // GET: MaterialController/Edit/5
         // GET: MaterialController/Edit/5
         public ActionResult Edit(int id)
         {
@@ -138,11 +197,7 @@ namespace StudyMaterialOrganiser.Controllers
             }
 
             var materialVM = _mapper.Map<MaterialVM>(material);
-
-            materialVM.AvailableTags = AssignTags();
-
-            materialVM.SelectedTagIds = material.TagIds;
-
+            materialVM.AvailableTags = _assignTags.AssignTag();
             return View(materialVM);
         }
 
@@ -151,15 +206,15 @@ namespace StudyMaterialOrganiser.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Edit(int id, MaterialVM materialVM)
         {
+            materialVM.AvailableTags = _assignTags.AssignTag();
             try
             {
-                if (id != materialVM.Id)
+                if (id != materialVM.Idmaterial)
                 {
                     return NotFound();
                 }
 
-                if (ModelState.IsValid)
-                {
+               
                     var existingMaterial = _materialService.GetMaterialById(id);
                     if (existingMaterial == null)
                     {
@@ -168,57 +223,60 @@ namespace StudyMaterialOrganiser.Controllers
 
                     if (materialVM.File != null)
                     {
-                        var fileType = FileTypeExtensions.GetFileTypeFromExtension(materialVM.File.FileName);
-                        if (!fileType.HasValue)
+                        if (!_binaryFileHandler.IsValidFile(materialVM.File.FileName))
                         {
                             ModelState.AddModelError("File", "Invalid file type");
-                            materialVM.AvailableTags = _mapper.Map<List<TagVM>>(_tagService.GetAll().ToList());
                             return View(materialVM);
                         }
 
-                        var fileName = Path.GetRandomFileName() + Path.GetExtension(materialVM.File.FileName);
-                        var uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "uploads");
-                        var filePath = Path.Combine(uploadsFolder, fileName);
+                    
+                    var binaryStoragePath = Path.Combine(_webHostEnvironment.WebRootPath, "binary_storage");
+                    Directory.CreateDirectory(binaryStoragePath);
 
-                        using (var stream = new FileStream(filePath, FileMode.Create))
-                        {
-                            await materialVM.File.CopyToAsync(stream);
-                        }
+            
+                    var newFilePath = _binaryFileHandler.SaveFile(materialVM.File, binaryStoragePath);
 
-                        if (!string.IsNullOrEmpty(existingMaterial.FilePath))
-                        {
-                            var oldFilePath = Path.Combine(uploadsFolder, existingMaterial.FilePath);
-                            if (System.IO.File.Exists(oldFilePath))
-                            {
-                                System.IO.File.Delete(oldFilePath);
-                            }
-                        }
-
-                        materialVM.FilePath = fileName;
-                        materialVM.FolderTypeId = (int)fileType.Value;
+                   
+                    if (!string.IsNullOrEmpty(existingMaterial.FilePath))
+                    {
+                        _binaryFileHandler.DeleteFile(Path.Combine(binaryStoragePath, existingMaterial.FilePath));
                     }
+
+                    materialVM.FilePath = newFilePath;
+
+                   //     materialVM.FolderTypeId = _binaryFileHandler.GetFileTypeId(materialVM.File);
+                     var folderTypeName = Path.GetExtension(materialVM.File.FileName) ?? string.Empty;
+                      materialVM.FolderTypeId = _materialFactory.GetFolderTypeId(folderTypeName);
+                }
                     else
                     {
-
                         materialVM.FilePath = existingMaterial.FilePath;
                         materialVM.FolderTypeId = existingMaterial.FolderTypeId;
                     }
 
-                    materialVM.Link = existingMaterial.Link;
+                   // materialVM.Link = existingMaterial.Link;
 
                     var materialDto = _mapper.Map<MaterialDto>(materialVM);
                     _materialService.Update(materialDto);
 
-                    return RedirectToAction(nameof(Index));
-                }
+                var confirmation = ConfirmationManager.GetInstance().CreateConfirmation(
+                   "Material was successfully updated.",
+                   nameof(List),
+                   "Material",
+                   3
+                   );
+                return View("Confirmation", confirmation);
 
-                materialVM.AvailableTags = AssignTags();
+
+            }
+            catch (InvalidOperationException)
+            {
+                ModelState.AddModelError("Name", "A material with this name already exists.");
                 return View(materialVM);
             }
             catch (Exception ex)
             {
                 ModelState.AddModelError("", $"Error: {ex.Message}");
-                materialVM.AvailableTags = AssignTags();
                 return View(materialVM);
             }
         }
@@ -239,14 +297,131 @@ namespace StudyMaterialOrganiser.Controllers
             {
                 var material = _mapper.Map<MaterialDto>(materialVM);
                 _materialService.Delete(material);
-                return RedirectToAction(nameof(Index));
+                return View("Confirmation", new ConfirmationVM
+                {
+                    Message = "Material was successfully deleted.",
+                    ActionName = nameof(List),
+                    ControllerName = "Material",
+                    RedirectSeconds = 3
+                });
             }
-            catch
+            catch (InvalidOperationException)
             {
+                TempData["ErrorMessage"] = "Deletion was unsuccessful. Please try again.";
+                return View(materialVM);
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", $"Error: {ex.Message}");
                 return View(materialVM);
             }
         }
-        public ActionResult Access(int id)
+        /*   public IActionResult ShareWithUsers(int id, string searchTerm = "")
+           {
+               var material = _materialService.GetMaterialById(id);
+               if (material == null)
+               {
+                   return NotFound();
+               }
+
+               var users = string.IsNullOrEmpty(searchTerm)
+                   ? _userService.GetAll()
+                   : _userService.SearchUsers(builder =>
+               builder.FilterByName(searchTerm));
+
+               var viewModel = new ShareWithUsersViewModel
+               {
+                   MaterialId = material.Idmaterial,
+                   MaterialLink = material.Link, 
+                   SearchTerm = searchTerm,
+                   Users = users.Select(u => new UserShareViewModel
+                   {
+                       Id = u.Id,
+                       FirstName = u.FirstName,
+                       LastName = u.LastName,
+                       Email = u.Email
+                   }).ToList()
+               };
+
+               return View(viewModel);
+           }*/
+        public IActionResult ShareWithUsers(int id, string searchTerm = "")
+        {
+            var material = _materialService.GetMaterialById(id);
+            if (material == null)
+            {
+                return NotFound();
+            }
+
+            var users = string.IsNullOrEmpty(searchTerm)
+                ? _userService.GetAll()
+                : _userService.SearchUsers(builder =>
+                    builder.FilterByName(searchTerm));
+
+            var viewModel = new ShareWithUsersViewModel
+            {
+                MaterialId = material.Idmaterial,
+                MaterialLink = material.Link,
+                SearchTerm = searchTerm,
+                Users = users.Select(u => new UserShareViewModel
+                {
+                    Id = u.Id,
+                    FirstName = u.FirstName,
+                    LastName = u.LastName,
+                    Email = u.Email,
+                    Permission = _materialAccessService.GetPermission(id, u.Id) // Fetch permission from proxy
+                }).ToList()
+            };
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        public IActionResult SetPermission([FromBody] dynamic requestData)
+        {
+            try
+            {
+                int materialId = (int)requestData.materialId;
+                int userId = (int)requestData.userId;
+                string permission = (string)requestData.permission;
+
+                if (string.IsNullOrEmpty(permission))
+                {
+                    return Json(new { success = false, message = "Permission cannot be empty." });
+                }
+
+              
+                _materialAccessService.AssignPermission(materialId, userId, permission);
+
+                return Json(new { success = true });
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = ex.Message });
+            }
+        }
+
+        [HttpPost]
+        public IActionResult SendShareEmail(int materialId, int userId)
+        {
+            try
+            {
+                var material = _materialService.GetMaterialById(materialId);
+                var permission = _materialAccessService.GetPermission(materialId, userId);
+
+                if (permission == "None")
+                {
+                    return Json(new { success = false, message = "User does not have permission to access this material." });
+                }
+
+                return Json(new { success = true, message = "Link shared successfully!" });
+            }
+            catch (Exception)
+            {
+                return Json(new { success = false, message = "Failed to share link." });
+            }
+        }
+
+     /*   public ActionResult Access(int id)
         {
             try
             {
@@ -261,8 +436,11 @@ namespace StudyMaterialOrganiser.Controllers
             }
             catch (Exception ex)
             {
-                return NotFound();
+                return NotFound(ex);
             }
-        }
+
+
+        }*/
     }
-}
+} 
+

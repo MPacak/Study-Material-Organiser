@@ -21,41 +21,27 @@ namespace StudyMaterialOrganiser.Controllers.UserModule
             _logger = logger;
 
 
-
+			 
         }
-        public ActionResult List(int page = 1, int pageSize = 20)
-        {
-            try
-            {
+		public IActionResult List(int page = 1, int pageSize = 20)
+		{
+			try
+			{
+				var paginatedLogs = _logService.GetPaginatedLogs(page, pageSize);
 
-                var allLogs = _logService.GetAll();
+				ViewBag.PageSize = paginatedLogs.PageSize;
+				ViewBag.CurrentPage = paginatedLogs.CurrentPage;
+				ViewBag.TotalPages = paginatedLogs.TotalPages;
 
-
-                var totalLogs = allLogs.Count();
-                var logsToDisplay = pageSize == 0
-                    ? allLogs.OrderBy(log => log.Timestamp).ToList()
-                    : allLogs.OrderBy(log => log.Timestamp)
-                        .Skip((page - 1) * pageSize)
-                        .Take(pageSize)
-                        .ToList();
-
-
-                var logDtos = _mapper.Map<List<LogDto>>(logsToDisplay);
-
-
-                ViewBag.PageSize = pageSize;
-                ViewBag.CurrentPage = page;
-                ViewBag.TotalPages = pageSize == 0 ? 1 : (int)Math.Ceiling(totalLogs / (double)pageSize);
-
-                return View(logDtos);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "An error occurred while fetching the list of logs.");
-                TempData["ToastMessage"] = "An error occurred while processing your request.";
-                TempData["ToastType"] = "error";
-                return RedirectToAction("Error", "Home");
-            }
-        }
+				return View(paginatedLogs.Items);
+			}
+			catch (Exception ex)
+			{
+				_logger.LogError(ex, "An error occurred while fetching the list of logs.");
+				TempData["ToastMessage"] = "An error occurred while processing your request.";
+				TempData["ToastType"] = "error";
+				return RedirectToAction("Error", "Home");
+			}
+		}
     }
 }

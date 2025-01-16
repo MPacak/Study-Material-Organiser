@@ -10,10 +10,13 @@ namespace BL.IServices;
 
 public interface ILogService
 {
-    ICollection<LogDto> GetLastN(int n);
+	PaginatedResultDto<LogDto> GetPaginatedLogs(int page, int pageSize);
+
+	ICollection<LogDto> GetLastN(int n);
     IEnumerable<Log> GetAll();
     int GetCount();
     void Log(string level, string message);
 
 
 }
+

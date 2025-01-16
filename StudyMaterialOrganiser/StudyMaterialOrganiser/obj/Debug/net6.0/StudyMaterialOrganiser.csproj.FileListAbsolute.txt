@@ -505,3 +505,15 @@ C:\Users\Tegula1\Documents\GitHub\Study-Material-Organiser\StudyMaterialOrganise
 C:\Users\Tegula1\Documents\GitHub\Study-Material-Organiser\StudyMaterialOrganiser\StudyMaterialOrganiser\obj\Debug\net6.0\StudyMaterialOrganiser.pdb
 C:\Users\Tegula1\Documents\GitHub\Study-Material-Organiser\StudyMaterialOrganiser\StudyMaterialOrganiser\obj\Debug\net6.0\StudyMaterialOrganiser.genruntimeconfig.cache
 C:\Users\Tegula1\Documents\GitHub\Study-Material-Organiser\StudyMaterialOrganiser\StudyMaterialOrganiser\obj\Debug\net6.0\ref\StudyMaterialOrganiser.dll
+C:\Users\mario\Documents\GitHub\Study-Material-Organiser\StudyMaterialOrganiser\StudyMaterialOrganiser\obj\Debug\net6.0\StudyMaterialOrganiser.csproj.AssemblyReference.cache
+C:\Users\mario\Documents\GitHub\Study-Material-Organiser\StudyMaterialOrganiser\StudyMaterialOrganiser\obj\Debug\net6.0\StudyMaterialOrganiser.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mario\Documents\GitHub\Study-Material-Organiser\StudyMaterialOrganiser\StudyMaterialOrganiser\obj\Debug\net6.0\StudyMaterialOrganiser.AssemblyInfoInputs.cache
+C:\Users\mario\Documents\GitHub\Study-Material-Organiser\StudyMaterialOrganiser\StudyMaterialOrganiser\obj\Debug\net6.0\StudyMaterialOrganiser.AssemblyInfo.cs
+C:\Users\mario\Documents\GitHub\Study-Material-Organiser\StudyMaterialOrganiser\StudyMaterialOrganiser\obj\Debug\net6.0\StudyMaterialOrganiser.csproj.CoreCompileInputs.cache
+C:\Users\mario\Documents\GitHub\Study-Material-Organiser\StudyMaterialOrganiser\StudyMaterialOrganiser\obj\Debug\net6.0\StudyMaterialOrganiser.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\mario\Documents\GitHub\Study-Material-Organiser\StudyMaterialOrganiser\StudyMaterialOrganiser\obj\Debug\net6.0\StudyMaterialOrganiser.RazorAssemblyInfo.cache
+C:\Users\mario\Documents\GitHub\Study-Material-Organiser\StudyMaterialOrganiser\StudyMaterialOrganiser\obj\Debug\net6.0\StudyMaterialOrganiser.RazorAssemblyInfo.cs
+C:\Users\mario\Documents\GitHub\Study-Material-Organiser\StudyMaterialOrganiser\StudyMaterialOrganiser\obj\Debug\net6.0\StudyMaterialOrganiser.sourcelink.json
+C:\Users\mario\Documents\GitHub\Study-Material-Organiser\StudyMaterialOrganiser\StudyMaterialOrganiser\obj\Debug\net6.0\StudyMaterialOrganiser.dll
+C:\Users\mario\Documents\GitHub\Study-Material-Organiser\StudyMaterialOrganiser\StudyMaterialOrganiser\obj\Debug\net6.0\refint\StudyMaterialOrganiser.dll
+C:\Users\mario\Documents\GitHub\Study-Material-Organiser\StudyMaterialOrganiser\StudyMaterialOrganiser\obj\Debug\net6.0\StudyMaterialOrganiser.pdb

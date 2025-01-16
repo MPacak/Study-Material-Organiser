@@ -17,103 +17,93 @@ namespace StudyMaterialOrganiser.Controllers.UserModule
         private readonly IMapper _mapper;
         private readonly IUserService _userService;
         private readonly ILogger<UserController> _logger;
+        private readonly IAuthService _authService;
+        private readonly IRoleService _roleService;
 
 
 
 
-        public UserController(IUserService userService, IMapper mapper, ILogger<UserController> logger, ILogService logService)
+
+		public UserController(IUserService userService, IMapper mapper, ILogger<UserController> logger, ILogService logService, IAuthService authService,
+			IRoleService roleService)
         {
 
             _userService = userService;
             _logService = logService;
             _mapper = mapper;
             _logger = logger;
+            _authService = authService;
+            _roleService = roleService;
 
 
 
-        }
+		}
         [Authorize(Roles = "Admin")]
+		[Authorize(Roles = "Admin")]
         public IActionResult List()
         {
-            try
-            {
-
-                var allUsers = _userService.GetAll();
-                var usersDtos = _mapper.Map<ICollection<UserDto>>(allUsers);
-                _logService.Log("Action", $"All users were fetched by {HttpContext?.User?.Identity?.Name}");
-                return View(usersDtos);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "An error occurred while fetching the list of users.");
-                TempData["ToastMessage"] = "An error occurred while processing your request.";
-                TempData["ToastType"] = "error";
-                return RedirectToAction("Error", "Home");
-            }
+	        try
+	        {
+		        var users = _userService.GetAll();
+		        var userDtos = _mapper.Map<ICollection<UserDto>>(users);
+		        _logService.Log("Action", $"All users were fetched by {User.Identity.Name}");
+		        return View(userDtos);
+	        }
+	        catch (Exception ex)
+	        {
+		        _logger.LogError(ex, "Error fetching users");
+		        return RedirectToAction("Error", "Home");
+	        }
         }
 
         [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult Approve(int id)
         {
-            var userName = HttpContext?.User?.Identity?.Name;
+	        try
+	        {
+		        var user = _userService.GetById(id);
+		        if (!_roleService.CanApproveRole(user.Role))
+			        return Json(new { success = false, message = "Invalid role state", type = "error" });
 
-            try
-            {
-                var userToUpdate = _userService.GetById(id);
+		        user.Role = _roleService.GetApprovedRole(user.Role);
+		        _userService.Update(id, user);
 
-
-                if (userToUpdate.Role == 2)
-                {
-
-                    return Json(new { success = false, message = "Admin Role cannot be changed", type = "error" });
-                }
-                if (userToUpdate.Role == 1)
-                {
-                    return Json(new { success = false, message = "Role cannot be increased further", type = "error" });
-                }
-                userToUpdate.Role = 1;
-                _userService.Update(id, userToUpdate);
-                _logService.Log("Action", $"User{userToUpdate.Username} approved by {HttpContext?.User?.Identity?.Name}");
-                return Json(new { success = true, message = $"{userToUpdate.Username} role updated successfully!", type = "success" });
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "An error occurred while approving a user");
-                return Json(new { success = false, message = ex.Message, type = "error" });
-            }
+		        _logService.Log("Action", $"User {user.Username} approved by {User.Identity.Name}");
+		        return Json(new { success = true, message = "Role updated successfully", type = "success" });
+	        }
+	        catch (Exception ex)
+	        {
+		        _logger.LogError(ex, "Error approving user");
+		        return Json(new { success = false, message = ex.Message, type = "error" });
+	        }
         }
-        [Authorize(Roles = "Admin")]
+		[Authorize(Roles = "Admin")]
         [HttpPost]
-        public IActionResult Disapprove(int id)
-        {
-            try
-            {
-                var userToUpdate = _userService.GetById(id);
+		[Authorize(Roles = "Admin")]
+		[HttpPost]
+		public IActionResult Disapprove(int id)
+		{
+			try
+			{
+				var user = _userService.GetById(id);
+				if (!_roleService.CanDisapproveRole(user.Role))
+					return Json(new { success = false, message = "Invalid role state", type = "error" });
 
+				user.Role = _roleService.GetDisapprovedRole(user.Role);
+				_userService.Update(id, user);
 
-                if (userToUpdate.Role == 2)
-                {
-                    return Json(new { success = false, message = "Admin Role cannot be changed", type = "error" });
-                }
+				_logService.Log("Action", $"User {user.Username} disapproved by {User.Identity.Name}");
+				return Json(new { success = true, message = "Role updated successfully", type = "success" });
+			}
+			catch (Exception ex)
+			{
+				_logger.LogError(ex, "Error disapproving user");
+				return Json(new { success = false, message = ex.Message, type = "error" });
+			}
+		}
 
-                if (userToUpdate.Role == 0)
-                {
-                    return Json(new { success = false, message = "Role cannot be lowered further", type = "error" });
-                }
-                userToUpdate.Role = 0;
-                _userService.Update(id, userToUpdate);
-                _logService.Log("Action", $"User{userToUpdate.Username} disapproved by {HttpContext?.User?.Identity?.Name}");
-                return Json(new { success = true, message = $"{userToUpdate.Username} role updated successfully!", type = "success" });
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "An error occurred while disapproving a user");
-                return Json(new { success = false, message = ex.Message, type = "error" });
-            }
-        }
-
-        [Authorize(Roles = "Admin")]
+		[Authorize(Roles = "Admin")]
         public IActionResult LoadUserList()
         {
             try
@@ -311,100 +301,40 @@ namespace StudyMaterialOrganiser.Controllers.UserModule
         {
             return View();
         }
-        [AllowAnonymous]
+     
         [HttpPost]
+		[AllowAnonymous]
         public IActionResult LogIn(UserLoginDto request)
         {
-            if (!ModelState.IsValid) return View();
+	        try
+	        {
+		        var user = _authService.Authenticate(request.Username, request.Password);
+		        _authService.SignIn(user.Username, user.Role, user.Id);
 
-            try
-            {
-
-                var existingUser = _userService.GetByName(request.Username);
-                if (existingUser == null)
-                {
-                    throw new InvalidOperationException("User does not exist");
-                }
-                if (existingUser.IsDeleted == true)
-                {
-                    throw new InvalidOperationException("Username no longer exists");
-                }
-
-
-                var authentication = _userService.Authenticate(request.Username, request.Password);
-                if (authentication == null)
-                {
-                    throw new InvalidOperationException("Wrong Password");
-                }
-
-
-
-
-
-                var claims = new List<Claim>
-            {
-                new Claim(ClaimTypes.Name, request.Username),
-                new Claim(ClaimTypes.Role, existingUser.Role switch
-                {
-                    2 => "Admin",
-                    1 => "User",
-                    0 => "NonUser",
-                    _ => throw new ArgumentOutOfRangeException()
-                }),
-
-                new Claim(ClaimTypes.NameIdentifier, existingUser.Id.ToString())
-            };
-
-                var claimsIdentity = new ClaimsIdentity(
-                    claims, CookieAuthenticationDefaults.AuthenticationScheme);
-
-
-                var authProperties = new AuthenticationProperties
-                {
-
-                };
-
-                Task.Run(async () =>
-                    await HttpContext.SignInAsync(
-                        CookieAuthenticationDefaults.AuthenticationScheme,
-                        new ClaimsPrincipal(claimsIdentity),
-                        authProperties)
-                ).GetAwaiter().GetResult();
-
-                _logService.Log("LogIn", $"User: {request.Username} logged in");
-                TempData["ToastMessage"] = "You have successfully logged in";
-                TempData["ToastType"] = "success";
-                if (existingUser.Role.ToString() == "2")
-                    return RedirectToAction("index", "Home");
-                if (existingUser.Role.ToString() == "1")
-                    return RedirectToAction("index", "Home");
-
-                return RedirectToAction("index", "Home");
-
-
-
-            }
-            catch (Exception ex)
-            {
-                TempData["ToastMessage"] = ex.Message;
-                TempData["ToastType"] = "error";
-                return View();
-            }
+		        _logService.Log("LogIn", $"User {request.Username} logged in");
+		        TempData["ToastMessage"] = "Successfully logged in!";
+		        TempData["ToastType"] = "success";
+				return RedirectToAction("Index", "Home");
+	        }
+	        catch (Exception ex)
+	        {
+		        _logger.LogError(ex, "Error during login");
+		        TempData["ToastMessage"] = ex.Message;
+		        TempData["ToastType"] = "error";
+		        return View();
+	        }
         }
-        [AllowAnonymous]
-        public IActionResult Logout()
-        {
-            var userName = HttpContext.User.Identity.Name;
-            Task.Run(async () =>
-                await HttpContext.SignOutAsync(
-                    CookieAuthenticationDefaults.AuthenticationScheme)
-            ).GetAwaiter().GetResult();
-            _logService.Log("LogOut", $"User: {userName} logged out");
+		[AllowAnonymous]
+		public IActionResult Logout()
+		{
+			_authService.SignOut();
+			_logService.Log("LogOut", $"User {User.Identity.Name} logged out");
+			return RedirectToAction("Index", "Home");
+		}
+    
 
-            return View();
-        }
 
-        [Authorize(Roles = "NonUser,User,Admin")]
+		[Authorize(Roles = "NonUser,User,Admin")]
         public IActionResult ProfileDetails()
         {
             try
@@ -472,40 +402,13 @@ namespace StudyMaterialOrganiser.Controllers.UserModule
             try
             {
                 _userService.Update(id, user);
+                _authService.SignOut();
+          
 
-                Task.Run(async () =>
-                    await HttpContext.SignOutAsync(
-                        CookieAuthenticationDefaults.AuthenticationScheme)
-                ).GetAwaiter().GetResult();
+               var updatedUserName = _userService.GetById(id);
+            
 
-                var updatedUserName = _userService.GetById(id);
-                var claims = new List<Claim>
-            {
-                new Claim(ClaimTypes.Name, updatedUserName.Username),
-                new Claim(ClaimTypes.Role, updatedUserName.Role switch
-                {
-                    2 => "Admin",
-                    1 => "User",
-                    0 => "NonUser",
-                    _ => throw new ArgumentOutOfRangeException()
-                }), new Claim(ClaimTypes.NameIdentifier, updatedUserName.Id.ToString())
-            };
-                var claimsIdentity = new ClaimsIdentity(
-                    claims, CookieAuthenticationDefaults.AuthenticationScheme);
-
-
-                var authProperties = new AuthenticationProperties
-                {
-
-                };
-
-
-                Task.Run(async () =>
-                    await HttpContext.SignInAsync(
-                        CookieAuthenticationDefaults.AuthenticationScheme,
-                        new ClaimsPrincipal(claimsIdentity),
-                        authProperties)
-                ).GetAwaiter().GetResult();
+                _authService.SignIn(updatedUserName.Username, updatedUserName.Role, updatedUserName.Id);
 
 
                 return PartialView("_ProfileDetailsPartial", updatedUserName);

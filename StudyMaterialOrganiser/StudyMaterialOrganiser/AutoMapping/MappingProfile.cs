@@ -14,13 +14,7 @@ namespace StudyMaterialOrganiser.Mappers
 
             CreateMap<TagVM, TagDto>().ReverseMap();
 
-            CreateMap<MaterialDto, MaterialVM>()
-                .ForMember(dest => dest.SelectedTagIds, opt => opt.MapFrom(src => src.TagIds))
-               .ForMember(dest => dest.File, opt => opt.Ignore());
-
-            CreateMap<MaterialVM, MaterialDto>()
-                 .ForMember(dest => dest.TagIds, opt => opt.MapFrom(src => src.SelectedTagIds));
-
+            CreateMap<MaterialDto, MaterialVM>().ReverseMap();
 
             CreateMap<UserDto, UserEditVM>().ReverseMap();
             CreateMap<UserDto, ProfileEditVM>().ReverseMap();

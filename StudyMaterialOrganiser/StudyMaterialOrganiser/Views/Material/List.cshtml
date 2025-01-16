@@ -1,29 +1,85 @@
-﻿@model IEnumerable<StudyMaterialOrganiser.ViewModels.MaterialVM>
+﻿
+@model StudyMaterialOrganiser.ViewModels.MaterialSearchVM
 @{
     ViewData["Title"] = "List Material";
 }
-<table class="table">
-    <thead>
-        <tr>
+<div class="container">
+    <h2>Materials List</h2>
+    <a class="btn btn-primary" asp-action="Create" asp-controller="Material" class="btn btn-primary btn-lg">+ Add Material</a>
 
-            <th>Name</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var material in Model)
-        {
-            <tr>
-                <td>@material.Name</td>
-               
-                <td>
-                  
-                    <a asp-action="Edit" asp-route-id="@material.Id">Edit</a> |
-                    <form asp-action="Delete" asp-route-id="@material.Id" method="post" style="display:inline;">
-                        <button type="submit" class="btn btn-link">Delete</button>
-                    </form>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+    <form method="get" class="mb-4 mt-4">
+        <div class="row">
+            <div class="col-md-4">
+                <input type="text" name="query" class="form-control" placeholder="Search by name or description..."
+                       value="@Model.Query">
+            </div>
+            <div class="col-md-3">
+                <select name="fileType" class="form-control" asp-items="@(new SelectList(Model.AvailableFileTypes, "Key", "Value", Model.FileType))">
+                    <option value="">-- Select File Type --</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <select name="tagIds" multiple class="form-control" asp-items="@(new SelectList(Model.AvailableTags, "Id", "Name", Model.TagIds))">
+                </select>
+            </div>
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-primary">Search</button>
+                <button type="button" onclick="window.location.href='@Url.Action("List")'" class="btn btn-secondary">Reset</button>
+            </div>
+        </div>
+    </form>
+    @if (!string.IsNullOrEmpty(Model.NotificationMessage))
+    {
+        <div class="alert alert-warning">
+            @Model.NotificationMessage
+        </div>
+    }
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>File Type</th>
+                    <th>Tags</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var material in Model.Materials)
+                {
+                    <tr>
+                        <td>@material.Name</td>
+                        <td>@material.Description</td>
+                        <td>@material.FolderTypeName</td>
+                        <td>@string.Join(", ", material.TagNames)</td>
+                        <td>
+                            <a asp-action="Details" asp-route-id="@material.Idmaterial" class="btn btn-secondary">Details</a> 
+                            <a asp-action="Delete" asp-route-id="@material.Idmaterial" method="get" class="btn btn-danger" >Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    @if (Model.TotalPages > 1)
+    {
+        <nav>
+            <ul class="pagination">
+                @for (int i = 1; i <= Model.TotalPages; i++)
+                {
+                    <li class="page-item @(i == Model.CurrentPage ? "active" : "")">
+                        <a class="page-link" href="@Url.Action("List", new { page = i, query = Model.Query, fileType = Model.FileType, tagIds = Model.TagIds })">
+                            @i
+                        </a>
+                    </li>
+                }
+            </ul>
+        </nav>
+    }
+</div>
+@section Scripts {
+    <script src="~/js/materialSearch.js"></script>
+}
+

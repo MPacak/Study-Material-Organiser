@@ -8,13 +8,13 @@ namespace DAL.IRepositories
 {
     public interface IUnitOfWork
     {
-        IGroupRepository Group{ get; }
 		IUserGroupRepository UserGroup { get; }
 		ILogRepository Log { get; }
         IUserRepository User { get; }
         ITagRepository Tag { get; }
         IMaterialRepository Material { get; }
         IMaterialTagRepository MaterialTag { get; }
+        IStudyGroupRepository StudyGroup { get; }
         void Save();
     }
 }

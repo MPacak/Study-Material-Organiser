@@ -1,9 +1,11 @@
 ﻿using AutoMapper;
+using BL.Builder;
 using BL.IServices;
 using BL.Models;
 using BL.Security;
 using DAL.IRepositories;
 using DAL.Models;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
@@ -19,19 +21,22 @@ namespace BL.Services;
 public class UserService : IUserService
 {
     private readonly IUnitOfWork _unitOfWork;
-    private readonly IConfiguration _configuration;
     private readonly IMapper _userMapper;
-    private readonly ILogService _logService;
+    private readonly IAuthService _authService;
 
-	public UserService(IUnitOfWork  unitOfWork, IConfiguration configuration, IMapper userMapper, ILogService logService)
+	public UserService(IUnitOfWork  unitOfWork,IMapper userMapper, IAuthService authService)
     {
 	    
 		_unitOfWork =  unitOfWork;
-        _configuration = configuration;
         _userMapper = userMapper;
-        _logService = logService;
-	}
-
+        _authService = authService;
+    }
+    public IEnumerable<UserDto> SearchUsers(Func<UserSearchQueryBuilder, UserSearchQueryBuilder> buildQuery)
+    {
+        var builder = new UserSearchQueryBuilder(_unitOfWork, _userMapper);
+        var query = buildQuery(builder);
+        return query.BuildDto();
+    }
     public ICollection<UserDto> GetAll()
     {
 		var allUsers =  _unitOfWork.User.GetAll(u => u.IsDeleted == false);
@@ -42,8 +47,7 @@ public class UserService : IUserService
 
     public UserDto GetById(int id)
     {
-        var user =  _unitOfWork.User.GetFirstOrDefault(u => u.Id == id && u.IsDeleted == false);
-        if (user == null) return null;
+        var user = _unitOfWork.User.GetFirstOrDefault(u => u.Id == id && !u.IsDeleted);
         return user == null ? null : _userMapper.Map<UserDto>(user);
     }
 
@@ -123,42 +127,6 @@ public class UserService : IUserService
     }
 
 
-
-    public string GenerateToken(UserLoginDto request)
-    {
-
-        var user = Authenticate(request.Username, request.Password);
-
-        if (user != null)
-        {
-            var jwtKey = _configuration["Jwt:Key"];
-            var role = user.Role.ToString();
-
-
-            var additionalClaims = new List<Claim>
-            {
-                new Claim(ClaimTypes.Role, role)
-            };
-
-            var token = JwtTokenProvider.CreateToken(jwtKey, 10, user.Username, additionalClaims);
-            return token;
-        }
-
-        throw new Exception("Authentication failed");
-    }
-
-
-
-    public User Authenticate(string username, string password)
-    {
-        var user =  _unitOfWork.User.GetFirstOrDefault(u => u.Username == username);
-        if (user == null) throw new InvalidOperationException("User does not exist");
-
-        var hash = PasswordHashProvider.GetHash(password, user.PwdSalt);
-
-        return hash == user.PwdHash ? user : null;
-    }
-
     public UserDto GetByUserName(string username)
     {
         var user =  _unitOfWork.User.GetFirstOrDefault(u => u.Username == username);
@@ -187,7 +155,7 @@ public class UserService : IUserService
 
     public void ChangePassword(UserPasswordChangeDto request)
     {
-        var user = Authenticate(request.Username, request.OldPassword);
+        var user = _authService.Authenticate(request.Username, request.OldPassword);
         if (user != null)
         {
             string b64Salt = PasswordHashProvider.GetSalt();

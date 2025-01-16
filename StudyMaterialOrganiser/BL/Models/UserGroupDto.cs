@@ -15,7 +15,7 @@ namespace BL.Models
 		[Display(Name = "User Id")]
 		public int UserId { get; set; }
 		[Required]
-		[Display(Name = "Project Id")]
+		[Display(Name = "Group Id")]
 		public int GroupId { get; set; }
 		
 		[Required]

@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace DAL.IRepositories
 {
-    public class GroupRepository : Repository<Group>, IGroupRepository
+    public class StudyGroupRepository : Repository<StudyGroup>, IStudyGroupRepository
     {
-		public GroupRepository(StudymaterialorganiserContext dbContext) : base(dbContext)
+		public StudyGroupRepository(StudymaterialorganiserContext dbContext) : base(dbContext)
 		{
 
 		}

@@ -1,0 +1,175 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = StudyMaterialOrganiser
+build_property.RootNamespace = StudyMaterialOrganiser
+build_property.ProjectDir = C:\Users\mario\Documents\GitHub\Study-Material-Organiser\StudyMaterialOrganiser\StudyMaterialOrganiser\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\mario\Documents\GitHub\Study-Material-Organiser\StudyMaterialOrganiser\StudyMaterialOrganiser
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/mario/Documents/GitHub/Study-Material-Organiser/StudyMaterialOrganiser/StudyMaterialOrganiser/Views/Home/Home.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIb21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mario/Documents/GitHub/Study-Material-Organiser/StudyMaterialOrganiser/StudyMaterialOrganiser/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mario/Documents/GitHub/Study-Material-Organiser/StudyMaterialOrganiser/StudyMaterialOrganiser/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mario/Documents/GitHub/Study-Material-Organiser/StudyMaterialOrganiser/StudyMaterialOrganiser/Views/Log/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9nXExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mario/Documents/GitHub/Study-Material-Organiser/StudyMaterialOrganiser/StudyMaterialOrganiser/Views/Material/Confirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0ZXJpYWxcQ29uZmlybWF0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mario/Documents/GitHub/Study-Material-Organiser/StudyMaterialOrganiser/StudyMaterialOrganiser/Views/Material/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0ZXJpYWxcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mario/Documents/GitHub/Study-Material-Organiser/StudyMaterialOrganiser/StudyMaterialOrganiser/Views/Material/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0ZXJpYWxcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mario/Documents/GitHub/Study-Material-Organiser/StudyMaterialOrganiser/StudyMaterialOrganiser/Views/Material/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0ZXJpYWxcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mario/Documents/GitHub/Study-Material-Organiser/StudyMaterialOrganiser/StudyMaterialOrganiser/Views/Material/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0ZXJpYWxcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mario/Documents/GitHub/Study-Material-Organiser/StudyMaterialOrganiser/StudyMaterialOrganiser/Views/Material/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0ZXJpYWxcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mario/Documents/GitHub/Study-Material-Organiser/StudyMaterialOrganiser/StudyMaterialOrganiser/Views/Material/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0ZXJpYWxcTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mario/Documents/GitHub/Study-Material-Organiser/StudyMaterialOrganiser/StudyMaterialOrganiser/Views/Material/ShareWithUsers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0ZXJpYWxcU2hhcmVXaXRoVXNlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mario/Documents/GitHub/Study-Material-Organiser/StudyMaterialOrganiser/StudyMaterialOrganiser/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mario/Documents/GitHub/Study-Material-Organiser/StudyMaterialOrganiser/StudyMaterialOrganiser/Views/Shared/_EmptyLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9FbXB0eUxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mario/Documents/GitHub/Study-Material-Organiser/StudyMaterialOrganiser/StudyMaterialOrganiser/Views/Shared/_LayoutAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mario/Documents/GitHub/Study-Material-Organiser/StudyMaterialOrganiser/StudyMaterialOrganiser/Views/Shared/_LayoutNonUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXROb25Vc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mario/Documents/GitHub/Study-Material-Organiser/StudyMaterialOrganiser/StudyMaterialOrganiser/Views/Shared/_LayoutUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRVc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mario/Documents/GitHub/Study-Material-Organiser/StudyMaterialOrganiser/StudyMaterialOrganiser/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mario/Documents/GitHub/Study-Material-Organiser/StudyMaterialOrganiser/StudyMaterialOrganiser/Views/StudyGroup/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZHlHcm91cFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mario/Documents/GitHub/Study-Material-Organiser/StudyMaterialOrganiser/StudyMaterialOrganiser/Views/StudyGroup/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZHlHcm91cFxpbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mario/Documents/GitHub/Study-Material-Organiser/StudyMaterialOrganiser/StudyMaterialOrganiser/Views/Tag/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFnXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mario/Documents/GitHub/Study-Material-Organiser/StudyMaterialOrganiser/StudyMaterialOrganiser/Views/Tag/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFnXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mario/Documents/GitHub/Study-Material-Organiser/StudyMaterialOrganiser/StudyMaterialOrganiser/Views/Tag/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFnXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mario/Documents/GitHub/Study-Material-Organiser/StudyMaterialOrganiser/StudyMaterialOrganiser/Views/Tag/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFnXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mario/Documents/GitHub/Study-Material-Organiser/StudyMaterialOrganiser/StudyMaterialOrganiser/Views/User/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mario/Documents/GitHub/Study-Material-Organiser/StudyMaterialOrganiser/StudyMaterialOrganiser/Views/User/CreateUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxDcmVhdGVVc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mario/Documents/GitHub/Study-Material-Organiser/StudyMaterialOrganiser/StudyMaterialOrganiser/Views/User/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mario/Documents/GitHub/Study-Material-Organiser/StudyMaterialOrganiser/StudyMaterialOrganiser/Views/User/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mario/Documents/GitHub/Study-Material-Organiser/StudyMaterialOrganiser/StudyMaterialOrganiser/Views/User/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mario/Documents/GitHub/Study-Material-Organiser/StudyMaterialOrganiser/StudyMaterialOrganiser/Views/User/LogIn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMb2dJbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mario/Documents/GitHub/Study-Material-Organiser/StudyMaterialOrganiser/StudyMaterialOrganiser/Views/User/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMb2dvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mario/Documents/GitHub/Study-Material-Organiser/StudyMaterialOrganiser/StudyMaterialOrganiser/Views/User/ProfileDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxQcm9maWxlRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mario/Documents/GitHub/Study-Material-Organiser/StudyMaterialOrganiser/StudyMaterialOrganiser/Views/User/Registration.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxSZWdpc3RyYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mario/Documents/GitHub/Study-Material-Organiser/StudyMaterialOrganiser/StudyMaterialOrganiser/Views/User/_EditModalPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxfRWRpdE1vZGFsUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mario/Documents/GitHub/Study-Material-Organiser/StudyMaterialOrganiser/StudyMaterialOrganiser/Views/User/_ProfileDetailsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxfUHJvZmlsZURldGFpbHNQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mario/Documents/GitHub/Study-Material-Organiser/StudyMaterialOrganiser/StudyMaterialOrganiser/Views/User/_UserList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxfVXNlckxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mario/Documents/GitHub/Study-Material-Organiser/StudyMaterialOrganiser/StudyMaterialOrganiser/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mario/Documents/GitHub/Study-Material-Organiser/StudyMaterialOrganiser/StudyMaterialOrganiser/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mario/Documents/GitHub/Study-Material-Organiser/StudyMaterialOrganiser/StudyMaterialOrganiser/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-uuq6f45h9a

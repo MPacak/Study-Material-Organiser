@@ -16,11 +16,7 @@
             <textarea asp-for="Description" class="form-control" id="Description"></textarea>
             <span asp-validation-for="Description" class="text-danger"></span>
         </div>
-        <div class="mb-3">
-            <label for="Link" class="form-label">Material Link</label>
-            <input asp-for="Link" class="form-control" id="Link" required />
-            <span asp-validation-for="Link" class="text-danger"></span>
-        </div>
+      
         <div class="mb-3">
             <label for="File" class="form-label">Upload File</label>
             <input type="file" asp-for="File" class="form-control" id="File" required
@@ -31,19 +27,19 @@
        
         <div class="mb-3">
             <label class="form-label">Tags</label>
-            <select asp-for="SelectedTagIds" class="form-select" multiple>
+            <select asp-for="TagIds" class="form-select" multiple>
                 @foreach (var tag in Model.AvailableTags)
                 {
                     <option value="@tag.Id">@tag.Name</option>
                 }
             </select>
-            <span asp-validation-for="SelectedTagIds" class="text-danger"></span>
+            <span asp-validation-for="TagIds" class="text-danger"></span>
             <small class="form-text text-muted">Hold Ctrl/Cmd to select multiple tags</small>
         </div>
 
         <div class="text-end">
             <button type="submit" class="btn btn-success">Save</button>
-            <a class="btn btn-secondary" asp-action="Index">Cancel</a>
+            <a class="btn btn-secondary" asp-action="List">Cancel</a>
         </div>
     </form>
 </div>

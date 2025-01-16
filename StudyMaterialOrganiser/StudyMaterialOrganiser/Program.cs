@@ -9,6 +9,9 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using System.Text;
 using BL.AutoMaperProfiles;
 using Microsoft.IdentityModel.Tokens;
+using BL.Utilities;
+using Microsoft.AspNetCore.Razor.TagHelpers;
+using StudyMaterialOrganiser.Utilities;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,10 +29,10 @@ builder.Services.AddSession(options =>
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
 });
+builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-builder.Services.AddScoped<IGroupRepository, GroupRepository>();
 builder.Services.AddScoped<IUserGroupRepository, UserGroupRepository>();
 builder.Services.AddScoped<IMaterialRepository, MaterialRepository>();
 builder.Services.AddScoped<ITagRepository, TagRepository>();
@@ -38,13 +41,26 @@ builder.Services.AddScoped<ILogService, LogService>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<ILogRepository, LogRepository>();
-
+builder.Services.AddScoped<IRoleApprovalStrategy, DefaultRoleApprovalStrategy>();
+builder.Services.AddScoped<IRoleApprovalStrategy, AdminRoleApprovalStrategy>();
 builder.Services.AddScoped<IMaterialRepository, MaterialRepository>();
 builder.Services.AddScoped<IMaterialTagRepository, MaterialTagRepository>();
 builder.Services.AddScoped<ITagRepository, TagRepository>();
 builder.Services.AddScoped<IMaterialService, MaterialService>();
 builder.Services.AddScoped<IMaterialTagService, MaterialTagService>();
 builder.Services.AddScoped<ITagService, TagService>();
+builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IRoleService, RoleService>();
+builder.Services.AddScoped<IPasswordService, PasswordService>();
+builder.Services.AddScoped<IStudyGroupService, StudyGroupService>();
+//builder.Services.AddAutoMapper(typeof(MappingProfile));
+
+
+builder.Services.AddTransient<AssignTags>();
+builder.Services.AddScoped<BaseFileHandler, BinaryFileHandler>();
+builder.Services.AddScoped<IMaterialFactory, MaterialFactory>();
+builder.Services.AddScoped<IMaterialAccessService, MaterialAccessService>();
+
 
 builder.Services
     .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

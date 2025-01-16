@@ -9,7 +9,7 @@ namespace BL.IServices
 {
     public interface IMaterialTagService
     {
-        void Create(MaterialTagDto materialTagDto);
+        void Create(int id, List<int> tagIds);
         void DeleteByMaterialId(int materialId);
         IEnumerable<MaterialTagDto> GetByMaterialId(int materialId);
         void Update(int materialId, List<int> TagIds);

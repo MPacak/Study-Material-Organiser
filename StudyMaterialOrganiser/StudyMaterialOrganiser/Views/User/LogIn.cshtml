@@ -30,11 +30,7 @@
 					<input id="Password" type="password" asp-for="Password" class="form-control border border-1 border-dark" />
 					<span asp-validation-for="Password" class="text-danger"></span>
 				</div>
-				<div class="col-md-12 mb-3">
-					<label asp-for="ConfirmPassword" class="form-label"></label>
-					<input id="ConfirmPassword" type="password" asp-for="ConfirmPassword" class="form-control border border-1 border-dark" />
-					<span asp-validation-for="ConfirmPassword" class="text-danger"></span>
-				</div>
+
 				<div class="col-md-12 mb-3">
 					<p class="text-primary">
 						New user? <a asp-controller="User" asp-action="Registration" class="text-info">Register</a>
