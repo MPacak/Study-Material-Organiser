@@ -3,40 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\mario\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0E9FB447-E793-4CD9-BBBB-7BF470900C54}|BL\\BL.csproj|c:\\users\\mario\\documents\\github\\study-material-organiser\\studymaterialorganiser\\bl\\automaperprofiles\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E9FB447-E793-4CD9-BBBB-7BF470900C54}|BL\\BL.csproj|solutionrelative:bl\\automaperprofiles\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|c:\\users\\mario\\documents\\github\\study-material-organiser\\studymaterialorganiser\\studymaterialorganiser\\views\\studygroup\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\views\\studygroup\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|c:\\users\\mario\\documents\\github\\study-material-organiser\\studymaterialorganiser\\studymaterialorganiser\\views\\studygroup\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\views\\studygroup\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|c:\\users\\mario\\documents\\github\\study-material-organiser\\studymaterialorganiser\\studymaterialorganiser\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|c:\\users\\mario\\documents\\github\\study-material-organiser\\studymaterialorganiser\\studymaterialorganiser\\controllers\\materialcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\controllers\\materialcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|c:\\users\\mario\\documents\\github\\study-material-organiser\\studymaterialorganiser\\dal\\repositories\\grouprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|solutionrelative:dal\\repositories\\grouprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|c:\\users\\mario\\documents\\github\\study-material-organiser\\studymaterialorganiser\\dal\\models\\tag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|solutionrelative:dal\\models\\tag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|c:\\users\\mario\\documents\\github\\study-material-organiser\\studymaterialorganiser\\dal\\models\\studymaterialorganisercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|solutionrelative:dal\\models\\studymaterialorganisercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|c:\\users\\mario\\documents\\github\\study-material-organiser\\studymaterialorganiser\\dal\\models\\studygroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B542E72-3228-4907-AFBF-D4E6EA3CF70B}|DAL\\DAL.csproj|solutionrelative:dal\\models\\studygroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{84B32EB9-0961-468F-9034-A74A960A4E26}|StudyMaterialOrganiser.Test\\StudyMaterialOrganiser.Test.csproj|c:\\users\\mario\\documents\\github\\study-material-organiser\\studymaterialorganiser\\studymaterialorganiser.test\\services\\logservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84B32EB9-0961-468F-9034-A74A960A4E26}|StudyMaterialOrganiser.Test\\StudyMaterialOrganiser.Test.csproj|solutionrelative:studymaterialorganiser.test\\services\\logservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,112 +22,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Tag.cs",
-              "DocumentMoniker": "C:\\Users\\mario\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\DAL\\Models\\Tag.cs",
-              "RelativeDocumentMoniker": "DAL\\Models\\Tag.cs",
-              "ToolTip": "C:\\Users\\mario\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\DAL\\Models\\Tag.cs",
-              "RelativeToolTip": "DAL\\Models\\Tag.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T17:54:38.504Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MaterialController.cs",
-              "DocumentMoniker": "C:\\Users\\mario\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Controllers\\MaterialController.cs",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\Controllers\\MaterialController.cs",
-              "ToolTip": "C:\\Users\\mario\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Controllers\\MaterialController.cs",
-              "RelativeToolTip": "StudyMaterialOrganiser\\Controllers\\MaterialController.cs",
-              "ViewState": "AQIAALwAAAAAAAAAAAAcwM4AAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T17:53:43.038Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\mario\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Program.cs",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\Program.cs",
-              "ToolTip": "C:\\Users\\mario\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Program.cs",
-              "RelativeToolTip": "StudyMaterialOrganiser\\Program.cs",
-              "ViewState": "AQIAADIAAAAAAAAAAAAcwEQAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T17:53:38.53Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MappingProfile.cs",
-              "DocumentMoniker": "C:\\Users\\mario\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\BL\\AutoMaperProfiles\\MappingProfile.cs",
-              "RelativeDocumentMoniker": "BL\\AutoMaperProfiles\\MappingProfile.cs",
-              "ToolTip": "C:\\Users\\mario\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\BL\\AutoMaperProfiles\\MappingProfile.cs",
-              "RelativeToolTip": "BL\\AutoMaperProfiles\\MappingProfile.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAAACkAAAAzAAAA",
+              "Title": "LogServiceTests.cs",
+              "DocumentMoniker": "C:\\Users\\mario\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser.Test\\Services\\LogServiceTests.cs",
+              "RelativeDocumentMoniker": "StudyMaterialOrganiser.Test\\Services\\LogServiceTests.cs",
+              "ToolTip": "C:\\Users\\mario\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser.Test\\Services\\LogServiceTests.cs",
+              "RelativeToolTip": "StudyMaterialOrganiser.Test\\Services\\LogServiceTests.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAACcAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T17:52:01.979Z",
+              "WhenOpened": "2025-01-16T19:24:46.813Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GroupRepository.cs",
-              "DocumentMoniker": "C:\\Users\\mario\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\DAL\\Repositories\\GroupRepository.cs",
-              "RelativeDocumentMoniker": "DAL\\Repositories\\GroupRepository.cs",
-              "ToolTip": "C:\\Users\\mario\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\DAL\\Repositories\\GroupRepository.cs",
-              "RelativeToolTip": "DAL\\Repositories\\GroupRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T17:54:50.057Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "index.cshtml",
-              "DocumentMoniker": "C:\\Users\\mario\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\StudyGroup\\index.cshtml",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\Views\\StudyGroup\\index.cshtml",
-              "ToolTip": "C:\\Users\\mario\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\StudyGroup\\index.cshtml",
-              "RelativeToolTip": "StudyMaterialOrganiser\\Views\\StudyGroup\\index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-16T17:57:23.1Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\mario\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\StudyGroup\\Create.cshtml",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser\\Views\\StudyGroup\\Create.cshtml",
-              "ToolTip": "C:\\Users\\mario\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Views\\StudyGroup\\Create.cshtml",
-              "RelativeToolTip": "StudyMaterialOrganiser\\Views\\StudyGroup\\Create.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-16T17:57:57.235Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "StudyGroup.cs",
-              "DocumentMoniker": "C:\\Users\\mario\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\DAL\\Models\\StudyGroup.cs",
-              "RelativeDocumentMoniker": "DAL\\Models\\StudyGroup.cs",
-              "ToolTip": "C:\\Users\\mario\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\DAL\\Models\\StudyGroup.cs",
-              "RelativeToolTip": "DAL\\Models\\StudyGroup.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T17:42:00.011Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "StudymaterialorganiserContext.cs",
-              "DocumentMoniker": "C:\\Users\\mario\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\DAL\\Models\\StudymaterialorganiserContext.cs",
-              "RelativeDocumentMoniker": "DAL\\Models\\StudymaterialorganiserContext.cs",
-              "ToolTip": "C:\\Users\\mario\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\DAL\\Models\\StudymaterialorganiserContext.cs",
-              "RelativeToolTip": "DAL\\Models\\StudymaterialorganiserContext.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAACcAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T17:44:28.8Z"
             }
           ]
         }

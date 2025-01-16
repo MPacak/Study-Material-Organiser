@@ -45,17 +45,17 @@ namespace StudyMaterialOrganiser.Test
         [Fact]
         public async Task CanCreateMaterialViaController()
         {
-            // Arrange
+            
             var materialVM = new MaterialVM
             {
                 Name = "Integration Material",
                 Description = "Created in integration test"
             };
 
-            // Act
+            
             var result = await _controller.Create(materialVM);
 
-            // Assert
+            
             var viewResult = Assert.IsType<ViewResult>(result);
             Assert.Equal("Confirmation", viewResult.ViewName);
 
