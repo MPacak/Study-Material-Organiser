@@ -37,17 +37,13 @@ namespace StudyMaterialOrganiser.Test.MaterialTests
             _mockWebHostEnvironment = new Mock<IWebHostEnvironment>();
 
 
-
-            // Create mock for BaseFileHandler
             _mockFileHandler = new Mock<BaseFileHandler>(Mock.Of<IConfiguration>());
 
 
             var realTagService = _fixture.ServiceProvider.GetRequiredService<ITagService>();
             var realMapper = _fixture.ServiceProvider.GetRequiredService<IMapper>();
 
-            // Create the real AssignTags instance with real dependencies
             _assignTags = new AssignTags(realTagService, realMapper);
-
 
 
             _controller = new MaterialController(

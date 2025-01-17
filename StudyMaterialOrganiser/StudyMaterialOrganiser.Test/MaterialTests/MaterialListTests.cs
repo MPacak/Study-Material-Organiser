@@ -107,7 +107,7 @@ namespace StudyMaterialOrganiser.Test.MaterialTests
            
             var viewResult = Assert.IsType<ViewResult>(result);
             var model = Assert.IsType<MaterialSearchVM>(viewResult.Model);
-            model.Materials.ForEach(m => Console.WriteLine(m.Name));
+
             Assert.Equal(2, model.Materials.Count);
 
             Assert.Contains(model.Materials, m => m.Name == "Test1");
@@ -116,15 +116,11 @@ namespace StudyMaterialOrganiser.Test.MaterialTests
             
 
             //testing filetype filter
-            Console.WriteLine("started filter by filetype");
-            result = _controller.List(null, 1, null);
-            Console.WriteLine("Finished filter by filetype");
 
+            result = _controller.List(null, 1, null);
             viewResult = Assert.IsType<ViewResult>(result);
-            Console.WriteLine(viewResult.Model);
             model = Assert.IsType<MaterialSearchVM>(viewResult.Model);
-            Console.WriteLine(model);
-            model.Materials.ForEach(m => Console.WriteLine(m.Name));
+
             Assert.Equal(1, model.Materials.Count);
 
             Assert.Contains(model.Materials, m => m.Name == "Test1");

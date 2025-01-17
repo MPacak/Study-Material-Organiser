@@ -20,15 +20,15 @@ using BL.Models;
 using DAL.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace StudyMaterialOrganiser.Test
+namespace StudyMaterialOrganiser.Test.MaterialTests
 {
-    public class MaterialControllerIntegrationTests :IClassFixture<TestFixture>
+    public class MaterialControllerIntegrationTests : IClassFixture<TestFixture>
     {
         private readonly TestFixture _fixture;
         private readonly MaterialController _controller;
         private readonly Mock<IWebHostEnvironment> _mockWebHostEnvironment;
         private readonly Mock<BaseFileHandler> _mockFileHandler;
-       
+
         private readonly AssignTags _assignTags;
 
         public MaterialControllerIntegrationTests(TestFixture fixture)
@@ -39,13 +39,13 @@ namespace StudyMaterialOrganiser.Test
             var assignTags = fixture.ServiceProvider.GetRequiredService<AssignTags>();
             _fixture = fixture;
             _mockWebHostEnvironment = new Mock<IWebHostEnvironment>();
-            
-            
+
+
 
             // Create mock for BaseFileHandler
             _mockFileHandler = new Mock<BaseFileHandler>(Mock.Of<IConfiguration>());
 
-           
+
             _mockFileHandler.Setup(x => x.IsValidFile(It.IsAny<string>()))
                 .Returns(true);
             _mockFileHandler.Setup(x => x.SaveFile(It.IsAny<IFormFile>(), It.IsAny<string>()))
@@ -62,19 +62,19 @@ namespace StudyMaterialOrganiser.Test
             var realTagService = _fixture.ServiceProvider.GetRequiredService<ITagService>();
             var realMapper = _fixture.ServiceProvider.GetRequiredService<IMapper>();
 
-            
+
             _assignTags = new AssignTags(realTagService, realMapper);
 
 
             _controller = new MaterialController(
-              _fixture.ServiceProvider.GetRequiredService<IMaterialService>(), 
-              _fixture.ServiceProvider.GetRequiredService<IMapper>(), 
-              _mockWebHostEnvironment.Object, 
-              _assignTags, 
-              _mockFileHandler.Object, 
-              _fixture.ServiceProvider.GetRequiredService<IUserService>(), 
-              _fixture.ServiceProvider.GetRequiredService<IMaterialAccessService>(), 
-              _fixture.ServiceProvider.GetRequiredService<IMaterialFactory>() 
+              _fixture.ServiceProvider.GetRequiredService<IMaterialService>(),
+              _fixture.ServiceProvider.GetRequiredService<IMapper>(),
+              _mockWebHostEnvironment.Object,
+              _assignTags,
+              _mockFileHandler.Object,
+              _fixture.ServiceProvider.GetRequiredService<IUserService>(),
+              _fixture.ServiceProvider.GetRequiredService<IMaterialAccessService>(),
+              _fixture.ServiceProvider.GetRequiredService<IMaterialFactory>()
   );
         }
 
@@ -115,12 +115,12 @@ namespace StudyMaterialOrganiser.Test
                     "testfile.pdf"
                 ),
                 TagIds = new List<int> { tagId }
-                
+
             };
 
 
-            var result = await _controller.Create(materialVM); 
-       
+            var result = await _controller.Create(materialVM);
+
             // controler 
             var viewResult = Assert.IsType<ViewResult>(result);
             Console.WriteLine($"viewresult point + {viewResult}");
@@ -142,7 +142,7 @@ namespace StudyMaterialOrganiser.Test
             Assert.NotNull(createdMaterialInDb);
             Assert.Equal("Created in integration test", createdMaterialInDb.Description);
             var createdMaterial = await dbContext.Materials
-          .Include(m => m.MaterialTags) 
+          .Include(m => m.MaterialTags)
           .FirstOrDefaultAsync(m => m.Name == "Integration Material");
 
             Assert.NotNull(createdMaterial);
@@ -161,7 +161,7 @@ namespace StudyMaterialOrganiser.Test
         {
             var dbContext = _fixture.DbContext;
 
-           
+
             if (!dbContext.Tags.Any())
             {
                 dbContext.Tags.AddRange(new List<Tag>
@@ -175,10 +175,10 @@ namespace StudyMaterialOrganiser.Test
 
             var result = _controller.Create();
 
-            
+
             var viewResult = Assert.IsType<ViewResult>(result);
             var model = Assert.IsType<MaterialVM>(viewResult.Model);
-           
+
 
             Assert.NotNull(model.AvailableTags);
             Assert.True(model.AvailableTags.Any(), "AvailableTags should not be empty.");
