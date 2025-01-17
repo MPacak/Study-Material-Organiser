@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace BL.Utilities
 {
 
-public class BinaryFileHandler : BaseFileHandler
+public class BinaryFileHandler : BaseFileHandler, IBinaryFileHandler
     {
         public BinaryFileHandler(IConfiguration configuration) : base(configuration)
         {

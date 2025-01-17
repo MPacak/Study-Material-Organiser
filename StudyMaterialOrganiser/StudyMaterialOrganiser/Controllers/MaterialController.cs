@@ -45,11 +45,6 @@ namespace StudyMaterialOrganiser.Controllers
 
 
 
-        // GET: MaterialController
-        public ActionResult Index()
-        {
-            return View();
-        }
 
         public ActionResult List(string? query, int? fileType, List<int>? tagIds, int page = 1, int pageSize = 10)
         {
@@ -125,6 +120,7 @@ namespace StudyMaterialOrganiser.Controllers
             {
                 AvailableTags = _assignTags.AssignTag()
             };
+           
             return View(viewModel);
         }
 
@@ -133,7 +129,19 @@ namespace StudyMaterialOrganiser.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Create(MaterialVM materialVM)
         {
+         
             materialVM.AvailableTags = _assignTags.AssignTag();
+            if (!ModelState.IsValid)
+            {
+                Console.WriteLine("ModelState is invalid. Errors:");
+                foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
+                {
+                    Console.WriteLine($"- {error.ErrorMessage}");
+                }
+
+                // Return the view with validation errors
+                return View(materialVM);
+            }
             try
             {
                 if (materialVM.File != null)
@@ -151,21 +159,28 @@ namespace StudyMaterialOrganiser.Controllers
 
                    // materialVM.FilePath = _fileHandler.SaveFile(materialVM.File, uploadsFolder);
                     materialVM.FilePath = _binaryFileHandler.SaveFile(materialVM.File, binaryStoragePath);
+                   
                     materialVM.FolderTypeId = _binaryFileHandler.GetFileTypeId(materialVM.File);
-                    materialVM.Link = GenerateShareableLink(materialVM.Idmaterial);
+                   
+                    materialVM.Link = "link";
+                    Console.WriteLine($"linke created");
 
-                    _materialService.Create(materialVM);
-
+                    var materialdto = _mapper.Map<MaterialDto>(materialVM);
+                    Console.WriteLine($"material mapped");
+                    _materialService.Create(materialdto);
+                    Console.WriteLine($"material service finished");
                     var confirmation = ConfirmationManager.GetInstance().CreateConfirmation(
                     "Material was successfully created.",
                     nameof(List),
                     "Material",
                     3
                     );
+                    Console.WriteLine($"confirmation finished: {confirmation}");
                     return View("Confirmation", confirmation);
                 }
 
                 ModelState.AddModelError("File", "No file was uploaded");
+                Console.WriteLine("No file was uploaded");
                 return View(materialVM);
             }
             catch (InvalidOperationException)
@@ -361,7 +376,7 @@ namespace StudyMaterialOrganiser.Controllers
             var viewModel = new ShareWithUsersViewModel
             {
                 MaterialId = material.Idmaterial,
-                MaterialLink = material.Link,
+                MaterialLink = GenerateShareableLink(material.Idmaterial),
                 SearchTerm = searchTerm,
                 Users = users.Select(u => new UserShareViewModel
                 {

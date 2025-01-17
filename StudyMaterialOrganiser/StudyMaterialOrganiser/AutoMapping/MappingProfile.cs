@@ -12,7 +12,8 @@ namespace StudyMaterialOrganiser.Mappers
         public MappingProfile()
         {
 
-            CreateMap<TagVM, TagDto>().ReverseMap();
+            CreateMap<TagVM, TagDto>();
+            CreateMap<TagDto,TagVM>();
 
             CreateMap<MaterialDto, MaterialVM>().ReverseMap();
 

@@ -30,6 +30,12 @@ namespace BL.Services
 
         public MaterialDto Create(MaterialDto materialDto)
         {
+            Console.WriteLine("service started");
+            Console.WriteLine($"Creating Material: {materialDto.Name}");
+            Console.WriteLine($"FilePath: {materialDto.FilePath}");
+            Console.WriteLine($"FolderTypeId: {materialDto.FolderTypeId}");
+            Console.WriteLine($"Link: {materialDto.Link}");
+            Console.WriteLine($"TagIds: {string.Join(", ", materialDto.TagIds)}");
             var material = _mapper.Map<Material>(materialDto);
             var checkMaterial= _unitOfWork.Material.GetFirstOrDefault(u => u.Name == material.Name);
             if (checkMaterial != null)
@@ -38,13 +44,16 @@ namespace BL.Services
             }
 
             _unitOfWork.Material.Add(material);
+            Console.WriteLine("Material added to UnitOfWork.");
             materialDto.Idmaterial = material.Idmaterial;
+            Console.WriteLine($"Creating Material: {materialDto.Idmaterial}");
             _unitOfWork.Save();
             if (materialDto.TagIds != null && materialDto.TagIds.Any())
             {
                 _materialTagService.Create(material.Idmaterial, materialDto.TagIds);
                 _unitOfWork.Save();
             }
+            Console.WriteLine($"it did not pass materialtagservice");
             return materialDto;
         }
 
