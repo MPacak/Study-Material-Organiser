@@ -67,23 +67,15 @@ namespace StudyMaterialOrganiser.Test
 
 
             _controller = new MaterialController(
-                materialService,
-                mapper,
-                Mock.Of<IWebHostEnvironment>(),
-                assignTags,
-                fileHandler,
-                fixture.ServiceProvider.GetRequiredService<IUserService>(),
-                fixture.ServiceProvider.GetRequiredService<IMaterialAccessService>(),
-                fixture.ServiceProvider.GetRequiredService<IMaterialFactory>(),
-                _fixture.ServiceProvider.GetRequiredService<IMaterialService>(),
-                _fixture.ServiceProvider.GetRequiredService<IMapper>(),
-                _mockWebHostEnvironment.Object,
-               _assignTags,
-                _mockFileHandler.Object,
-                _fixture.ServiceProvider.GetRequiredService<IUserService>(),
-                _fixture.ServiceProvider.GetRequiredService<IMaterialAccessService>(),
-                _fixture.ServiceProvider.GetRequiredService<IMaterialFactory>()
-            );
+              _fixture.ServiceProvider.GetRequiredService<IMaterialService>(), 
+              _fixture.ServiceProvider.GetRequiredService<IMapper>(), 
+              _mockWebHostEnvironment.Object, 
+              _assignTags, 
+              _mockFileHandler.Object, 
+              _fixture.ServiceProvider.GetRequiredService<IUserService>(), 
+              _fixture.ServiceProvider.GetRequiredService<IMaterialAccessService>(), 
+              _fixture.ServiceProvider.GetRequiredService<IMaterialFactory>() 
+  );
         }
 
         [Fact]

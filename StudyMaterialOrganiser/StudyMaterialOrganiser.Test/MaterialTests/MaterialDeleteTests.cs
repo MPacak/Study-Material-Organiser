@@ -75,9 +75,11 @@ namespace StudyMaterialOrganiser.Test.MaterialTests
                 Link = "link",
                 FolderTypeId = 4
             };
+           
 
             dbContext.Materials.Add(material);
-            Console.WriteLine("add done");
+            Assert.True(dbContext.Materials.Any(m => m.Idmaterial == material.Idmaterial), "Material was not saved to the database.");
+           
             await dbContext.SaveChangesAsync();
             Console.WriteLine("saved");
             var materialVM = new MaterialVM
@@ -102,7 +104,7 @@ namespace StudyMaterialOrganiser.Test.MaterialTests
             Assert.Equal("Material", model.ControllerName);
             Assert.Equal(3, model.RedirectSeconds);
 
-            // Verify the material is removed from the database
+       
             var deletedMaterial = await dbContext.Materials
                 .FirstOrDefaultAsync(m => m.Idmaterial == material.Idmaterial);
             Assert.Null(deletedMaterial);
