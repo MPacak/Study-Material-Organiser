@@ -31,11 +31,23 @@ public class MaterialServiceTests
     [Fact]
     public void Create_ShouldAddMaterialAndSave()
     {
-        var materialDto = new MaterialDto { Idmaterial = 1, Name = "Material A" };
+        var materialDto = new MaterialDto { Idmaterial = 1, Name = "Material A", TagIds = new List<int> { 1 } };
         var material = new Material { Idmaterial = 1, Name = "Material A" };
 
         _mockMapper.Setup(m => m.Map<Material>(materialDto)).Returns(material);
 
+
+        _mockUnitOfWork.Setup(u => u.Material.GetFirstOrDefault(It.IsAny<Expression<Func<Material, bool>>>(), null))
+     .Returns((Material)null);
+
+
+        _mockUnitOfWork.Setup(u => u.Material.Add(material));
+        _mockUnitOfWork.Setup(u => u.Save());
+
+        
+        _mockMaterialTagService.Setup(s => s.Create(material.Idmaterial, materialDto.TagIds)).Verifiable();
+
+      
         _materialService.Create(materialDto);
 
         _mockUnitOfWork.Verify(u => u.Material.Add(It.Is<Material>(m => m.Name == "Material A")), Times.Once);
@@ -55,8 +67,12 @@ public class MaterialServiceTests
             }
         };
 
-        _mockUnitOfWork.Setup(u => u.Material.GetFirstOrDefault(It.IsAny<Expression<Func<Material, bool>>>(), null))
-     .Returns(new Material());
+        _mockUnitOfWork.Setup(u => u.Material.GetAll(It.IsAny<Expression<Func<Material, bool>>>(), "MaterialTags"))
+      .Returns(new List<Material> { material });
+
+        _mockUnitOfWork.Setup(u => u.MaterialTag.Delete(It.IsAny<MaterialTag>()));
+        _mockUnitOfWork.Setup(u => u.Material.Delete(It.IsAny<Material>()));
+        _mockUnitOfWork.Setup(u => u.Save());
 
         _materialService.Delete(new MaterialDto { Idmaterial = 1 });
 

@@ -1212,7 +1212,10 @@
           "Microsoft.Testing.Extensions.CodeCoverage": "17.13.1"
         },
         "runtime": {
-          "DAL.dll": {}
+          "DAL.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

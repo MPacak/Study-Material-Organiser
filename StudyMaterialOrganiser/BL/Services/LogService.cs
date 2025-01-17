@@ -55,6 +55,7 @@ public class LogService : ILogService
             Message = message,
 
         };
+		Console.WriteLine(log.Message);
          _unitOfWork.Log.Add(log);
          _unitOfWork.Save();
 

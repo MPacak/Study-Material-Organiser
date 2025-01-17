@@ -49,7 +49,11 @@ public class LogServiceTests
     [Fact]
     public void Log_ShouldAddLogAndSave()
     {
-        
+        var mockLogRepository = new Mock<ILogRepository>();
+
+       
+        _mockUnitOfWork.Setup(u => u.Log).Returns(mockLogRepository.Object);
+
         var log = new Log { Level = "Info", Message = "Test Log" };
 
         

@@ -67,7 +67,7 @@ namespace BL.Services
                 {
                     _unitOfWork.MaterialTag.Delete(materialTag);
                 }
-
+                _unitOfWork.Save();
                 _unitOfWork.Material.Delete(material);
 
                 _unitOfWork.Save();
