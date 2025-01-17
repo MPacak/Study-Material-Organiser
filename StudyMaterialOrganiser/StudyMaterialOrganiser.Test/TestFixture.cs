@@ -42,8 +42,6 @@ namespace StudyMaterialOrganiser.Test
             // repositories
             services.AddScoped<IMaterialRepository, MaterialRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
-            services.AddScoped<IGroupRepository, GroupRepository>();
-            services.AddScoped<IGroupService, GroupService>();
            services.AddScoped<IUserGroupRepository, UserGroupRepository>();
            services.AddScoped<ITagRepository, TagRepository>();
            services.AddScoped<IUserRepository, UserRepository>();
@@ -93,7 +91,7 @@ namespace StudyMaterialOrganiser.Test
                     cfg.AddProfile<Mappers.MappingProfile>();
                 }));
             });
-            services.AddSingleton(mapperConfig.CreateMapper());
+            //services.AddSingleton(mapperConfig.CreateMapper());
 
             // Build the service provider
             ServiceProvider = services.BuildServiceProvider();

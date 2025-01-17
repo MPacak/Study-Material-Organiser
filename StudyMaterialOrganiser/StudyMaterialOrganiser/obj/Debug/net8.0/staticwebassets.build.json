@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "B3JCCaVdnA1Iqz40Dl9fjoTYUsK10+HG/5WulAshOVg=",
+  "Hash": "dArWy/6jznzeENHnrYB0LN2LFWDcDv/nUNM7ZA4RuvI=",
   "Source": "StudyMaterialOrganiser",
   "BasePath": "_content/StudyMaterialOrganiser",
   "Mode": "Default",
@@ -205,6 +205,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\binary_storage\\ii1x53kw.xgr.docx"
+    },
+    {
+      "Identity": "C:\\Users\\mario\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\wwwroot\\binary_storage\\k2cvfsdk.usd.pdf",
+      "SourceId": "StudyMaterialOrganiser",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mario\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\wwwroot\\",
+      "BasePath": "_content/StudyMaterialOrganiser",
+      "RelativePath": "binary_storage/k2cvfsdk.usd.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\binary_storage\\k2cvfsdk.usd.pdf"
     },
     {
       "Identity": "C:\\Users\\mario\\Documents\\GitHub\\Study-Material-Organiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\wwwroot\\binary_storage\\nzxlbc11.jsj.docx",

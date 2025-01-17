@@ -75,7 +75,7 @@ namespace StudyMaterialOrganiser.Test
                 fileHandler,
                 fixture.ServiceProvider.GetRequiredService<IUserService>(),
                 fixture.ServiceProvider.GetRequiredService<IMaterialAccessService>(),
-                fixture.ServiceProvider.GetRequiredService<IMaterialFactory>()
+                fixture.ServiceProvider.GetRequiredService<IMaterialFactory>(),
                 _fixture.ServiceProvider.GetRequiredService<IMaterialService>(),
                 _fixture.ServiceProvider.GetRequiredService<IMapper>(),
                 _mockWebHostEnvironment.Object,

@@ -30,8 +30,16 @@ namespace StudyMaterialOrganiser.Controllers
         private readonly IUserService _userService;
         private readonly IMaterialAccessService _materialAccessService;
         private readonly IMaterialFactory _materialFactory;
+        private IMaterialService materialService;
+        private IMapper mapper;
+        private IWebHostEnvironment object1;
+        private AssignTags assignTags;
+        private BaseFileHandler object2;
+        private IUserService userService;
+        private IMaterialAccessService materialAccessService;
+        private IMaterialFactory materialFactory;
 
-        public MaterialController(IMaterialService materialService, IMapper mapper, IWebHostEnvironment webHostEnvironment, AssignTags assignTags, BaseFileHandler basefileHandler, IUserService userService, IMaterialAccessService materialAccessService, IMaterialFactory materialFactory)
+        public MaterialController(IMaterialService materialService, IMapper mapper, IWebHostEnvironment webHostEnvironment, AssignTags assignTags, BaseFileHandler basefileHandler, IUserService userService, IMaterialAccessService materialAccessService, IMaterialFactory materialFactory, IMaterialService materialService1, IMapper mapper1, IWebHostEnvironment @object, AssignTags _assignTags, BaseFileHandler object1, IUserService userService1, IMaterialAccessService materialAccessService1, IMaterialFactory materialFactory1)
         {
             _materialService = materialService;
             _mapper = mapper;
@@ -43,8 +51,17 @@ namespace StudyMaterialOrganiser.Controllers
             _materialFactory = materialFactory;
         }
 
-
-
+        public MaterialController(IMaterialService materialService, IMapper mapper, IWebHostEnvironment object1, AssignTags assignTags, BaseFileHandler object2, IUserService userService, IMaterialAccessService materialAccessService, IMaterialFactory materialFactory)
+        {
+            this.materialService = materialService;
+            this.mapper = mapper;
+            this.object1 = object1;
+            this.assignTags = assignTags;
+            this.object2 = object2;
+            this.userService = userService;
+            this.materialAccessService = materialAccessService;
+            this.materialFactory = materialFactory;
+        }
 
         public ActionResult List(string? query, int? fileType, List<int>? tagIds, int page = 1, int pageSize = 10)
         {
