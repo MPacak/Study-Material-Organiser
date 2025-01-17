@@ -1,5 +1,6 @@
 ﻿using BL.IServices;
 using BL.Models;
+using BL.Services;
 using DAL.IRepositories;
 using DAL.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -45,7 +46,8 @@ namespace StudyMaterialOrganiser.Controllers
                 }).ToList();
 
             ViewData["Tags"] = tags;
-            return View();
+
+            return View(new StudyGroupDto()); // Ensure this returns the correct model
         }
 
         // POST: /StudyGroup/Create
@@ -68,9 +70,12 @@ namespace StudyMaterialOrganiser.Controllers
                         }).ToList();
             ViewData["Tags"] = tags;
 
-            return View(group);
+            _studyGroupService.Add(group);
+            return RedirectToAction(nameof(Index));
         }
 
-
+            
     }
+
+  
 }

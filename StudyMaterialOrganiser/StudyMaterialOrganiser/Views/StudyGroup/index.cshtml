@@ -10,20 +10,21 @@
 
 <a asp-action="Create" class="btn btn-primary">+ Create Study Group</a>
 
-<table class="table table-striped mt-4">
+<table class="table">
     <thead>
         <tr>
+            <th>Id</th>
             <th>Name</th>
             <th>Tag</th>
-            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var group in Model)
         {
             <tr>
+                <td>@group.Id</td>
                 <td>@group.Name</td>
-                <td>@group.Tag?.TagName</td>
+                <td>@group.Name</td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@group.Id" class="btn btn-secondary">Edit</a>
                     <a asp-action="Delete" asp-route-id="@group.Id" class="btn btn-danger">Delete</a>
