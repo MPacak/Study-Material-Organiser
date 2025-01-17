@@ -41,7 +41,7 @@ namespace StudyMaterialOrganiser.Test
             // Create mock for BaseFileHandler
             _mockFileHandler = new Mock<BaseFileHandler>(Mock.Of<IConfiguration>());
 
-            // Setup the base file handler mock
+           
             _mockFileHandler.Setup(x => x.IsValidFile(It.IsAny<string>()))
                 .Returns(true);
             _mockFileHandler.Setup(x => x.SaveFile(It.IsAny<IFormFile>(), It.IsAny<string>()))
@@ -58,10 +58,9 @@ namespace StudyMaterialOrganiser.Test
             var realTagService = _fixture.ServiceProvider.GetRequiredService<ITagService>();
             var realMapper = _fixture.ServiceProvider.GetRequiredService<IMapper>();
 
-            // Create the real AssignTags instance with real dependencies
+            
             _assignTags = new AssignTags(realTagService, realMapper);
 
-            
 
             _controller = new MaterialController(
                 _fixture.ServiceProvider.GetRequiredService<IMaterialService>(),
@@ -79,6 +78,11 @@ namespace StudyMaterialOrganiser.Test
         public async Task CanCreateMaterialViaController()
         {
             var dbContext = _fixture.DbContext;
+            var materialService = _fixture.ServiceProvider.GetRequiredService<IMaterialService>();
+
+            var serviceType = materialService.GetType();
+            Console.WriteLine($"Material service type: {serviceType.FullName}");
+
             if (!dbContext.Tags.Any())
             {
                 dbContext.Tags.Add(new Tag { TagName = "TestTag" });
@@ -106,32 +110,14 @@ namespace StudyMaterialOrganiser.Test
                     "Data",
                     "testfile.pdf"
                 ),
-                TagIds = new List<int> { 1 },
-                //AvailableTags = _assignTags.AssignTag()
+                TagIds = new List<int> { tagId }
+                
             };
-            
-          
-            // Act
-            var result = await _controller.Create(materialVM);
-           
-            if (!_controller.ModelState.IsValid)
-            {
-                foreach (var entry in _controller.ModelState)
-                {
-                    Console.WriteLine($"Key: {entry.Key}");
-                    foreach (var error in entry.Value.Errors)
-                    {
-                        Console.WriteLine($"  Error: {error.ErrorMessage}");
-                        if (error.Exception != null)
-                        {
-                            Console.WriteLine($"  Exception: {error.Exception.Message}");
-                        }
-                    }
-                }
 
-                Assert.True(false, "ModelState is invalid. See logs for details.");
-            }
-            // Assert
+
+            var result = await _controller.Create(materialVM); 
+       
+            // controler 
             var viewResult = Assert.IsType<ViewResult>(result);
             Console.WriteLine($"viewresult point + {viewResult}");
             if (viewResult.ViewName != "Confirmation")
@@ -148,8 +134,11 @@ namespace StudyMaterialOrganiser.Test
             Assert.Equal("Material", model.ControllerName);
             Assert.Equal(3, model.RedirectSeconds);
 
+            var createdMaterialInDb = materialService.GetMaterialByName("Integration Material");
+            Assert.NotNull(createdMaterialInDb);
+            Assert.Equal("Created in integration test", createdMaterialInDb.Description);
             var createdMaterial = await dbContext.Materials
-          .Include(m => m.MaterialTags) // Include related tags
+          .Include(m => m.MaterialTags) 
           .FirstOrDefaultAsync(m => m.Name == "Integration Material");
 
             Assert.NotNull(createdMaterial);
@@ -157,17 +146,35 @@ namespace StudyMaterialOrganiser.Test
             Assert.NotNull(createdMaterial.FilePath);
             Assert.Contains(createdMaterial.MaterialTags, mt => mt.TagId == tagId);
 
-          
+            dbContext.MaterialTags.RemoveRange(dbContext.MaterialTags);
+            dbContext.Materials.RemoveRange(dbContext.Materials);
+            dbContext.Tags.RemoveRange(dbContext.Tags);
+            await dbContext.SaveChangesAsync();
+
         }
         [Fact]
         public void Get_Create_ReturnsViewWithAvailableTags()
         {
-            // Act
+            var dbContext = _fixture.DbContext;
+
+           
+            if (!dbContext.Tags.Any())
+            {
+                dbContext.Tags.AddRange(new List<Tag>
+        {
+            new Tag { TagName = "Tag1" },
+            new Tag { TagName = "Tag2" },
+            new Tag { TagName = "Tag3" }
+        });
+                dbContext.SaveChanges();
+            }
+
             var result = _controller.Create();
 
-            // Assert
+            
             var viewResult = Assert.IsType<ViewResult>(result);
             var model = Assert.IsType<MaterialVM>(viewResult.Model);
+           
 
             Assert.NotNull(model.AvailableTags);
             Assert.True(model.AvailableTags.Any(), "AvailableTags should not be empty.");

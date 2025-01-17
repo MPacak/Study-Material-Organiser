@@ -72,7 +72,7 @@ namespace StudyMaterialOrganiser.Test.MaterialTests
                 Description = "Test Description",
                 Link = "link",
                 FilePath = "testfile.pdf",
-                FolderTypeId = 1
+                FolderTypeId = 4
             };
 
             dbContext.Materials.Add(material);
@@ -99,7 +99,7 @@ namespace StudyMaterialOrganiser.Test.MaterialTests
                 Description = "Old Description",
                 Link = "link",
                 FilePath = "oldfile.pdf",
-                FolderTypeId = 1
+                FolderTypeId = 4
             };
 
             dbContext.Materials.Add(material);
@@ -110,7 +110,7 @@ namespace StudyMaterialOrganiser.Test.MaterialTests
                 Idmaterial = material.Idmaterial,
                 Name = "Updated Material",
                 Description = "Updated Description",
-                FolderTypeId = 1,
+                FolderTypeId = 3,
                 AvailableTags = new List<TagVM>()
             };
 

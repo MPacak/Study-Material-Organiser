@@ -69,11 +69,11 @@ namespace StudyMaterialOrganiser.Test.MaterialTests
             var dbContext = _fixture.DbContext;
             var material = new Material
             {
-                Name = "Test Material",
-                Description = "Test Description",
+                Name = "Detail Material",
+                Description = "Detail Description",
                 Link = "link",
                 FilePath = "testfile.pdf",
-                FolderTypeId = 1
+                FolderTypeId = 3
             };
 
             dbContext.Materials.Add(material);
@@ -102,20 +102,30 @@ namespace StudyMaterialOrganiser.Test.MaterialTests
     });
             dbContext.SaveChanges();
 
-            // Act
-            var result = _controller.List("Test", 1, null);
+            //testing name filter
+            var result = _controller.List("Test", null, null);
 
-            // Assert
+            
             var viewResult = Assert.IsType<ViewResult>(result);
             var model = Assert.IsType<MaterialSearchVM>(viewResult.Model);
-            Console.WriteLine($"{model.Materials.Count}");
+           
             Assert.Equal(2, model.Materials.Count);
 
-            model.Materials.ForEach(m => Console.WriteLine($"{m.Name}"));
             Assert.Contains(model.Materials, m => m.Name == "Test1");
          
             Assert.Contains(model.Materials, m => m.Name == "Test2");
-            
+            //testing filetype filter
+            result = _controller.List(null, 1, null);
+
+
+             viewResult = Assert.IsType<ViewResult>(result);
+            model = Assert.IsType<MaterialSearchVM>(viewResult.Model);
+
+            Assert.Equal(1, model.Materials.Count);
+
+            Assert.Contains(model.Materials, m => m.Name == "Test1");
+
+
         }
 
     }

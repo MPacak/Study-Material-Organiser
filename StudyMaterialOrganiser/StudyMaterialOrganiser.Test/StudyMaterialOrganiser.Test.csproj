@@ -12,7 +12,7 @@
   <ItemGroup>
     <PackageReference Include="coverlet.collector" Version="6.0.3">
       <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive; buildtables</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.Cryptography.KeyDerivation" Version="9.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.0" />

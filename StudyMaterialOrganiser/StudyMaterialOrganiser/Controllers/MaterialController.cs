@@ -115,11 +115,15 @@ namespace StudyMaterialOrganiser.Controllers
         // GET: MaterialController/Create
         public ActionResult Create()
         {
-
+            
             var viewModel = new MaterialVM
             {
                 AvailableTags = _assignTags.AssignTag()
             };
+            Console.WriteLine("tags to print out");
+            Console.WriteLine(viewModel.AvailableTags.Count);
+            viewModel.AvailableTags.ForEach(t =>  Console.WriteLine(t.Name));
+            
            
             return View(viewModel);
         }
@@ -139,7 +143,7 @@ namespace StudyMaterialOrganiser.Controllers
                     Console.WriteLine($"- {error.ErrorMessage}");
                 }
 
-                // Return the view with validation errors
+              
                 return View(materialVM);
             }
             try
@@ -166,21 +170,21 @@ namespace StudyMaterialOrganiser.Controllers
                     Console.WriteLine($"linke created");
 
                     var materialdto = _mapper.Map<MaterialDto>(materialVM);
-                    Console.WriteLine($"material mapped");
+
                     _materialService.Create(materialdto);
-                    Console.WriteLine($"material service finished");
+                   
                     var confirmation = ConfirmationManager.GetInstance().CreateConfirmation(
                     "Material was successfully created.",
                     nameof(List),
                     "Material",
                     3
                     );
-                    Console.WriteLine($"confirmation finished: {confirmation}");
+                   
                     return View("Confirmation", confirmation);
                 }
 
                 ModelState.AddModelError("File", "No file was uploaded");
-                Console.WriteLine("No file was uploaded");
+               
                 return View(materialVM);
             }
             catch (InvalidOperationException)

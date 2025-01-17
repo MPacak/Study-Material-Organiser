@@ -73,7 +73,7 @@ namespace StudyMaterialOrganiser.Test.MaterialTests
                 Description = "This material will be deleted",
                 FilePath = "test-path.pdf",
                 Link = "link",
-                FolderTypeId = 1
+                FolderTypeId = 4
             };
 
             dbContext.Materials.Add(material);
@@ -118,7 +118,7 @@ namespace StudyMaterialOrganiser.Test.MaterialTests
                 Description = "Test Description",
                 Link = "link",
                 FilePath = "testfile.pdf",
-                FolderTypeId = 1
+                FolderTypeId = 4
             };
 
             dbContext.Materials.Add(material);
