@@ -17,31 +17,26 @@ namespace DAL.Repositories
             _context = context;
 
             UserGroup = new UserGroupRepository(_context);
-            Group = new GroupRepository(_context);
             User = new UserRepository(_context);
             Log = new LogRepository(_context);
             Material = new MaterialRepository(_context);
             Tag = new TagRepository(_context);
             MaterialTag = new MaterialTagRepository(_context);
-			StudyGroup = new GroupRepository(_context);
-          
+            StudyGroup = new StudyGroupRepository(_context);
+
         }
 
 
         public IUserGroupRepository UserGroup { get; private set; }
-		public IGroupRepository Group { get; private set; }
         public IUserRepository User { get; private set; }
         public ILogRepository Log { get; private set; }
 
         public IMaterialRepository Material { get; private set; }
         public ITagRepository Tag { get; private set; }
         public IMaterialTagRepository MaterialTag { get; private set; }
-        public IGroupRepository StudyGroup { get; private set; }
+        public IStudyGroupRepository StudyGroup { get; private set; }
 
-
-
-
-		public void Save()
+        public void Save()
         {
             _context.SaveChanges();
         }

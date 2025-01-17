@@ -1,9 +1,4 @@
-﻿@model DAL.Models.Group
-
-@{
-    ViewData["Title"] = "Create Study Group";
-    var tags = ViewData["Tags"] as List<SelectListItem>;
-}
+﻿@model BL.Models.StudyGroupDto
 
 <h2>Create Study Group</h2>
 
@@ -15,12 +10,22 @@
     </div>
 
     <div class="form-group">
-        <label asp-for="TagId" class="form-label">Tag</label>
+        <label asp-for="Name" class="form-label">Tag</label>
         <select asp-for="TagId" class="form-control">
             <option value="">-- Select a Tag --</option>
-            @foreach (var tag in ViewData["Tags"] as List<SelectListItem>)
-            {
-                <option value="@tag.Value">@tag.Text</option>
+            @{
+                var tags = ViewData["Tags"] as List<SelectListItem>;
+                if (tags != null)
+                {
+                    foreach (var tag in tags)
+                    {
+                        <option value="@tag.Value">@tag.Text</option>
+                    }
+                }
+                else
+                {
+                    <option value="">No tags available</option>
+                }
             }
         </select>
         <span asp-validation-for="TagId" class="text-danger"></span>

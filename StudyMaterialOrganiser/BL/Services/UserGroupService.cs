@@ -10,7 +10,7 @@ using DAL.IRepositories;
 
 namespace BL.Services
 {
-	internal class UserGroupService : IUserGroupService
+	public class UserGroupService : IUserGroupService
 	{
 		private readonly IUnitOfWork _unitOfWork;
 		private readonly IMapper _userGroupMapper;

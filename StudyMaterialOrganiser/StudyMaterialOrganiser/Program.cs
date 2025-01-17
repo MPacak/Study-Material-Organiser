@@ -33,8 +33,6 @@ builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-builder.Services.AddScoped<IGroupRepository, GroupRepository>();
-builder.Services.AddScoped<IGroupService, GroupService>();
 builder.Services.AddScoped<IUserGroupRepository, UserGroupRepository>();
 builder.Services.AddScoped<IMaterialRepository, MaterialRepository>();
 builder.Services.AddScoped<ITagRepository, TagRepository>();
@@ -54,11 +52,12 @@ builder.Services.AddScoped<ITagService, TagService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IRoleService, RoleService>();
 builder.Services.AddScoped<IPasswordService, PasswordService>();
+builder.Services.AddScoped<IStudyGroupService, StudyGroupService>();
+//builder.Services.AddAutoMapper(typeof(MappingProfile));
 
 
 builder.Services.AddTransient<AssignTags>();
 builder.Services.AddScoped<BaseFileHandler, BinaryFileHandler>();
-builder.Services.AddScoped<IBinaryFileHandler, BinaryFileHandler>();
 builder.Services.AddScoped<IMaterialFactory, MaterialFactory>();
 builder.Services.AddScoped<IMaterialAccessService, MaterialAccessService>();
 
@@ -100,6 +99,7 @@ if (!app.Environment.IsDevelopment())
     app.UseExceptionHandler("/Home/Error");
 }
 app.UseStaticFiles();
+
 
 app.UseRouting();
 app.UseAuthentication();
