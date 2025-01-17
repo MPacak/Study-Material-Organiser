@@ -1,6 +1,10 @@
 ﻿using AutoMapper;
+using BL.IServices;
 using BL.Models;
+using BL.Services;
+using DAL.IRepositories;
 using DAL.Models;
+using DAL.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +18,6 @@ namespace BL.AutoMaperProfiles
         public MappingProfile()
         {
             CreateMap<DAL.Models.User, Models.UserDto>().ReverseMap();
-            CreateMap<DAL.Models.Group, Models.GroupDto>().ReverseMap();
 			CreateMap<DAL.Models.Log, Models.LogDto>().ReverseMap();
             CreateMap<Material, MaterialDto>()
                .ForMember(dest => dest.TagIds, opt => opt.MapFrom(src => src.MaterialTags.Select(mt => mt.Tag.Idtag)))
@@ -33,7 +36,11 @@ namespace BL.AutoMaperProfiles
             CreateMap<UserGroupDto, UserGroup>()
 	            .ForMember(dest => dest.Group, opt => opt.Ignore())
 	            .ForMember(dest => dest.User, opt => opt.Ignore());
+            CreateMap<StudyGroup, StudyGroupDto>()
+           .ForMember(dest => dest.TagName, opt => opt.MapFrom(src => src.Tag.TagName));
 
-		}
+            CreateMap<StudyGroupDto, StudyGroup>();
+
+        }
     }
 }

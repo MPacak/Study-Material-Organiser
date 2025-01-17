@@ -16,7 +16,7 @@ namespace DAL.Models
         {
         }
 
-        public virtual DbSet<Group> Groups { get; set; } = null!;
+        public virtual DbSet<StudyGroup> StudyGroup { get; set; } = null!;
         public virtual DbSet<Log> Logs { get; set; } = null!;
         public virtual DbSet<Material> Materials { get; set; } = null!;
         public virtual DbSet<MaterialTag> MaterialTags { get; set; } = null!;
@@ -35,7 +35,7 @@ namespace DAL.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Group>(entity =>
+            modelBuilder.Entity<StudyGroup>(entity =>
             {
                 entity.ToTable("Group");
 
@@ -44,10 +44,7 @@ namespace DAL.Models
 
                 entity.Property(e => e.Name).HasMaxLength(50);
 
-                entity.HasOne(d => d.Tag)
-                    .WithMany(p => p.Groups)
-                    .HasForeignKey(d => d.TagId)
-                    .HasConstraintName("FK_Group_Tag");
+                
             });
 
             modelBuilder.Entity<Log>(entity =>

@@ -22,7 +22,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace StudyMaterialOrganiser.Test
 {
-    public class MaterialControllerIntegrationTests : IClassFixture<TestFixture>
+    public class MaterialControllerIntegrationTests :IClassFixture<TestFixture>
     {
         private readonly TestFixture _fixture;
         private readonly MaterialController _controller;
@@ -33,6 +33,10 @@ namespace StudyMaterialOrganiser.Test
 
         public MaterialControllerIntegrationTests(TestFixture fixture)
         {
+            var materialService = fixture.ServiceProvider.GetRequiredService<IMaterialService>();
+            var mapper = fixture.ServiceProvider.GetRequiredService<IMapper>();
+            var fileHandler = fixture.ServiceProvider.GetRequiredService<BaseFileHandler>();
+            var assignTags = fixture.ServiceProvider.GetRequiredService<AssignTags>();
             _fixture = fixture;
             _mockWebHostEnvironment = new Mock<IWebHostEnvironment>();
             
@@ -64,6 +68,14 @@ namespace StudyMaterialOrganiser.Test
             
 
             _controller = new MaterialController(
+                materialService,
+                mapper,
+                Mock.Of<IWebHostEnvironment>(),
+                assignTags,
+                fileHandler,
+                fixture.ServiceProvider.GetRequiredService<IUserService>(),
+                fixture.ServiceProvider.GetRequiredService<IMaterialAccessService>(),
+                fixture.ServiceProvider.GetRequiredService<IMaterialFactory>(),
                 _fixture.ServiceProvider.GetRequiredService<IMaterialService>(),
                 _fixture.ServiceProvider.GetRequiredService<IMapper>(),
                 _mockWebHostEnvironment.Object,

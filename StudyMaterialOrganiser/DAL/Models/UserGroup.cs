@@ -9,7 +9,7 @@ namespace DAL.Models
         public int UserId { get; set; }
         public int GroupId { get; set; }
 
-        public virtual Group Group { get; set; } = null!;
+        public virtual StudyGroup Group { get; set; } = null!;
         public virtual User User { get; set; } = null!;
     }
 }
