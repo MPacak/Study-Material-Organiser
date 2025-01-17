@@ -37,16 +37,14 @@ namespace StudyMaterialOrganiser.Test.MaterialTests
             _fixture = fixture;
             _mockWebHostEnvironment = new Mock<IWebHostEnvironment>();
 
-
-
-            // Create mock for BaseFileHandler
+    
             _mockFileHandler = new Mock<BaseFileHandler>(Mock.Of<IConfiguration>());
 
 
             var realTagService = _fixture.ServiceProvider.GetRequiredService<ITagService>();
             var realMapper = _fixture.ServiceProvider.GetRequiredService<IMapper>();
 
-            // Create the real AssignTags instance with real dependencies
+          
             _assignTags = new AssignTags(realTagService, realMapper);
 
 
@@ -79,10 +77,10 @@ namespace StudyMaterialOrganiser.Test.MaterialTests
             dbContext.Materials.Add(material);
             dbContext.SaveChanges();
 
-            // Act
+
             var result = _controller.Details(material.Idmaterial);
 
-            // Assert
+    
             var viewResult = Assert.IsType<ViewResult>(result);
             var model = Assert.IsType<MaterialVM>(viewResult.Model);
 
@@ -91,7 +89,7 @@ namespace StudyMaterialOrganiser.Test.MaterialTests
         [Fact]
         public void Get_List_ReturnsViewWithFilteredMaterials()
         {
-            // Arrange
+    
             var dbContext = _fixture.DbContext;
             dbContext.Materials.AddRange(new List<Material>
     {
@@ -101,26 +99,32 @@ namespace StudyMaterialOrganiser.Test.MaterialTests
                 Link = "link", FolderTypeId = 2 }
     });
             dbContext.SaveChanges();
+         
 
             //testing name filter
             var result = _controller.List("Test", null, null);
 
-            
+           
             var viewResult = Assert.IsType<ViewResult>(result);
             var model = Assert.IsType<MaterialSearchVM>(viewResult.Model);
-           
+            model.Materials.ForEach(m => Console.WriteLine(m.Name));
             Assert.Equal(2, model.Materials.Count);
 
             Assert.Contains(model.Materials, m => m.Name == "Test1");
          
             Assert.Contains(model.Materials, m => m.Name == "Test2");
+            
+
             //testing filetype filter
+            Console.WriteLine("started filter by filetype");
             result = _controller.List(null, 1, null);
+            Console.WriteLine("Finished filter by filetype");
 
-
-             viewResult = Assert.IsType<ViewResult>(result);
+            viewResult = Assert.IsType<ViewResult>(result);
+            Console.WriteLine(viewResult.Model);
             model = Assert.IsType<MaterialSearchVM>(viewResult.Model);
-
+            Console.WriteLine(model);
+            model.Materials.ForEach(m => Console.WriteLine(m.Name));
             Assert.Equal(1, model.Materials.Count);
 
             Assert.Contains(model.Materials, m => m.Name == "Test1");

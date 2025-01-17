@@ -37,17 +37,13 @@ namespace StudyMaterialOrganiser.Test.MaterialTests
             _mockWebHostEnvironment = new Mock<IWebHostEnvironment>();
 
 
-
-            // Create mock for BaseFileHandler
             _mockFileHandler = new Mock<BaseFileHandler>(Mock.Of<IConfiguration>());
 
 
             var realTagService = _fixture.ServiceProvider.GetRequiredService<ITagService>();
             var realMapper = _fixture.ServiceProvider.GetRequiredService<IMapper>();
 
-            // Create the real AssignTags instance with real dependencies
             _assignTags = new AssignTags(realTagService, realMapper);
-
 
 
             _controller = new MaterialController(
@@ -64,12 +60,12 @@ namespace StudyMaterialOrganiser.Test.MaterialTests
         [Fact]
         public void Get_Edit_ReturnsViewWithMaterialAndTags()
         {
-            // Arrange
+           
             var dbContext = _fixture.DbContext;
             var material = new Material
             {
-                Name = "Test Material",
-                Description = "Test Description",
+                Name = "Edit Material",
+                Description = "Edit Description",
                 Link = "link",
                 FilePath = "testfile.pdf",
                 FolderTypeId = 4
@@ -78,10 +74,10 @@ namespace StudyMaterialOrganiser.Test.MaterialTests
             dbContext.Materials.Add(material);
             dbContext.SaveChanges();
 
-            // Act
+           
             var result = _controller.Edit(material.Idmaterial);
 
-            // Assert
+          
             var viewResult = Assert.IsType<ViewResult>(result);
             var model = Assert.IsType<MaterialVM>(viewResult.Model);
 
@@ -91,7 +87,7 @@ namespace StudyMaterialOrganiser.Test.MaterialTests
         [Fact]
         public async Task Post_Edit_UpdatesMaterial()
         {
-            // Arrange
+           
             var dbContext = _fixture.DbContext;
             var material = new DAL.Models.Material
             {
@@ -114,10 +110,10 @@ namespace StudyMaterialOrganiser.Test.MaterialTests
                 AvailableTags = new List<TagVM>()
             };
 
-            // Act
+          
             var result = await _controller.Edit(material.Idmaterial, updatedMaterial);
 
-            // Assert
+      
             var viewResult = Assert.IsType<ViewResult>(result);
             var dbMaterial = dbContext.Materials.FirstOrDefault(m => m.Idmaterial == material.Idmaterial);
 

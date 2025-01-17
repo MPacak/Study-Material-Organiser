@@ -28,16 +28,15 @@ namespace StudyMaterialOrganiser.Test
         {
             var services = new ServiceCollection();
 
-            // Load real appsettings.json configuration
             var configuration = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory()) // Use current directory for appsettings.json
-                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true) // Load appsettings.json
+                .SetBasePath(Directory.GetCurrentDirectory()) 
+                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true) 
                 .Build();
             services.AddSingleton<IConfiguration>(configuration);
 
-            // Configure DbContext with InMemory Database
+
             services.AddDbContext<StudymaterialorganiserContext>(options =>
-                options.UseInMemoryDatabase("IntegrationTestDb"));
+     options.UseInMemoryDatabase($"IntegrationTestDb_{Guid.NewGuid()}"));
 
             // repositories
             services.AddScoped<IMaterialRepository, MaterialRepository>();
@@ -72,19 +71,19 @@ namespace StudyMaterialOrganiser.Test
 
             services.AddSingleton<IMapper>(provider =>
             {
-                // BL Layer Mapper: DTO to DB Entity
+               
                 var dbMapperConfig = new MapperConfiguration(cfg =>
                 {
                     cfg.AddProfile<BL.AutoMaperProfiles.MappingProfile>();
                 });
 
-                // MVC Layer Mapper: DTO to ViewModel
+              
                 var mvcMapperConfig = new MapperConfiguration(cfg =>
                 {
                     cfg.AddProfile<Mappers.MappingProfile>();
                 });
 
-                // Return a consolidated IMapper instance combining both configurations
+              
                 return new Mapper(new MapperConfiguration(cfg =>
                 {
                     cfg.AddProfile<BL.AutoMaperProfiles.MappingProfile>();
@@ -93,10 +92,10 @@ namespace StudyMaterialOrganiser.Test
             });
             //services.AddSingleton(mapperConfig.CreateMapper());
 
-            // Build the service provider
+           
             ServiceProvider = services.BuildServiceProvider();
 
-            // Resolve DbContext and ensure database is created
+   
             DbContext = ServiceProvider.GetRequiredService<StudymaterialorganiserContext>();
             DbContext.Database.EnsureCreated();
         }

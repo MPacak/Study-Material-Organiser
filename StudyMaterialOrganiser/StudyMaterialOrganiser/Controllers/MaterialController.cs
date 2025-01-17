@@ -312,7 +312,9 @@ namespace StudyMaterialOrganiser.Controllers
             try
             {
                 var material = _mapper.Map<MaterialDto>(materialVM);
+              
                 _materialService.Delete(material);
+               
                 return View("Confirmation", new ConfirmationVM
                 {
                     Message = "Material was successfully deleted.",

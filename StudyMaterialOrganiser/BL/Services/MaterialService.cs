@@ -60,14 +60,7 @@ namespace BL.Services
           filter: m => m.Idmaterial == materialDto.Idmaterial,
           includeProperties: "MaterialTags")
       .FirstOrDefault();
-            if (material == null)
-            {
-                Console.WriteLine($"Material with ID {materialDto.Idmaterial} not found.");
-            }
-            else
-            {
-                Console.WriteLine($"Material found: {material.Name}");
-            }
+           
 
             if (material != null)
             {

@@ -69,19 +69,19 @@ namespace StudyMaterialOrganiser.Test.MaterialTests
 
             var material = new Material
             {
-                Name = "Test Material for Deletion",
+                Name = "Delete Material",
                 Description = "This material will be deleted",
                 FilePath = "test-path.pdf",
                 Link = "link",
                 FolderTypeId = 4
             };
-           
 
+           
             dbContext.Materials.Add(material);
-            Assert.True(dbContext.Materials.Any(m => m.Idmaterial == material.Idmaterial), "Material was not saved to the database.");
+         
            
             await dbContext.SaveChangesAsync();
-            Console.WriteLine("saved");
+ 
             var materialVM = new MaterialVM
             {
                 Idmaterial = material.Idmaterial,
@@ -112,12 +112,12 @@ namespace StudyMaterialOrganiser.Test.MaterialTests
         [Fact]
         public void Get_Delete_ReturnsViewWithMaterial()
         {
-            // Arrange
+           
             var dbContext = _fixture.DbContext;
             var material = new Material
             {
-                Name = "Test Material",
-                Description = "Test Description",
+                Name = "Deletion Material",
+                Description = "Deletion Description",
                 Link = "link",
                 FilePath = "testfile.pdf",
                 FolderTypeId = 4
