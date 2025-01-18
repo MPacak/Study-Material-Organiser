@@ -41,8 +41,6 @@ namespace StudyMaterialOrganiser.Test.MaterialTests
             _mockWebHostEnvironment = new Mock<IWebHostEnvironment>();
 
 
-
-            // Create mock for BaseFileHandler
             _mockFileHandler = new Mock<BaseFileHandler>(Mock.Of<IConfiguration>());
 
 
@@ -101,7 +99,7 @@ namespace StudyMaterialOrganiser.Test.MaterialTests
                 dbContext.Materials.Remove(existingMaterial);
                 await dbContext.SaveChangesAsync();
             }
-            // Arrange
+
             var fileContent = Encoding.UTF8.GetBytes("Dummy file content");
             var materialVM = new MaterialVM
             {
@@ -121,9 +119,9 @@ namespace StudyMaterialOrganiser.Test.MaterialTests
 
             var result = await _controller.Create(materialVM);
 
-            // controler 
+
             var viewResult = Assert.IsType<ViewResult>(result);
-            Console.WriteLine($"viewresult point + {viewResult}");
+
             if (viewResult.ViewName != "Confirmation")
             {
                 var actualModel = viewResult.Model;
