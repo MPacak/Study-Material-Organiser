@@ -126,6 +126,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\binary_storage\ge4yht1p.u1w.docx'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\binary_storage\hpweb54h.ky3.docx'))">
+      <SourceType>Package</SourceType>
+      <SourceId>StudyMaterialOrganiser</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/StudyMaterialOrganiser</BasePath>
+      <RelativePath>binary_storage/hpweb54h.ky3.docx</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>1n9pelz1o3</Fingerprint>
+      <Integrity>Da85S6a9LoF+5F/Q7ieD2vuhtfeoB62o977q8E0oE1E=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\binary_storage\hpweb54h.ky3.docx'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\binary_storage\ii1x53kw.xgr.docx'))">
       <SourceType>Package</SourceType>
       <SourceId>StudyMaterialOrganiser</SourceId>

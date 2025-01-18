@@ -121,6 +121,58 @@ namespace StudyMaterialOrganiser.Test.MaterialTests
             Assert.Equal("Updated Material", dbMaterial.Name);
             Assert.Equal("Updated Description", dbMaterial.Description);
         }
+        [Fact]
+        public async Task Post_Edit_FailsWhenMaterialNameAlreadyExists()
+        {
+
+            var dbContext = _fixture.DbContext;
+
+            var existingMaterialWithDuplicateName = new Material
+            {
+                Name = "Duplicate Material",
+                Description = "Existing material with duplicate name",
+                Link = "link1",
+                FilePath = "existingfile1.pdf",
+                FolderTypeId = 1
+            };
+            dbContext.Materials.Add(existingMaterialWithDuplicateName);
+           
+            var materialToUpdate = new Material
+            {
+                Name = "Original Material",
+                Description = "Original Description",
+                Link = "link2",
+                FilePath = "originalfile.pdf",
+                FolderTypeId = 2
+            };
+            dbContext.Materials.Add(materialToUpdate);
+
+            dbContext.SaveChanges();
+            
+            var updatedMaterialVM = new MaterialVM
+            {
+                Idmaterial = materialToUpdate.Idmaterial,
+                Name = "Duplicate Material", 
+                Description = "Updated Description",
+                FolderTypeId = 3,
+                AvailableTags = new List<TagVM>()
+            };
+          
+            var result = await _controller.Edit(materialToUpdate.Idmaterial, updatedMaterialVM);
+
+            var viewResult = Assert.IsType<ViewResult>(result);
+            Assert.True(viewResult.ViewName == null || viewResult.ViewName == "Edit",
+             $"Expected view name to be 'Edit' or null, but got '{viewResult.ViewName}'");
+
+            var errors = _controller.ModelState["Name"]?.Errors.Select(e => e.ErrorMessage).ToList();
+            Assert.NotNull(errors);
+            Assert.Contains("A material with this name already exists.", errors);
+
+            var dbMaterial = dbContext.Materials.FirstOrDefault(m => m.Idmaterial == materialToUpdate.Idmaterial);
+            Assert.NotNull(dbMaterial);
+            Assert.Equal("Original Material", dbMaterial.Name);
+            Assert.Equal("Original Description", dbMaterial.Description);
+        }
 
     }
 }

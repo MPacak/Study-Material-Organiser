@@ -32,7 +32,7 @@ namespace BL.Services
         {
            
             var material = _mapper.Map<Material>(materialDto);
-            var checkMaterial= _unitOfWork.Material.GetFirstOrDefault(u => u.Name == material.Name);
+            var checkMaterial = CheckName(materialDto);
             if (checkMaterial != null)
             {
                 throw new InvalidOperationException();
@@ -95,8 +95,12 @@ namespace BL.Services
       .FirstOrDefault();
 
             if (existingMaterial == null)
-                throw new InvalidOperationException($"Material with ID {data.Idmaterial} not found");
-
+                throw new KeyNotFoundException($"Material with ID {data.Idmaterial} not found");
+            var checkMaterial = CheckName(data);
+            if (checkMaterial != null)
+            {
+                throw new InvalidOperationException();
+            }
 
             _mapper.Map(data, existingMaterial);
             _unitOfWork.Save();
@@ -108,7 +112,14 @@ namespace BL.Services
             }
         }
 
-       public MaterialDto? GetMaterialById(int materialId)
+        private Material CheckName(MaterialDto data)
+        {
+            var material = _mapper.Map<Material>(data);
+            var checkMaterial = _unitOfWork.Material.GetFirstOrDefault(u => u.Name == material.Name);
+            return checkMaterial;
+        }
+
+        public MaterialDto? GetMaterialById(int materialId)
         {
             var material = _unitOfWork.Material
        .GetAll(

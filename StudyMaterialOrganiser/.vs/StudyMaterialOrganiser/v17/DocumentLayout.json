@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "D:\\Faks\\3. godina\\Study-Material-Organiser\\StudyMaterialOrganiser\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{84B32EB9-0961-468F-9034-A74A960A4E26}|StudyMaterialOrganiser.Test\\StudyMaterialOrganiser.Test.csproj|d:\\faks\\3. godina\\study-material-organiser\\studymaterialorganiser\\studymaterialorganiser.test\\materialtests\\sharinglinkstests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84B32EB9-0961-468F-9034-A74A960A4E26}|StudyMaterialOrganiser.Test\\StudyMaterialOrganiser.Test.csproj|solutionrelative:studymaterialorganiser.test\\materialtests\\sharinglinkstests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{84B32EB9-0961-468F-9034-A74A960A4E26}|StudyMaterialOrganiser.Test\\StudyMaterialOrganiser.Test.csproj|d:\\faks\\3. godina\\study-material-organiser\\studymaterialorganiser\\studymaterialorganiser.test\\materialtests\\materialedittests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84B32EB9-0961-468F-9034-A74A960A4E26}|StudyMaterialOrganiser.Test\\StudyMaterialOrganiser.Test.csproj|solutionrelative:studymaterialorganiser.test\\materialtests\\materialedittests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|d:\\faks\\3. godina\\study-material-organiser\\studymaterialorganiser\\studymaterialorganiser\\controllers\\materialcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{25A25124-F1A8-4884-9C9E-797743C3A443}|StudyMaterialOrganiser\\StudyMaterialOrganiser.csproj|solutionrelative:studymaterialorganiser\\controllers\\materialcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E9FB447-E793-4CD9-BBBB-7BF470900C54}|BL\\BL.csproj|d:\\faks\\3. godina\\study-material-organiser\\studymaterialorganiser\\bl\\services\\materialservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E9FB447-E793-4CD9-BBBB-7BF470900C54}|BL\\BL.csproj|solutionrelative:bl\\services\\materialservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{84B32EB9-0961-468F-9034-A74A960A4E26}|StudyMaterialOrganiser.Test\\StudyMaterialOrganiser.Test.csproj|d:\\faks\\3. godina\\study-material-organiser\\studymaterialorganiser\\studymaterialorganiser.test\\testfixture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,19 +26,40 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SharingLinksTests.cs",
-              "DocumentMoniker": "D:\\Faks\\3. godina\\Study-Material-Organiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser.Test\\MaterialTests\\SharingLinksTests.cs",
-              "RelativeDocumentMoniker": "StudyMaterialOrganiser.Test\\MaterialTests\\SharingLinksTests.cs",
-              "ToolTip": "D:\\Faks\\3. godina\\Study-Material-Organiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser.Test\\MaterialTests\\SharingLinksTests.cs",
-              "RelativeToolTip": "StudyMaterialOrganiser.Test\\MaterialTests\\SharingLinksTests.cs",
-              "ViewState": "AgIAAGIAAAAAAAAAAAAIwH4AAAAeAAAAAAAAAA==",
+              "Title": "MaterialEditTests.cs",
+              "DocumentMoniker": "D:\\Faks\\3. godina\\Study-Material-Organiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser.Test\\MaterialTests\\MaterialEditTests.cs",
+              "RelativeDocumentMoniker": "StudyMaterialOrganiser.Test\\MaterialTests\\MaterialEditTests.cs",
+              "ToolTip": "D:\\Faks\\3. godina\\Study-Material-Organiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser.Test\\MaterialTests\\MaterialEditTests.cs",
+              "RelativeToolTip": "StudyMaterialOrganiser.Test\\MaterialTests\\MaterialEditTests.cs",
+              "ViewState": "AgIAAJcAAAAAAAAAAAAgwKQAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-17T21:31:27.255Z",
+              "WhenOpened": "2025-01-18T12:05:03.499Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MaterialService.cs",
+              "DocumentMoniker": "D:\\Faks\\3. godina\\Study-Material-Organiser\\StudyMaterialOrganiser\\BL\\Services\\MaterialService.cs",
+              "RelativeDocumentMoniker": "BL\\Services\\MaterialService.cs",
+              "ToolTip": "D:\\Faks\\3. godina\\Study-Material-Organiser\\StudyMaterialOrganiser\\BL\\Services\\MaterialService.cs",
+              "RelativeToolTip": "BL\\Services\\MaterialService.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAQwFcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-18T11:53:40.827Z",
               "EditorCaption": ""
             },
             {
@@ -45,14 +70,14 @@
               "RelativeDocumentMoniker": "StudyMaterialOrganiser\\Controllers\\MaterialController.cs",
               "ToolTip": "D:\\Faks\\3. godina\\Study-Material-Organiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\Controllers\\MaterialController.cs",
               "RelativeToolTip": "StudyMaterialOrganiser\\Controllers\\MaterialController.cs",
-              "ViewState": "AgIAAGsBAAAAAAAAAIAwwJgBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABYBAAAAAAAAAADwvyUBAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-17T21:22:36.448Z",
+              "WhenOpened": "2025-01-18T11:53:38.198Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "TestFixture.cs",
               "DocumentMoniker": "D:\\Faks\\3. godina\\Study-Material-Organiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser.Test\\TestFixture.cs",
               "RelativeDocumentMoniker": "StudyMaterialOrganiser.Test\\TestFixture.cs",
@@ -60,26 +85,7 @@
               "RelativeToolTip": "StudyMaterialOrganiser.Test\\TestFixture.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAGEAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-17T17:56:53.176Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+              "WhenOpened": "2025-01-17T17:56:53.176Z"
             }
           ]
         }

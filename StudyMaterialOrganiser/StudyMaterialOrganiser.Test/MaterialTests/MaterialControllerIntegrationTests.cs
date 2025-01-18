@@ -75,6 +75,68 @@ namespace StudyMaterialOrganiser.Test.MaterialTests
               _fixture.ServiceProvider.GetRequiredService<IMaterialFactory>()
   );
         }
+        [Fact]
+        public async Task CannotCreateMaterialWithDuplicateName()
+        {
+            var dbContext = _fixture.DbContext;
+            var materialService = _fixture.ServiceProvider.GetRequiredService<IMaterialService>();
+
+
+            if (!dbContext.Tags.Any())
+            {
+                dbContext.Tags.Add(new Tag { TagName = "TestTag" });
+                await dbContext.SaveChangesAsync();
+            }
+
+            var tags = await dbContext.Tags.ToListAsync();
+            var tagId = tags.First().Idtag;
+
+            var existingMaterial = new Material
+            {
+                Name = "Duplicate Material",
+                Description = "This is an existing material",
+                FilePath = "existing-file-path.pdf",
+                FolderTypeId = 1,
+                Link = "http://localhost/Material/Access/1"
+            };
+
+            dbContext.Materials.Add(existingMaterial);
+            await dbContext.SaveChangesAsync();
+
+            var fileContent = Encoding.UTF8.GetBytes("Dummy file content");
+            var materialVM = new MaterialVM
+            {
+                Name = "Duplicate Material", 
+                Description = "This is a duplicate",
+                File = new FormFile(
+                    new MemoryStream(fileContent),
+                    0,
+                    fileContent.Length,
+                    "Data",
+                    "testfile.pdf"
+                ),
+                TagIds = new List<int> { tagId }
+            };
+
+            var result = await _controller.Create(materialVM);
+
+
+            Assert.False(_controller.ModelState.IsValid, "ModelState should be invalid for duplicate material name.");
+
+            var viewResult = Assert.IsType<ViewResult>(result);
+            Assert.Equal(null, viewResult.ViewName); 
+
+            var model = Assert.IsType<MaterialVM>(viewResult.Model);
+            Assert.Equal("Duplicate Material", model.Name);
+
+            var errors = _controller.ModelState["Name"]?.Errors.Select(e => e.ErrorMessage).ToList();
+            Assert.NotNull(errors);
+            Assert.Contains("A material with this name already exists.", errors);
+
+            dbContext.Materials.RemoveRange(dbContext.Materials);
+            dbContext.Tags.RemoveRange(dbContext.Tags);
+            await dbContext.SaveChangesAsync();
+        }
 
         [Fact]
         public async Task CanCreateMaterialViaController()
@@ -147,6 +209,7 @@ namespace StudyMaterialOrganiser.Test.MaterialTests
             Assert.Equal("Created in integration test", createdMaterial.Description);
             Assert.NotNull(createdMaterial.FilePath);
             Assert.Contains(createdMaterial.MaterialTags, mt => mt.TagId == tagId);
+
 
             dbContext.MaterialTags.RemoveRange(dbContext.MaterialTags);
             dbContext.Materials.RemoveRange(dbContext.Materials);

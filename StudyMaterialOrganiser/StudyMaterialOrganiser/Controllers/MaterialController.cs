@@ -285,6 +285,11 @@ namespace StudyMaterialOrganiser.Controllers
 
 
             }
+            catch (KeyNotFoundException ex)
+            {
+                ModelState.AddModelError("", $"{ex}");
+                return View(materialVM);
+            }
             catch (InvalidOperationException)
             {
                 ModelState.AddModelError("Name", "A material with this name already exists.");

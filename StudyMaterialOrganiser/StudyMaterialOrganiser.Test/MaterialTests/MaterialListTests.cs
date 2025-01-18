@@ -63,7 +63,7 @@ namespace StudyMaterialOrganiser.Test.MaterialTests
         [Fact]
         public void Get_Details_ReturnsViewWithMaterial()
         {
-            // Arrange
+       
             var dbContext = _fixture.DbContext;
             var material = new Material
             {

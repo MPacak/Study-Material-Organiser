@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Ayq6psa4tVx0mBsfXrSOsFEDAL+iSLIvOELbREOvkRI=",
+  "Hash": "Y60Qq8yivaYlp55FJEgxIhWXBNSdb+F8DeqJBTvl0lo=",
   "Source": "StudyMaterialOrganiser",
   "BasePath": "_content/StudyMaterialOrganiser",
   "Mode": "Default",
@@ -204,6 +204,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\binary_storage\\ge4yht1p.u1w.docx"
+    },
+    {
+      "Identity": "D:\\Faks\\3. godina\\Study-Material-Organiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\wwwroot\\binary_storage\\hpweb54h.ky3.docx",
+      "SourceId": "StudyMaterialOrganiser",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Faks\\3. godina\\Study-Material-Organiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\wwwroot\\",
+      "BasePath": "_content/StudyMaterialOrganiser",
+      "RelativePath": "binary_storage/hpweb54h.ky3#[.{fingerprint}]?.docx",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1n9pelz1o3",
+      "Integrity": "Da85S6a9LoF+5F/Q7ieD2vuhtfeoB62o977q8E0oE1E=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\binary_storage\\hpweb54h.ky3.docx"
     },
     {
       "Identity": "D:\\Faks\\3. godina\\Study-Material-Organiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\wwwroot\\binary_storage\\ii1x53kw.xgr.docx",
@@ -11709,6 +11730,88 @@
         {
           "Name": "Last-Modified",
           "Value": "Sun, 05 Jan 2025 22:23:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Da85S6a9LoF+5F/Q7ieD2vuhtfeoB62o977q8E0oE1E="
+        }
+      ]
+    },
+    {
+      "Route": "binary_storage/hpweb54h.ky3.1n9pelz1o3.docx",
+      "AssetFile": "D:\\Faks\\3. godina\\Study-Material-Organiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\wwwroot\\binary_storage\\hpweb54h.ky3.docx",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14082"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Da85S6a9LoF+5F/Q7ieD2vuhtfeoB62o977q8E0oE1E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 18 Jan 2025 12:37:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1n9pelz1o3"
+        },
+        {
+          "Name": "label",
+          "Value": "binary_storage/hpweb54h.ky3.docx"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Da85S6a9LoF+5F/Q7ieD2vuhtfeoB62o977q8E0oE1E="
+        }
+      ]
+    },
+    {
+      "Route": "binary_storage/hpweb54h.ky3.docx",
+      "AssetFile": "D:\\Faks\\3. godina\\Study-Material-Organiser\\StudyMaterialOrganiser\\StudyMaterialOrganiser\\wwwroot\\binary_storage\\hpweb54h.ky3.docx",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14082"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Da85S6a9LoF+5F/Q7ieD2vuhtfeoB62o977q8E0oE1E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 18 Jan 2025 12:37:39 GMT"
         },
         {
           "Name": "Cache-Control",
