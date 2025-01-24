@@ -10,65 +10,108 @@ using BL.IServices;
 
 public class UserServiceTests
 {
-    private readonly Mock<IUnitOfWork> _mockUnitOfWork;
-    private readonly Mock<IAuthService> _mockAuthService;
-    private readonly Mock<IMapper> _mockMapper;
-    private readonly UserService _userService;
+	private readonly Mock<IUnitOfWork> _mockUnitOfWork;
+	private readonly Mock<IAuthService> _mockAuthService;
+	private readonly Mock<IMapper> _mockMapper;
+	private readonly UserService _userService;
 
-    public UserServiceTests()
-    {
-        _mockUnitOfWork = new Mock<IUnitOfWork>();
-        _mockAuthService = new Mock<IAuthService>();
-        _mockMapper = new Mock<IMapper>();
+	public UserServiceTests()
+	{
+		_mockUnitOfWork = new Mock<IUnitOfWork>();
+		_mockAuthService = new Mock<IAuthService>();
+		_mockMapper = new Mock<IMapper>();
 
-        _userService = new UserService(
-            _mockUnitOfWork.Object,
-            _mockMapper.Object,
-            _mockAuthService.Object
-        );
-    }
+		_userService = new UserService(
+			_mockUnitOfWork.Object,
+			_mockMapper.Object,
+			_mockAuthService.Object
+		);
+	}
 
-    [Fact]
-    public void Create_ShouldAddUserAndSave()
-    {
-        
-        var userRegistrationDto = new UserRegistrationDto
-        {
-            UserName = "test",
-            Email = "test@test.com",
-            Password = "password"
-        };
+	[Fact]
+	public void Create_ShouldAddUserAndSave()
+	{
+		// Arrange
+		var userRegistrationDto = new UserRegistrationDto
+		{
+			UserName = "test",
+			Email = "test@test.com",
+			Password = "password",
+			FirstName = "Test",
+			LastName = "User"
+		};
 
-        _mockUnitOfWork.Setup(u => u.User.GetFirstOrDefault(It.IsAny<Expression<Func<User, bool>>>(), It.IsAny<string>()))
-            .Returns((User)null); 
+		var user = new User
+		{
+			Id = 1,
+			Username = "test",
+			Email = "test@test.com",
+			FirstName = "Test",
+			LastName = "User",
+			PwdHash = "hash",
+			PwdSalt = "salt",
+			SecurityToken = "token",
+			Role = 1,
+			IsDeleted = false
+		};
 
-        _mockMapper.Setup(m => m.Map<User>(It.IsAny<UserRegistrationDto>()))
-            .Returns(new User { Username = "test", Email = "test@test.com" });
+		_mockUnitOfWork.Setup(u => u.User.GetFirstOrDefault(
+			It.IsAny<Expression<Func<User, bool>>>(),
+			It.IsAny<string>()))
+			.Returns((User)null);
 
-        
-        var result = _userService.Create(userRegistrationDto);
+		_mockMapper.Setup(m => m.Map<User>(It.IsAny<UserRegistrationDto>()))
+			.Returns(user);
 
-        
-        Assert.NotNull(result);
-        Assert.Equal("test", result.Username);
-        _mockUnitOfWork.Verify(u => u.User.Add(It.IsAny<User>()), Times.Once);
-        _mockUnitOfWork.Verify(u => u.Save(), Times.Once);
-    }
+		_mockMapper.Setup(m => m.Map<UserDto>(It.IsAny<User>()))
+			.Returns(new UserDto
+			{
+				Id = 1,
+				Username = "test",
+				Email = "test@test.com",
+				FirstName = "Test",
+				LastName = "User",
+				Role = 1
+			});
 
-    [Fact]
-    public void Delete_ShouldMarkUserAsDeletedAndSave()
-    {
-        
-        var user = new User { Id = 1, IsDeleted = false };
+		// Act
+		var result = _userService.Create(userRegistrationDto);
 
-        _mockUnitOfWork.Setup(u => u.User.GetFirstOrDefault(It.IsAny<Expression<Func<User, bool>>>(), It.IsAny<string>()))
-            .Returns(user);
+		// Assert
+		Assert.NotNull(result);
+		Assert.Equal("test", result.Username);
+		_mockUnitOfWork.Verify(u => u.User.Add(It.IsAny<User>()), Times.Once);
+		_mockUnitOfWork.Verify(u => u.Save(), Times.Once);
+	}
 
-        
-        _userService.Delete(1);
+	[Fact]
+	public void Delete_ShouldMarkUserAsDeletedAndSave()
+	{
+		// Arrange
+		var user = new User
+		{
+			Id = 1,
+			IsDeleted = false,
+			Username = "test",
+			Email = "test@test.com",
+			FirstName = "Test",
+			LastName = "User",
+			PwdHash = "hash",
+			PwdSalt = "salt",
+			SecurityToken = "token",
+			Role = 1
+		};
 
-        
-        Assert.True(user.IsDeleted);
-        _mockUnitOfWork.Verify(u => u.Save(), Times.Once);
-    }
+		_mockUnitOfWork.Setup(u => u.User.GetFirstOrDefault(
+			It.IsAny<Expression<Func<User, bool>>>(),
+			It.IsAny<string>()))
+			.Returns(user);
+
+		// Act
+		_userService.Delete(1);
+
+		// Assert
+		Assert.True(user.IsDeleted);
+		_mockUnitOfWork.Verify(u => u.Save(), Times.Once);
+	}
 }

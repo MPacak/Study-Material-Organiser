@@ -28,3 +28,18 @@ D:\Faks\3. godina\Study-Material-Organiser\StudyMaterialOrganiser\DAL\obj\Debug\
 D:\Faks\3. godina\Study-Material-Organiser\StudyMaterialOrganiser\DAL\obj\Debug\net8.0\DAL.pdb
 D:\Faks\3. godina\Study-Material-Organiser\StudyMaterialOrganiser\DAL\obj\Debug\net8.0\DAL.genruntimeconfig.cache
 D:\Faks\3. godina\Study-Material-Organiser\StudyMaterialOrganiser\DAL\obj\Debug\net8.0\ref\DAL.dll
+D:\Users\Kuri\Desktop\SMO\StudyMaterialOrganiser\DAL\bin\Debug\net8.0\DAL.deps.json
+D:\Users\Kuri\Desktop\SMO\StudyMaterialOrganiser\DAL\bin\Debug\net8.0\DAL.runtimeconfig.json
+D:\Users\Kuri\Desktop\SMO\StudyMaterialOrganiser\DAL\bin\Debug\net8.0\DAL.dll
+D:\Users\Kuri\Desktop\SMO\StudyMaterialOrganiser\DAL\bin\Debug\net8.0\DAL.pdb
+D:\Users\Kuri\Desktop\SMO\StudyMaterialOrganiser\DAL\obj\Debug\net8.0\DAL.csproj.AssemblyReference.cache
+D:\Users\Kuri\Desktop\SMO\StudyMaterialOrganiser\DAL\obj\Debug\net8.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\Kuri\Desktop\SMO\StudyMaterialOrganiser\DAL\obj\Debug\net8.0\DAL.AssemblyInfoInputs.cache
+D:\Users\Kuri\Desktop\SMO\StudyMaterialOrganiser\DAL\obj\Debug\net8.0\DAL.AssemblyInfo.cs
+D:\Users\Kuri\Desktop\SMO\StudyMaterialOrganiser\DAL\obj\Debug\net8.0\DAL.csproj.CoreCompileInputs.cache
+D:\Users\Kuri\Desktop\SMO\StudyMaterialOrganiser\DAL\obj\Debug\net8.0\DAL.sourcelink.json
+D:\Users\Kuri\Desktop\SMO\StudyMaterialOrganiser\DAL\obj\Debug\net8.0\DAL.dll
+D:\Users\Kuri\Desktop\SMO\StudyMaterialOrganiser\DAL\obj\Debug\net8.0\refint\DAL.dll
+D:\Users\Kuri\Desktop\SMO\StudyMaterialOrganiser\DAL\obj\Debug\net8.0\DAL.pdb
+D:\Users\Kuri\Desktop\SMO\StudyMaterialOrganiser\DAL\obj\Debug\net8.0\DAL.genruntimeconfig.cache
+D:\Users\Kuri\Desktop\SMO\StudyMaterialOrganiser\DAL\obj\Debug\net8.0\ref\DAL.dll

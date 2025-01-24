@@ -24,10 +24,10 @@ public class AuthServiceTests
         _mockPasswordService = new Mock<IPasswordService>();
         _mockConfiguration = new Mock<IConfiguration>();
 
-        
-        _mockConfiguration.Setup(c => c["Jwt:Key"]).Returns("MockJwtKey");
 
-        _authService = new AuthService(
+		_mockConfiguration.Setup(c => c["Jwt:Key"]).Returns("ThisIsALongEnoughSecretKeyForHMACSHA256Signing123!");
+
+		_authService = new AuthService(
             _mockHttpContextAccessor.Object,
             _mockUnitOfWork.Object,
             _mockPasswordService.Object,

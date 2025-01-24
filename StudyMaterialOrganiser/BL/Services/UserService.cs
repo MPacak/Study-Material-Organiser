@@ -91,29 +91,30 @@ public class UserService : IUserService
 
     }
 
-    public UserDto Update(int id, UserDto user)
-    {
-        var userToUpdate =  _unitOfWork.User.GetFirstOrDefault(u => u.Id == id && u.IsDeleted == false);
-        if (userToUpdate == null) throw new InvalidOperationException("User does not exist"); ;
+	public UserDto Update(int id, UserDto user)
+	{
+		var userToUpdate = _unitOfWork.User.GetFirstOrDefault(u => u.Id == id);
+		if (userToUpdate == null)
+			throw new InvalidOperationException("User does not exist");
 
+		if (userToUpdate.IsDeleted)
+			throw new InvalidOperationException("Cannot update deleted user");
 
-        userToUpdate.FirstName = user.FirstName;
-        userToUpdate.LastName = user.LastName;
-        userToUpdate.Username = user.Username;
-        userToUpdate.Email = user.Email;
-        userToUpdate.Phone = user.Phone;
-        if (user.Role.HasValue)
-        {
-            userToUpdate.Role = user.Role.Value;
-        }
+		userToUpdate.FirstName = user.FirstName;
+		userToUpdate.LastName = user.LastName;
+		userToUpdate.Username = user.Username;
+		userToUpdate.Email = user.Email;
+		userToUpdate.Phone = user.Phone;
+		if (user.Role.HasValue)
+		{
+			userToUpdate.Role = user.Role.Value;
+		}
 
+		_unitOfWork.Save();
+		return _userMapper.Map<UserDto>(userToUpdate);
+	}
 
-         _unitOfWork.Save();
-        return _userMapper.Map<UserDto>(userToUpdate);
-
-    }
-
-    public UserDto Delete(int id)
+	public UserDto Delete(int id)
     {
         var toDelete =  _unitOfWork.User.GetFirstOrDefault(u => u.Id == id && u.IsDeleted == false);
         if (toDelete == null) return null;
