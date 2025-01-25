@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StudyMaterialOrganiser")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bf43d5931bb6b95b1a86ae6f78db4b9016bc890d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0493da0495d634107ef8b4020e5cc048a1219e00")]
 [assembly: System.Reflection.AssemblyProductAttribute("StudyMaterialOrganiser")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StudyMaterialOrganiser")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

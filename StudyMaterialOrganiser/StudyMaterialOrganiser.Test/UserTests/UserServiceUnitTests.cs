@@ -25,7 +25,6 @@ public class UserServiceUnitTests
 	[Fact]
 	public void Create_WhenFirstUser_AssignsAdminRole()
 	{
-		// Arrange
 		var registration = new UserRegistrationDto
 		{
 			UserName = "firstadmin",
@@ -41,17 +40,16 @@ public class UserServiceUnitTests
 
 		_mockUnitOfWork.Setup(u => u.User).Returns(mockUserRepo.Object);
 
-		// Act
+		
 		var result = _userService.Create(registration);
 
-		// Assert
 		mockUserRepo.Verify(r => r.Add(It.Is<User>(u => u.Role == 2)), Times.Once);
 	}
 
 	    [Fact]
     public void Update_WithDeletedUser_ThrowsException()
     {
-        // Arrange
+       
         var userDto = new UserDto 
         { 
             Id = 1, 
@@ -79,7 +77,6 @@ public class UserServiceUnitTests
 
         _mockUnitOfWork.Setup(u => u.User).Returns(mockUserRepo.Object);
 
-        // Act & Assert
         var exception = Assert.Throws<InvalidOperationException>(
             () => _userService.Update(1, userDto));
             
@@ -89,7 +86,7 @@ public class UserServiceUnitTests
 	[Fact]
 	public void Delete_SetsDeletedFlagAndTimestamp()
 	{
-		// Arrange
+		
 		var user = new User { Id = 1, IsDeleted = false };
 		var mockUserRepo = new Mock<IUserRepository>();
 
@@ -100,10 +97,9 @@ public class UserServiceUnitTests
 
 		_mockUnitOfWork.Setup(u => u.User).Returns(mockUserRepo.Object);
 
-		// Act
+		
 		_userService.Delete(1);
 
-		// Assert
 		Assert.True(user.IsDeleted);
 		Assert.NotNull(user.DeletedAt);
 		_mockUnitOfWork.Verify(u => u.Save(), Times.Once);

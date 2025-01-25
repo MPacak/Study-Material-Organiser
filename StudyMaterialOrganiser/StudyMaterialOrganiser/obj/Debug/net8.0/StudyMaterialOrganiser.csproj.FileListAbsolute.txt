@@ -1070,4 +1070,5 @@ D:\Users\Kuri\Desktop\SMO\StudyMaterialOrganiser\StudyMaterialOrganiser\obj\Debu
 D:\Users\Kuri\Desktop\SMO\StudyMaterialOrganiser\StudyMaterialOrganiser\obj\Debug\net8.0\StudyMaterialOrganiser.pdb
 D:\Users\Kuri\Desktop\SMO\StudyMaterialOrganiser\StudyMaterialOrganiser\obj\Debug\net8.0\StudyMaterialOrganiser.genruntimeconfig.cache
 D:\Users\Kuri\Desktop\SMO\StudyMaterialOrganiser\StudyMaterialOrganiser\obj\Debug\net8.0\ref\StudyMaterialOrganiser.dll
+D:\Users\Kuri\Desktop\SMO\StudyMaterialOrganiser\StudyMaterialOrganiser\bin\Debug\net8.0\CoverletSourceRootsMapping_StudyMaterialOrganiser
 D:\Users\Kuri\Desktop\SMO\StudyMaterialOrganiser\StudyMaterialOrganiser\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

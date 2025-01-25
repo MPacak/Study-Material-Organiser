@@ -38,7 +38,6 @@ namespace StudyMaterialOrganiser.Test
             services.AddDbContext<StudymaterialorganiserContext>(options =>
      options.UseInMemoryDatabase($"IntegrationTestDb_{Guid.NewGuid()}"));
 
-            // repositories
             services.AddScoped<IMaterialRepository, MaterialRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
            services.AddScoped<IUserGroupRepository, UserGroupRepository>();
@@ -50,7 +49,6 @@ namespace StudyMaterialOrganiser.Test
            services.AddScoped<IMaterialTagRepository, MaterialTagRepository>();
    
 
-            // Add Services (real implementations)
             services.AddScoped<IMaterialService, MaterialService>();
             services.AddScoped<IMaterialTagService, MaterialTagService>();
             services.AddScoped<IUserService, UserService>();
@@ -90,7 +88,6 @@ namespace StudyMaterialOrganiser.Test
                     cfg.AddProfile<Mappers.MappingProfile>();
                 }));
             });
-            //services.AddSingleton(mapperConfig.CreateMapper());
 
            
             ServiceProvider = services.BuildServiceProvider();
